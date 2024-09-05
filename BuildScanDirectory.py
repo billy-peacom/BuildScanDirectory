@@ -4,7 +4,7 @@ import re
 import csv
 class Master:
     def __init__(self, path, filename, created_by=None):
-        self.path = path
+        self.path = os.path.normpath(path)
         self.filename = filename.lower()    
         self.created_by = created_by
         self.dependencies = []    
@@ -117,7 +117,7 @@ class Master:
                             print(e)
 class Procedure:
     def __init__(self, file_path, includes=None):
-        self.file_path = file_path
+        self.file_path = os.path.normpath(file_path)  
         self.filename = os.path.basename(file_path).lower()    
         self.includes = includes or []
         self.masters = []
@@ -186,17 +186,36 @@ class Procedure:
 
     @staticmethod
     def __copy_parents(src, dest_folder, dir_offset=0):
-        prev_offset = 0 if dir_offset == 0 else src.replace('/', '%', dir_offset - 1).find('/') + 1
-        post_offset = src.rfind('/')
+        src = os.path.normpath(src)
+        dest_folder = os.path.normpath(dest_folder)
+
+        prev_offset = 0 if dir_offset == 0 else src.replace(os.sep, '%', dir_offset - 1).find(os.sep) + 1
+        post_offset = src.rfind(os.sep)
 
         src_dirs = '' if post_offset == -1 else src[prev_offset:post_offset]
         src_filename = src[post_offset + 1:]
 
-        # os.makedirs(f'{dest_folder}/{src_dirs}', exist_ok=True)
-        # shutil.copy(src, f'{dest_folder}/{src_dirs}/{src_filename}')
+        dest_dir = os.path.join(dest_folder, src_dirs)
+        os.makedirs(dest_dir, exist_ok=True)
 
-        os.makedirs(f'{dest_folder}\\{os.path.dirname(src)}', exist_ok=True)
-        shutil.copy(src, f'{dest_folder}\\{src_filename}')
+        shutil.copy(src, os.path.join(dest_dir, src_filename))
+
+    # @staticmethod
+    # def __copy_parents(src, dest_folder, dir_offset=0):
+    #     src = os.path.normpath(src)
+    #     dest_folder = os.path.normpath(dest_folder)  # Normalize destination folder path
+    #     prev_offset = 0 if dir_offset == 0 else src.replace('/', '%', dir_offset - 1).find('/') + 1
+    #     post_offset = src.rfind('/')
+    #     create_folder = os.path.dirname(os.path.join(dest_folder, src))
+    #     dest_folder = os.path.join(dest_folder, os.path.basename(src))
+
+    #     src_dirs = '' if post_offset == -1 else src[prev_offset:post_offset]
+    #     src_filename = src[post_offset + 1:]
+
+    #     # os.makedirs(f'{dest_folder}/{src_dirs}', exist_ok=True)
+    #     # shutil.copy(src, f'{dest_folder}/{src_dirs}/{src_filename}')
+    #     os.makedirs(create_folder, exist_ok=True)
+    #     shutil.copy(src, f'{dest_folder}\\{src_filename}')
 
     @staticmethod
     def copy_used_masters(output_directory, procedures):
@@ -301,9 +320,9 @@ class Procedure:
   
 if __name__ == "__main__":
 
-    scan_directory = "OD\\CM\\Ops" #scandir proc + master
-    procedure_directory = "ac_ops_11" #folder with fexes for initial scan
-    output_directory = "ac_ops_11\\data\\fullpath"
+    scan_directory = os.path.normpath("OD/CM/Ops") #scandir proc + master
+    procedure_directory = os.path.normpath("ac_ops_11") #folder with fexes for initial scan
+    output_directory = os.path.normpath("ac_ops_11/data/fullpath")
 
 
     masters = Master.get_masters(scan_directory)
