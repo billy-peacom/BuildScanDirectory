@@ -1,6 +1,7 @@
 import os
 import shutil
 import re
+import csv
 class Master:
     def __init__(self, path, filename, created_by=None):
         self.path = path
@@ -65,6 +66,8 @@ class Master:
                             if dependent_filename in master_dict:
                                 master.add_dependency(master_dict[dependent_filename])
                                 #print(f"Dependancy Found: {dependent_filename}")
+                            else:
+                                print("Dependency file not in master dict")
 
     def add_created_by_proc(self, procedure_filename):
         """
@@ -116,9 +119,8 @@ class Procedure:
     def __init__(self, file_path, includes=None):
         self.file_path = file_path
         self.filename = os.path.basename(file_path).lower()    
-        self.includes = includes if includes is not None else []
+        self.includes = includes or []
         self.masters = []
-        self.includes = [] #todo
 
     def add_master(self, master):
         """
@@ -126,6 +128,11 @@ class Procedure:
         """
         if isinstance(master, Master) and master not in self.masters:
             self.masters.append(master)
+
+
+    def add_include(self, include):
+        if include not in self.includes:
+            self.includes.append(include)
 
     @staticmethod
     def get_procedures(directory, masters):
@@ -226,7 +233,69 @@ class Procedure:
 
         return len(copied_files)
     
+    @staticmethod
+    def get_output_csv(procedures, output_file="output.csv"):
+        unique_rows = set()
+
+        with open(output_file, 'w', newline='') as csvfile:
+            csvwriter = csv.writer(csvfile)
+
+            csvwriter.writerow(['Master Filename', 'Procedure File Path', 'Master File Path'])
+
+            for procedure in procedures:
+                for master in procedure.masters:
+                    row = (master.filename, procedure.file_path, master.path)
+
+                    if row not in unique_rows:
+                        unique_rows.add(row)
+                        csvwriter.writerow(row)
+
+        print(f"CSV file '{output_file}' created with unique rows.")
     
+    @staticmethod
+    def get_includes(scan_directory, procedures, procedure_directory):
+        include_regex = re.compile(r"^(?!\s*-?\s*-\*)\s*-?\s*INCLUDE\s*(?:=\s*)?(?:[A-Za-z]+:)?(?:[\/\.\w]+\/)?([\w]+\.fex)", re.IGNORECASE)
+        unique_includes = set()
+
+        for root, dirs, files in os.walk(procedure_directory):
+            for file in files:
+                if file.lower().endswith('.fex'):    
+                    procedure_path = os.path.join(root, file)
+
+                    with open(procedure_path, 'r', encoding='utf8') as f:
+                        try:
+                            for line in f:
+                                line = line.strip()
+
+                                include_match = include_regex.search(line)
+                                if include_match:
+                                    include_name = include_match.group(1).lower()
+
+                                    for procedure in procedures:
+                                        if procedure.file_path == procedure_path:
+                                            unique_includes.add(include_name)
+                                            procedure.add_include(include_name)                      
+
+                        except Exception as e:
+                            print(e)
+        for include in unique_includes:
+            found_files = []
+
+            for root, dirs, files in os.walk(scan_directory):
+                for file in files:
+                    if file.lower() == include:
+                        found_files.append(os.path.join(root, file))
+
+            if len(found_files) == 1:
+                src = found_files[0]
+                dest = os.path.join(procedure_directory, include)
+
+                os.makedirs(procedure_directory, exist_ok=True)
+                shutil.copy(src, dest)
+            elif len(found_files) > 1:
+                print(f"Error: Multiple files found for {include}: {found_files}. Skipping.\n")
+            else:
+                print(f"Warning: No file found for {include} in {scan_directory}. Skipping.\n")
 
 
   
@@ -243,16 +312,20 @@ if __name__ == "__main__":
     Master.find_dependencies(masters)
 
     #Todo - Add a function for procs to capture includes and add them to the AC_ops_11 dir  getincludes()  copy_included_procs()
+
     #Todo - Grab all master created_by_proc []
-    holds = Master.get_hold_tables(scan_directory, masters)
+    Master.get_hold_tables(scan_directory, masters)
 
 
     #Todo - move those procedures (.fex) to the procedure_directory
 
 
     procedures = Procedure.get_procedures(procedure_directory, masters)
+    Procedure.get_includes(scan_directory, procedures, procedure_directory)
 
 
     num_copied_files = Procedure.copy_used_masters(output_directory, procedures)
+
+    output_csv = Procedure.get_output_csv(procedures)
     #Todo - Output csv : master.filename | procedure.filePath | master.path
     print(f"Total number of master files copied: {num_copied_files}") 
