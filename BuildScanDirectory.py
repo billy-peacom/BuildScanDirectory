@@ -81,7 +81,7 @@ class Master:
         Master is added to the Procedure's list of masters.
         """
         
-        hold_regex = re.compile(r"on\s+(table|graph)\s+hold\s+as\s+(\S+)", re.IGNORECASE)
+        hold_regex = re.compile(r"^\s*on\s+(table|graph)\s+hold\s+as\s+(\S+)", re.IGNORECASE)
         app_hold_regex = re.compile(r"app\s+hold", re.IGNORECASE)
 
         for root, dirs, files in os.walk(directory):
@@ -97,21 +97,24 @@ class Master:
                                 i+=1
                                 line_lower = line.strip().lower()
 
-                                if app_hold_regex.search(line_lower):
-                                    hold = True
+                                #if app_hold_regex.search(line_lower):
+                                #    hold = True
 
-                                if hold:
-                                    hold_match = hold_regex.search(line_lower)
-                                    if hold_match:
-                                        hold_name = hold_match.group(2).lower()
-
-                                        for master in masters:
-                                            if master.filename == hold_name:
-                                                master.add_created_by_proc(procedure)
-                                                break   
+                                #if hold:
+                                hold_match = hold_regex.search(line_lower)
+                                if hold_match:
+                                    hold_name = hold_match.group(2).lower()
+                                    
+                                    if "/" in hold_name:
+                                        hold_name = hold_name.rsplit('/',1)[-1]
+                                        print(hold_name)
+                                    for master in masters:
+                                        if master.filename == hold_name:
+                                            master.add_created_by_proc(procedure)
+                                            break   
 
                         except Exception as e:
-                            print(e)
+                            pass#print(e)
 class Procedure:
     def __init__(self, file_path, includes=None):
         self.file_path = file_path
@@ -232,9 +235,9 @@ class Procedure:
   
 if __name__ == "__main__":
 
-    scan_directory = "OD\\CM\\Ops" #scandir proc + master
-    procedure_directory = "ac_ops_11" #folder with fexes for initial scan
-    output_directory = "ac_ops_11\\data\\fullpath"
+    scan_directory = "/home/mike/GetComplexityStats/OneDrive_1_12-8-2024/Change Management - 20240625/Ops_Analytics_20240625/"
+    procedure_directory = "/home/mike/GetComplexityStats/ac_ops_11/"
+    output_directory = "/home/mike/GetComplexityStats/ac_ops_11/data/test/"
 
 
     masters = Master.get_masters(scan_directory)
