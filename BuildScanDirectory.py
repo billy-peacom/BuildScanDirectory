@@ -107,7 +107,6 @@ class Master:
                                     
                                     if "/" in hold_name:
                                         hold_name = hold_name.rsplit('/',1)[-1]
-                                        print(hold_name)
                                     for master in masters:
                                         if master.filename == hold_name:
                                             master.add_created_by_proc(procedure)
@@ -141,6 +140,7 @@ class Procedure:
 
           
         for root, dirs, files in os.walk(directory):
+            pattern = re.compile(r"^\s*(table|graph)\s+file", re.IGNORECASE)
             for file in files:
                 if file.lower().endswith('.fex'):    
                     file_path = os.path.join(root, file)
@@ -149,11 +149,10 @@ class Procedure:
                       
                     with open(file_path, 'r', encoding='utf8') as f:
                         for line in f:
-                            line_lower = line.strip().lower()    
-                            if "graph file" in line_lower or "table file" in line_lower or "define file" in line_lower:    #todo, change to regex match
+                            line_lower = line.strip().lower()  
+                            if re.search(pattern, line_lower):  
                                   
                                 table_name = line.split()[-1].strip().lower()
-
                                   
                                 for master in masters:
                                     if master.filename == table_name:
