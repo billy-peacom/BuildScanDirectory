@@ -1,0 +1,65 @@
+-* File intl_otp_report.fex.fex
+-* Default Mode: ResourceLayout
+
+-*-INCLUDE IBFS:/WFC/Repository/SOC/Production/China_ARR_and_DEP/intl_otp_parameters.fex
+-INCLUDE ./intl_otp_parameters.fex
+
+-*EX IBFS:/WFC/Repository/SOC/Production/China_ARR_and_DEP/intl_otp_data_extract.fex
+EX ./intl_otp_data_extract.fex
+
+SET HTMLARCHIVE=ON
+COMPOUND LAYOUT PCHOLD FORMAT PDF
+UNITS=IN, $
+OBJECT=bookmarks ,$
+SECTION=section1, LAYOUT=ON, METADATA='0.5^0.5^0.25^0.5^4', MERGE=OFF, ORIENTATION=LANDSCAPE, PAGESIZE=Letter, SHOW_GLOBALFILTER=OFF, $
+PAGELAYOUT=ALL, NAME='Page Master', $
+OBJECT=STRING, NAME='text1', TEXT='<font face="VERDANA" size=8 color=#42454a><right>Page <ibi-page-number/> of <ibi-total-pages/></right></font>', POSITION=(7.167 8.000), MARKUP=ON, WRAP=ON, DIMENSION=(3.292 0.167),  METADATA='', $
+OBJECT=STRING, NAME='text4', TEXT='<font face="VERDANA" size=8 color=#42454a><left>Report Run Date: &REPORT_RUN_DATE_LABEL</left></font>', POSITION=(0.500 8.000), MARKUP=ON, WRAP=ON, DIMENSION=(3.292 0.167),  METADATA='', $
+OBJECT=STRING, NAME='text10', TEXT='<font face="VERDANA" size=12 color=#42454a>International OTP Summary</font>', POSITION=(0.500 0.500), MARKUP=ON, WRAP=ON, DIMENSION=(7.000 0.219), style=bold, METADATA='', $
+OBJECT=STRING, NAME='text11', TEXT='<font face="VERDANA" size=9 color=#42454a>YST: &YST_DATE, MTD: &MTD_BDT - &MTD_EDT, LW: &LW_BDT - &LW_EDT</font>', POSITION=(0.479 0.719), MARKUP=ON, WRAP=ON, DIMENSION=(7.000 0.167), style=bold, METADATA='', $
+COMPONENT='DfltCmpt1', POSITION=(0 0), DIMENSION=(0 0), $
+
+-SET &PG_NUM = 1;
+PAGELAYOUT=&PG_NUM, NAME='Page layout 1', text='International OTP Summary', TOC-LEVEL=1, BOTTOMMARGIN=0.5, TOPMARGIN=0.5, METADATA='BOTTOMMARGIN=0.5,TOPMARGIN=0.5,LEFTMARGIN=0,RIGHTMARGIN=0,', $
+COMPONENT='report1', TEXT='Carrier OTP Summary', TOC-LEVEL=0, POSITION=(0.500 0.900), DIMENSION=(10.000 7.332), METADATA='Z-INDEX: 100; POSITION: absolute; WIDTH: 10in; HEIGHT: 7.332in; TOP: 0.75in; LEFT: 0.5in', $
+COMPONENT='report2', TEXT='Region OTP Summary', TOC-LEVEL=0, POSITION=(0.500 3.000), DIMENSION=(10.000 7.332), METADATA='Z-INDEX: 100; POSITION: absolute; WIDTH: 10in; HEIGHT: 7.332in; TOP: 0.75in; LEFT: 0.5in', $
+
+-SET &PG_NUM = &PG_NUM + 1;
+PAGELAYOUT=&PG_NUM, NAME='Page layout 2', text='International OTP Summary', TOC-LEVEL=1, BOTTOMMARGIN=0.5, TOPMARGIN=0.5, METADATA='BOTTOMMARGIN=0.5,TOPMARGIN=0.5,LEFTMARGIN=0,RIGHTMARGIN=0,', $
+COMPONENT='report3', TEXT='Station OTP Summary', TOC-LEVEL=0, POSITION=(0.500 0.900), DIMENSION=(10.000 7.332), METADATA='Z-INDEX: 100; POSITION: absolute; WIDTH: 10in; HEIGHT: 7.332in; TOP: 0.75in; LEFT: 0.5in', $
+
+-SET &PG_NUM = &PG_NUM + 1;
+PAGELAYOUT=&PG_NUM, NAME='Page layout 3', text='Outbound Flight Details', TOC-LEVEL=1, BOTTOMMARGIN=0.25, TOPMARGIN=0.5, METADATA='BOTTOMMARGIN=0.25,TOPMARGIN=0.5,LEFTMARGIN=0,RIGHTMARGIN=0,', $
+COMPONENT='report4', TEXT='Month-to-Date Performance', TOC-LEVEL=0, POSITION=(0.500 0.750), DIMENSION=(10.000 7.247), METADATA='Z-INDEX: 113; POSITION: absolute; WIDTH: 10in; HEIGHT: 7.247in; TOP: 0.75in; LEFT: 0.5in', $
+
+END
+
+SET COMPONENT='DfltCmpt1'
+TABLE FILE SYSCOLUM
+" "
+SUM TBNAME NOPRINT
+IF READLIMIT EQ 1
+ON TABLE SET PREVIEW ON
+ON TABLE SET PAGE-NUM NOLEAD
+ON TABLE PCHOLD FORMAT PDF
+ON TABLE SET STYLE *
+END
+
+SET COMPONENT='report1'
+-*component_type report
+-INCLUDE ./intl_otp_carrier_summary.fex
+
+SET COMPONENT='report2'
+-*component_type report
+-INCLUDE ./intl_otp_region_summary.fex
+
+SET COMPONENT='report3'
+-*component_type report
+-INCLUDE ./intl_otp_station_summary.fex
+
+SET COMPONENT='report4'
+-*component_type report
+-SET &INB_OUTB_FLAG = 'OUTB';
+-INCLUDE ./intl_otp_flight_details.fex
+
+COMPOUND END

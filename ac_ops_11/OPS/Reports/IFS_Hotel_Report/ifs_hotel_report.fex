@@ -1,0 +1,177 @@
+-*** File IFS_Hotel_Report.fex-
+-*** 20171201 (Anton): parameterised for FOPS version
+-*** 20180724 (Anton): added a parameter for date range (DAILY or MONTHLY), requested by Winnie
+
+-* For FOPS VERSION: pull data from xrew (not xrewifs)
+
+SET EMPTYREPORT = ON
+SET ASNAMES = ON
+SET TITLELINE = SKIP
+SET HOLDMISS = ON
+SET NULL = ON
+SET LINES = 999999
+SET DROPBLNKLINE = ON
+SET ACROSSPRT = COMPRESS
+SET HIDENULLACRS = ON
+SET HOLDLIST = PRINTONLY
+SET NODATA = -
+SET BYDISPLAY = ON
+
+-*-SET &&path='';-MRNOEDIT
+-*INCLUDE /WFC/Repository/SOC/common_dates_ibi.fex
+-INCLUDE IBFS:/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex
+
+-DEFAULT &CREW = 'IFS'
+-*-DEFAULT &CREW = 'FOPS'
+
+-DEFAULT &DATE_RANGE = 'MONTHLY'
+-*-DEFAULT &DATE_RANGE = 'DAILY'
+
+
+
+-SET &START_DATE = IF &DATE_RANGE EQ 'MONTHLY' THEN &LM_BDT ELSE IF &DATE_RANGE EQ 'DAILY' THEN &LD_DT ELSE MISSING;
+-SET &END_DATE   = IF &DATE_RANGE EQ 'MONTHLY' THEN &LM_EDT ELSE IF &DATE_RANGE EQ 'DAILY' THEN &LD_DT ELSE MISSING;
+
+
+
+
+-*-SET &START_DATE = 20190910;
+-*-SET &END_DATE   = 20190910;
+
+-SET &DB_NAME = IF &CREW EQ 'IFS' THEN 'xcrewifs' ELSE IF &CREW EQ 'FOPS' THEN 'xcrew' ELSE 'ZZZ';
+-SET &HOTEL_RESERVATION_TABLE = IF &CREW EQ 'IFS' THEN 'xcrewifs.hotel_reservation' ELSE IF &CREW EQ 'FOPS' THEN 'xcrew.hotel_reservation' ELSE 'ZZZ';
+-SET &HOTEL_TABLE = IF &CREW EQ 'IFS' THEN 'xcrewifs.hotel' ELSE IF &CREW EQ 'FOPS' THEN 'xcrew.hotel' ELSE 'ZZZ';
+-SET &ACTUAL_ROOMS_COLUMN_NAME = IF &CREW EQ 'IFS' THEN 'ACTUAL_ROOMS_IFS' ELSE IF &CREW EQ 'FOPS' THEN 'ACTUAL_ROOMS_FOPS' ELSE 'ZZZ';
+
+-TYPE CREW:                     &CREW
+-TYPE DB_NAME:                  &DB_NAME
+-TYPE HOTEL_RESERVATION_TABLE:  &HOTEL_RESERVATION_TABLE
+-TYPE HOTEL_TABLE:              &HOTEL_TABLE
+-TYPE ACTUAL_ROOMS_COLUMN_NAME: &ACTUAL_ROOMS_COLUMN_NAME
+-TYPE
+-TYPE DATE_RANGE:               &DATE_RANGE
+-TYPE START_DATE:               &START_DATE
+-TYPE END_DATE:                 &END_DATE
+-*-EXIT
+
+
+
+
+-*from xcrewifs.hotel_reservation hr
+-*	left join xcrewifs.hotel hn on hr.hotel_id=hn.id
+
+-*from xcrew.hotel_reservation hr
+-*	left join xcrew.hotel hn on hr.hotel_id=hn.id
+
+-*from &HOTEL_RESERVATION_TABLE hr
+-*	left join &HOTEL_TABLE hn on hr.hotel_id=hn.id
+
+
+
+-*
+-*ENGINE SQLORA SET DEFAULT_CONNECTION netline
+-*SQL SQLORA PREPARE SQLOUT FOR
+-*select  *
+-*from &HOTEL_RESERVATION_TABLE hr
+-*-*	left join &HOTEL_TABLE hn on hr.hotel_id=hn.id
+-*
+-*where
+-*	hr.reservation_date between to_date('&START_DATE','YYYYMMDD') and to_date('&END_DATE','YYYYMMDD')
+-*-* add to remove blank TLC in hr (Hugh Williams 4-Apr-2018)
+-*	and length(trim(hr.tlc)) > 1
+-*-*group by hr.airport_code, hn.id, hn.name, TO_CHAR(hr.reservation_date, 'MON')
+-*-*order by hr.airport_code, hn.id
+-*
+-*END
+-*
+-*
+-*TABLE FILE SQLOUT
+-*PRINT *
+-*WHERE READLIMIT EQ 15
+-*END
+-*-EXIT
+
+
+
+
+
+-*CONFIRMATION_NO
+
+ENGINE SQLORA SET DEFAULT_CONNECTION netline
+SQL SQLORA PREPARE SQLOUT FOR
+select
+	hr.airport_code as Sta,
+	hn.id as Code,
+	hn.name as Supplier,
+	COUNT(*) as &ACTUAL_ROOMS_COLUMN_NAME,
+	SUM(CASE WHEN CONFIRMATION_NO = 'UNABLE-TO-CANCEL' THEN 1 ELSE 0 END) AS UNABLE_TO_CANCEL_COUNT,
+	SUM(CASE WHEN IS_NOHOT = 'Y' THEN 1 ELSE 0 END) AS NOHOT_COUNT,
+	case
+	  when '&START_DATE' = '&END_DATE'
+	    then '&START_DATE'
+	  else TO_CHAR(hr.reservation_date, 'MON')
+	end as Date_Range
+
+from &HOTEL_RESERVATION_TABLE hr
+	left join &HOTEL_TABLE hn on hr.hotel_id=hn.id
+
+where
+	hr.reservation_date between to_date('&START_DATE','YYYYMMDD') and to_date('&END_DATE','YYYYMMDD')
+-* add to remove blank TLC in hr (Hugh Williams 4-Apr-2018)
+	and length(trim(hr.tlc)) > 1
+group by hr.airport_code, hn.id, hn.name, TO_CHAR(hr.reservation_date, 'MON')
+-*order by hr.airport_code, hn.id
+
+END
+
+
+TABLE FILE SQLOUT
+PRINT
+	&ACTUAL_ROOMS_COLUMN_NAME/I11
+	UNABLE_TO_CANCEL_COUNT/I11
+	NOHOT_COUNT/I11
+
+BY DATE_RANGE
+BY STA
+BY CODE
+BY SUPPLIER
+
+ON TABLE SET PAGE-NUM NOLEAD
+ON TABLE NOTOTAL
+
+ON TABLE PCHOLD FORMAT EXL07
+
+ON TABLE SET HTMLCSS ON
+ON TABLE SET STYLE *
+-*     INCLUDE = /WFC/Repository/SOC/endeflt.sty,
+	INCLUDE = IBFS:/EDA/EDASERVE/ops_analytics/styles/endeflt.sty,
+$
+TYPE=REPORT,
+     GRAPHCOLOR='GREEN',
+$
+TYPE=REPORT,
+     OBJECT=MENU,
+     COLOR='WHITE',
+     HOVER-COLOR=RGB(66 70 73),
+     BACKCOLOR=RGB(102 102 102),
+     HOVER-BACKCOLOR=RGB(218 225 232),
+     BORDER-COLOR='WHITE',
+$
+TYPE=REPORT,
+     OBJECT=STATUS-AREA,
+     COLOR='WHITE',
+     BACKCOLOR=RGB(102 102 102),
+$
+TYPE=REPORT,
+     OBJECT=CURRENT-ROW,
+     HOVER-BACKCOLOR=RGB(218 225 232),
+     BACKCOLOR=RGB(200 200 200),
+$
+TYPE=REPORT,
+     OBJECT=CALC-AREA,
+     COLOR='WHITE',
+     BACKCOLOR=RGB(102 102 102),
+$
+ENDSTYLE
+END
+
