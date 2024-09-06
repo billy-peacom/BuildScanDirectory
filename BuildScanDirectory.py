@@ -374,7 +374,7 @@ if __name__ == "__main__":
     #Todo - Add a function for procs to capture includes and add them to the AC_ops_11 dir  getincludes()  copy_included_procs()
 
     #Todo - Grab all master created_by_proc []
-    # Master.get_hold_tables(scan_directory, masters)
+    Master.get_hold_tables(scan_directory, masters)
 
 
     includes = Procedure.get_includes(scan_directory)
@@ -386,6 +386,6 @@ if __name__ == "__main__":
 
     num_copied_files = Procedure.copy_used_masters(output_directory, procedures, includes)
 
-    # output_csv = Procedure.get_output_csv(procedures)
+    output_csv = Procedure.get_output_csv(procedures)
     #Todo - Output csv : master.filename | procedure.filePath | master.path
-    # print(f"Total number of master files copied: {num_copied_files}") 
+    print(f"Total number of master files copied: {num_copied_files}") 

@@ -6,6 +6,14 @@ ftw_aircraft_info,ac_ops_11\ftw_weekly_netline_extract.fex,OD\CM\Ops\EDA\EDASERV
 intl_otp_hold_all,ac_ops_11\intl_otp_carrier_summary.fex,OD\CM\Ops\EDA\EDASERVE\ops_analytics\data\hold\ops\intl_otp_hold_all.mas
 intl_otp_hold_all,ac_ops_11\intl_otp_region_summary.fex,OD\CM\Ops\EDA\EDASERVE\ops_analytics\data\hold\ops\intl_otp_hold_all.mas
 intl_otp_hold_all,ac_ops_11\intl_otp_station_summary.fex,OD\CM\Ops\EDA\EDASERVE\ops_analytics\data\hold\ops\intl_otp_hold_all.mas
+ftw_estmtd_bags,ac_ops_11\data\fullpath\ftw_weekly_netline_extract.fex,OD\CM\Ops\EDA\EDASERVE\ops_analytics\data\master\ops\ftw_estmtd_bags.mas
+ftw_wab_pax_wts,ac_ops_11\data\fullpath\ftw_weekly_netline_extract.fex,OD\CM\Ops\EDA\EDASERVE\ops_analytics\data\master\ops\ftw_wab_pax_wts.mas
+ftw_wab_bag_wts,ac_ops_11\data\fullpath\ftw_weekly_netline_extract.fex,OD\CM\Ops\EDA\EDASERVE\ops_analytics\data\master\ops\ftw_wab_bag_wts.mas
+ftw_aircraft_info,ac_ops_11\data\fullpath\ftw_weekly_netline_extract.fex,OD\CM\Ops\EDA\EDASERVE\ops_analytics\data\master\ops\ftw_aircraft_info.mas
+intl_otp_hold_all,ac_ops_11\data\fullpath\intl_otp_carrier_summary.fex,OD\CM\Ops\EDA\EDASERVE\ops_analytics\data\hold\ops\intl_otp_hold_all.mas
+leg_flown,ac_ops_11\data\fullpath\intl_otp_flight_details.fex,OD\CM\Ops\EDA\EDASERVE\ops_analytics\data\master\ops\leg_flown.mas
+intl_otp_hold_all,ac_ops_11\data\fullpath\intl_otp_region_summary.fex,OD\CM\Ops\EDA\EDASERVE\ops_analytics\data\hold\ops\intl_otp_hold_all.mas
+intl_otp_hold_all,ac_ops_11\data\fullpath\intl_otp_station_summary.fex,OD\CM\Ops\EDA\EDASERVE\ops_analytics\data\hold\ops\intl_otp_hold_all.mas
 ref_oprn_flight_range,ac_ops_11\data\fullpath\holds\bi_tool_dimensions_load.fex,OD\CM\Ops\EDA\EDASERVE\ops_analytics\data\master\ops\ref_oprn_flight_range.mas
 td_cancel_code_master,ac_ops_11\data\fullpath\holds\bi_tool_dimensions_load.fex,OD\CM\Ops\EDA\EDASERVE\ops_analytics\data\master\ops\td_cancel_code_master.mas
 delay_code_master,ac_ops_11\data\fullpath\holds\bi_tool_dimensions_load.fex,OD\CM\Ops\EDA\EDASERVE\ops_analytics\data\master\ops\delay_code_master.mas
