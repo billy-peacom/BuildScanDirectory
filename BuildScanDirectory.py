@@ -30,21 +30,25 @@ class Master:
                 if file.lower().endswith('.mas'):    
                     file_path = os.path.join(root, file)
 
+                    lines = _read_file_lines(file_path)
                       
-                    master_obj = None
-                    with open(file_path, 'r') as f:
-                        for line in f:
-                            line_lower = line.strip().lower()
-                            if line_lower.startswith("filename="):
-                                  
-                                filename = line.split('=')[1].split(',')[0].strip().lower()
-                                master_obj = Master(path=file_path, filename=filename)
-                                break    
+                    for line in lines:
+                        filename = Master.extract_filename(line)
 
-                    if master_obj:
-                        masters.append(master_obj)
+                        if filename:
+                            master_obj = Master(path=file_path, filename=filename)   
+                            masters.append(master_obj)
+                            break
 
         return masters
+
+    @staticmethod
+    def extract_filename(line):
+        match = re.match(r'^filename\s*=\s*([^,\s]+)', line, re.IGNORECASE)
+        if match:
+            return match.group(1)
+        return None
+
 
     @staticmethod
     def find_dependencies(masters):
@@ -54,20 +58,18 @@ class Master:
         master_dict = {master.filename: master for master in masters}    
 
         for master in masters:
-            #print(f"Master: {master.filename}" )
-            with open(master.path, 'r') as f:
-                for line in f:
-                    line_lower = line.strip().lower()
-                    if "crfile=" in line_lower:
-                        crfile_parts = line_lower.split('crfile=')
-                        if len(crfile_parts) > 1:
-                            crfile_path = crfile_parts[1].split(',')[0].strip()
-                            dependent_filename = os.path.basename(crfile_path).split('.')[0].lower()
-                            if dependent_filename in master_dict:
-                                master.add_dependency(master_dict[dependent_filename])
-                                #print(f"Dependancy Found: {dependent_filename}")
-                            else:
-                                print("Dependency file not in master dict")
+            lines = _read_file_lines(master.path)
+            for line in lines:
+                line_lower = line.strip().lower()
+                if "crfile=" in line_lower:
+                    crfile_parts = line_lower.split('crfile=')
+                    if len(crfile_parts) > 1:
+                        crfile_path = crfile_parts[1].split(',')[0].strip()
+                        dependent_filename = os.path.basename(crfile_path).split('.')[0].lower()
+                        if dependent_filename in master_dict:
+                            master.add_dependency(master_dict[dependent_filename])
+                        else:
+                            print("Dependency file not in master dict")
 
     def add_created_by_proc(self, procedure_filename):
         """
@@ -85,36 +87,27 @@ class Master:
         """
         
         hold_regex = re.compile(r"on\s+(table|graph)\s+hold\s+as\s+(\S+)", re.IGNORECASE)
-        app_hold_regex = re.compile(r"app\s+hold", re.IGNORECASE)
 
         for root, dirs, files in os.walk(directory):
             for file in files:
                 if file.lower().endswith('.fex'):    
                     file_path = os.path.join(root, file)
                     procedure = Procedure(file_path=file_path)
-                    hold = False
-                    i = 1
-                    with open(file_path, 'r', encoding='utf8') as f:
-                        try:
-                            for line in f:
-                                i+=1
-                                line_lower = line.strip().lower()
 
-                                if app_hold_regex.search(line_lower):
-                                    hold = True
+                    lines = _read_file_lines(file_path)
+                    for line in lines:
+                        hold_match = hold_regex.search(line)
+                        if hold_match:
+                            hold_name = hold_match.group(2).lower()
+                            Master._match_master_to_hold(hold_name, masters, procedure)
+    
+    @staticmethod
+    def _match_master_to_hold(hold_name, masters, procedure):
+        for master in masters:
+            if master.filename == hold_name:
+                master.add_created_by_proc(procedure)
+                break
 
-                                if hold:
-                                    hold_match = hold_regex.search(line_lower)
-                                    if hold_match:
-                                        hold_name = hold_match.group(2).lower()
-
-                                        for master in masters:
-                                            if master.filename == hold_name:
-                                                master.add_created_by_proc(procedure)
-                                                break   
-
-                        except Exception as e:
-                            print(e)
 class Procedure:
     def __init__(self, file_path, includes=None, includes_key=None):
         self.file_path = os.path.normpath(file_path)  
@@ -166,19 +159,19 @@ class Procedure:
 
                     procedure = Procedure(file_path=file_path, includes=includes, includes_key=includes_key)
 
+                    lines = _read_file_lines(file_path)
                       
-                    with open(file_path, 'r', encoding='utf8') as f:
-                        for line in f:
-                            line_lower = line.strip().lower()    
-                            if "graph file" in line_lower or "table file" in line_lower or "define file" in line_lower:    #todo, change to regex match
-                                  
-                                table_name = line.split()[-1].strip().lower()
+                    for line in lines:
+                        line_lower = line.strip().lower()    
+                        if "graph file" in line_lower or "table file" in line_lower or "define file" in line_lower:    #todo, change to regex match
+                                
+                            table_name = line.split()[-1].strip().lower()
 
-                                  
-                                for master in masters:
-                                    if master.filename == table_name:
-                                        procedure.add_master(master)
-                                        break    
+                                
+                            for master in masters:
+                                if master.filename == table_name:
+                                    procedure.add_master(master)
+                                    break    
 
                     procedures.append(procedure)
 
@@ -325,25 +318,25 @@ class Procedure:
                 if file.lower().endswith('.fex'):    
                     procedure_path = os.path.normpath(os.path.join(root, file))
                     found_includes = []
-                    try:
-                        with open(procedure_path, 'r', encoding='utf8') as f:
-                                for line in f:
-                                    line = line.strip()
 
-                                    include_match = include_regex.search(line)
-                                    if include_match:
-                                        include_name = include_match.group(1).lower()
+                    lines = _read_file_lines(procedure_path)
 
-                                        if include_name.startswith("."):
-                                            include_name = os.path.normpath(os.path.join(root, include_name))
-                                        else:
-                                            include_name = f"{scan_directory}\\{include_name}"
-                                            include_name = os.path.normpath(include_name)
+                    for line in lines:
+                        line = line.strip()
 
-                                        found_includes.append(include_name)
+                        include_match = include_regex.search(line)
+                        if include_match:
+                            include_name = include_match.group(1).lower()
 
-                    except Exception as e:
-                        print(e)
+                            if include_name.startswith("."):
+                                include_name = os.path.normpath(os.path.join(root, include_name))
+                            else:
+                                include_name = f"{scan_directory}\\{include_name}"
+                                include_name = os.path.normpath(include_name)
+
+                            found_includes.append(include_name)
+
+
 
                     if found_includes and procedure_path not in include_dictionary:
                         include_dictionary[procedure_path] = found_includes
@@ -356,7 +349,13 @@ class Procedure:
 
         return include_dictionary
 
-
+def _read_file_lines(file_path):
+    try:
+        with open(file_path, 'r', encoding='utf8') as f:
+            return [line.strip().lower() for line in f]
+    except Exception as e:
+        print(f"Error reading {file_path}: {e}")
+        return []
 
   
 if __name__ == "__main__":
