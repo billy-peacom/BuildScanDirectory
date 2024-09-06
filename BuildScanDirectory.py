@@ -8,7 +8,8 @@ class Master:
         self.filename = filename.lower()    
         self.created_by = created_by
         self.dependencies = []    
-        self.created_by_proc = [] #todo
+        self.created_by_proc = []
+
     def add_dependency(self, master):
         """
         Adds a Master object as a dependency to this Master.
@@ -23,13 +24,11 @@ class Master:
         and returns a list of Master objects.
         """
         masters = []
-
           
         for root, dirs, files in os.walk(directory):
             for file in files:
                 if file.lower().endswith('.mas'):    
                     file_path = os.path.join(root, file)
-
                     lines = _read_file_lines(file_path)
                       
                     for line in lines:
@@ -60,9 +59,9 @@ class Master:
         for master in masters:
             lines = _read_file_lines(master.path)
             for line in lines:
-                line_lower = line.strip().lower()
-                if "crfile=" in line_lower:
-                    crfile_parts = line_lower.split('crfile=')
+                Master._extract_and_add_dependency(line, master, master_dict)
+                if "crfile=" in line:
+                    crfile_parts = line.split('crfile=')
                     if len(crfile_parts) > 1:
                         crfile_path = crfile_parts[1].split(',')[0].strip()
                         dependent_filename = os.path.basename(crfile_path).split('.')[0].lower()
@@ -70,6 +69,19 @@ class Master:
                             master.add_dependency(master_dict[dependent_filename])
                         else:
                             print("Dependency file not in master dict")
+
+    @staticmethod
+    def _extract_and_add_dependency(line, master, master_dict):
+        crfile_regex = re.compile(r'crfile\s*=\s*([^,\s]+)', re.IGNORECASE)
+
+        match = crfile_regex.search(line)
+        if match:
+            crfile_path = match.group(1).strip()
+            dependent_filename = os.path.basename(crfile_path).split('.')[0].lower()
+            if dependent_filename in master_dict:
+                master.add_dependency(master_dict[dependent_filename])
+
+
 
     def add_created_by_proc(self, procedure_filename):
         """
