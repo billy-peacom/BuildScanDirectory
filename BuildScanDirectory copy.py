@@ -85,7 +85,7 @@ class Master:
         """
         
         hold_regex = re.compile(r"^\s*on\s+(table|graph)\s+hold\s+as\s+(\S+)", re.IGNORECASE)
-        app_hold_regex = re.compile(r"app\s+hold", re.IGNORECASE)
+        app_hold_regex = re.compile(r"^\s*app\s+", re.IGNORECASE)
 
         for root, dirs, files in os.walk(directory):
             for file in files:
@@ -100,11 +100,11 @@ class Master:
                                 i+=1
                                 line_lower = line.strip().lower()
 
-                                #if app_hold_regex.search(line_lower):
-                                #    hold = True
+                                if app_hold_regex.search(line_lower):
+                                    hold = True
 
-                                #if hold:
-                                hold_match = hold_regex.search(line_lower)
+                                if hold:
+                                    hold_match = hold_regex.search(line_lower)
                                 if hold_match:
                                     hold_name = hold_match.group(2).lower()
                                     
@@ -316,12 +316,48 @@ class MasterCentricVisualization:
             G.add_edge(master.filename, procedure.filename, label='used in', color='green')
 
         # Save the graph as an image
-        output_image = os.path.join(output_dir, f"{master.filename}_dependency.png")
+        output_image = os.path.join(output_dir, f"{master.filename}_dependency.svg")
+        G.layout(prog='dot')
+        G.draw(output_image)
+    def create_single_report_image(reportName, proceduire, output_dir='report_dependency_images'):
+        """
+        Creates a flowchart-style visualization for a single master and its dependencies, 
+        created_by_procs, and using procedures.
+        """
+        # Create the output directory if it doesn't exist
+        os.makedirs(output_dir, exist_ok=True)
+
+        # Initialize a directed graph for the master dependency
+        G = pgv.AGraph(directed=True)
+
+        
+        # Add the master as the central node
+        G.add_node(master.filename, label=master.filename, shape='box', style='filled', fillcolor='yellow', group='center')
+
+        # Add dependencies (Masters this master depends on) on the left
+        for dependency in master.dependencies:
+            G.add_node(dependency.filename, label=dependency.filename, shape='box', style='filled', fillcolor='orange', group='left')
+            G.add_edge(dependency.filename, master.filename, label='depends on', color='orange')
+            for dependency2nd in dependency.dependencies:
+                G.add_node(dependency2nd.filename, label=dependency2nd.filename, shape='box', style='filled', fillcolor='orange', group='left')
+                G.add_edge(dependency2nd.filename, dependency.filename, label='depends on', color='orange')
+        # Add the procedures that created this master (above the master)
+        for proc in master.created_by_proc:
+            G.add_node(proc.filename, label=proc.filename, shape='box', style='filled', fillcolor='lightblue', group='top')
+            G.add_edge(proc.filename, master.filename, label='created', color='blue')
+
+        # Add the procedures that use this master (on the right)
+        for procedure in Procedure.get_procedures_using_master(master):
+            G.add_node(procedure.filename, label=procedure.filename, shape='box', style='filled', fillcolor='lightgreen', group='right')
+            G.add_edge(master.filename, procedure.filename, label='used in', color='green')
+
+        # Save the graph as an image
+        output_image = os.path.join(output_dir, f"{master.filename}_dependency.svg")
         G.layout(prog='dot')
         G.draw(output_image)
 
     @staticmethod
-    def visualize_each_master(masters, output_dir='master_dependency_images'):
+    def visualize_each_master(masters, output_dir='master_dependency_images_fulltest'):
         """
         Creates a separate flowchart image for each master and its dependencies, 
         created_by_procs, and using procedures.
@@ -329,13 +365,27 @@ class MasterCentricVisualization:
         # Loop through each master and create a separate image
         for master in masters:
             MasterCentricVisualization.create_single_master_image(master, output_dir)
+    def load_report_mapping(report_mapping_file):
+        """
+        Loads the report mapping from a CSV file with two columns: Report Name, ProcedurePath.
+        """
+        report_mapping = {}
+        with open(report_mapping_file, mode='r') as csvfile:
+            reader = csv.reader(csvfile)
+            for row in reader:
+                if len(row) == 2:
+                    report_name, procedure_path = row
+                    if procedure_path not in report_mapping:
+                        report_mapping[procedure_path] = []
+                    report_mapping[procedure_path].append(report_name)
+        return report_mapping
 
 # Example Usage:
 
 if __name__ == "__main__":
-    scan_directory = "/home/mike/GetComplexityStats/ac_ops_11/"
+    scan_directory = "/home/mike/GetComplexityStats/OneDrive_1_12-8-2024/Change Management - 20240625/Ops_Analytics_20240625/"
     procedure_directory = "/home/mike/GetComplexityStats/ac_ops_11/"
-    output_directory = "/home/mike/GetComplexityStats/ac_ops_11/Dependencies"
+    output_directory = "/home/mike/GetComplexityStats/testfullscan/ac_ops_11/Dependencies"
 
     # Gather masters and procedures as in your current code
     masters = Master.get_masters(scan_directory)
