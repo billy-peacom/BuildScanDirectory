@@ -25,7 +25,7 @@ class Master:
         """
         masters = []
           
-        for root, dirs, files in os.walk(directory):
+        for root, _, files in os.walk(directory):
             for file in files:
                 if file.lower().endswith('.mas'):    
                     file_path = os.path.join(root, file)
@@ -60,15 +60,7 @@ class Master:
             lines = _read_file_lines(master.path)
             for line in lines:
                 Master._extract_and_add_dependency(line, master, master_dict)
-                if "crfile=" in line:
-                    crfile_parts = line.split('crfile=')
-                    if len(crfile_parts) > 1:
-                        crfile_path = crfile_parts[1].split(',')[0].strip()
-                        dependent_filename = os.path.basename(crfile_path).split('.')[0].lower()
-                        if dependent_filename in master_dict:
-                            master.add_dependency(master_dict[dependent_filename])
-                        else:
-                            print("Dependency file not in master dict")
+                        
 
     @staticmethod
     def _extract_and_add_dependency(line, master, master_dict):
@@ -80,7 +72,8 @@ class Master:
             dependent_filename = os.path.basename(crfile_path).split('.')[0].lower()
             if dependent_filename in master_dict:
                 master.add_dependency(master_dict[dependent_filename])
-
+            else:
+                print("Dependency file not in master dict")
 
 
     def add_created_by_proc(self, procedure_filename):
@@ -100,7 +93,7 @@ class Master:
         
         hold_regex = re.compile(r"on\s+(table|graph)\s+hold\s+as\s+(\S+)", re.IGNORECASE)
 
-        for root, dirs, files in os.walk(directory):
+        for root, _, files in os.walk(directory):
             for file in files:
                 if file.lower().endswith('.fex'):    
                     file_path = os.path.join(root, file)
@@ -150,45 +143,47 @@ class Procedure:
         procedures = []
 
           
-        for root, dirs, files in os.walk(directory):
+        for root, _, files in os.walk(directory):
             for file in files:
                 if file.lower().endswith('.fex'):    
-                    file_path = os.path.normpath(os.path.join(root, file))
-
-                    relative_path = os.path.relpath(file_path, directory)
-                    file_name = os.path.basename(relative_path)
-                    parent_folder = os.path.basename(os.path.dirname(relative_path))
-                    search_path = os.path.normpath(os.path.join(parent_folder, file_name))
-
-
-                    possible_keys = [key for key in all_includes if search_path in key]
-
-                    includes_key = possible_keys[0] if len(possible_keys) == 1 else None
-                    includes = all_includes.get(includes_key, []) if len(possible_keys) == 1 else []
-                    if len(possible_keys) > 1:
-                        print(f"Searching possible keys resulted in more than 1 match.\n Procedure: {file_path}\nSearch term {search_path}:\n\t{possible_keys}\n")
-
-
-                    procedure = Procedure(file_path=file_path, includes=includes, includes_key=includes_key)
-
-                    lines = _read_file_lines(file_path)
-                      
-                    for line in lines:
-                        line_lower = line.strip().lower()    
-                        if "graph file" in line_lower or "table file" in line_lower or "define file" in line_lower:    #todo, change to regex match
-                                
-                            table_name = line.split()[-1].strip().lower()
-
-                                
-                            for master in masters:
-                                if master.filename == table_name:
-                                    procedure.add_master(master)
-                                    break    
-
+                    procedure = Procedure._process_fex_file(root, file, directory, masters, all_includes)
                     procedures.append(procedure)
 
         return procedures
 
+    @staticmethod
+    def _process_fex_file(root, file, directory, masters, all_includes):
+        file_path = os.path.normpath(os.path.join(root, file))
+        search_path = Procedure._build_search_path(file_path, directory)
+        includes_key, includes = Procedure._get_includes_key(search_path, all_includes)
+        procedure = Procedure(file_path=file_path, includes=includes, includes_key=includes_key)
+        lines = _read_file_lines(file_path)
+        for line in lines:
+            if "graph file" in line or "table file" in line or "define file" in line:
+                table_name = line.split()[-1].strip().lower()
+                Procedure._match_table_to_master(table_name, procedure, masters)
+        return procedure
+
+    @staticmethod
+    def _build_search_path(file_path, directory):
+        relative_path = os.path.relpath(file_path, directory)
+        file_name = os.path.basename(relative_path)
+        parent_folder = os.path.basename(os.path.dirname(relative_path))
+        return os.path.normpath(os.path.join(parent_folder, file_name))
+
+    @staticmethod
+    def _get_includes_key(search_path, all_includes):
+        possible_keys = [key for key in all_includes if search_path in key]
+        includes_key = possible_keys[0] if len(possible_keys) == 1 else None
+        includes = all_includes.get(includes_key, []) if includes_key else []
+        return includes_key, includes
+
+    @staticmethod
+    def _match_table_to_master(table_name, procedure, masters):
+        for master in masters:
+            if master.filename == table_name:
+                procedure.add_master(master)
+                break
 
     @staticmethod
     def collect_all_dependencies(master, collected=None):
@@ -221,22 +216,6 @@ class Procedure:
 
         shutil.copy(src, os.path.join(dest_dir, src_filename))
 
-    # @staticmethod
-    # def __copy_parents(src, dest_folder, dir_offset=0):
-    #     src = os.path.normpath(src)
-    #     dest_folder = os.path.normpath(dest_folder)  # Normalize destination folder path
-    #     prev_offset = 0 if dir_offset == 0 else src.replace('/', '%', dir_offset - 1).find('/') + 1
-    #     post_offset = src.rfind('/')
-    #     create_folder = os.path.dirname(os.path.join(dest_folder, src))
-    #     dest_folder = os.path.join(dest_folder, os.path.basename(src))
-
-    #     src_dirs = '' if post_offset == -1 else src[prev_offset:post_offset]
-    #     src_filename = src[post_offset + 1:]
-
-    #     # os.makedirs(f'{dest_folder}/{src_dirs}', exist_ok=True)
-    #     # shutil.copy(src, f'{dest_folder}/{src_dirs}/{src_filename}')
-    #     os.makedirs(create_folder, exist_ok=True)
-    #     shutil.copy(src, f'{dest_folder}\\{src_filename}')
 
     @staticmethod
     def copy_used_masters(output_directory, procedures, all_includes):
@@ -245,39 +224,28 @@ class Procedure:
         to the specified output directory.
         """
         os.makedirs(output_directory, exist_ok=True)
-        copied_files = set()   
-        copied_holds = set() 
-            
+        copied_files = set()
+
         for procedure in procedures:
-            includes = all_includes.get(procedure.includes_key, [])
+            Procedure._copy_includes(procedure, all_includes, output_directory, copied_files)
+            Procedure._copy_masters(procedure, output_directory, copied_files)
 
-            for include in includes:
-                Procedure.copy_file_and_includes(include, output_directory, copied_files, all_includes)
+        return len(copied_files),
 
+    @staticmethod
+    def _copy_includes(procedure, all_includes, output_directory, copied_files):
+        includes = all_includes.get(procedure.includes_key, [])
+        for include in includes:
+            Procedure.copy_file_and_includes(include, output_directory, copied_files, all_includes)
 
-            for master in procedure.masters:
-                all_masters = Procedure.collect_all_dependencies(master)
-
-                for m in all_masters:
-                    for created_by in m.created_by_proc:
-                        if created_by.file_path not in copied_holds:
-                            os.makedirs(f'{output_directory}\\holds', exist_ok=True)
-                            shutil.copy(created_by.file_path, f"{output_directory}\\holds\\{created_by.filename}") 
-                            copied_holds.add(created_by.file_path)
-                    if m.path not in copied_files:
-                        Procedure.__copy_parents(m.path,output_directory)
-                        pre, ext = os.path.splitext(m.path)
-                        try:
-                            Procedure.__copy_parents(pre + ".acx",output_directory)
-                        except:
-                            pass
-                            # print(f"file not found {pre}.acx")
-                            
-                        #shutil.copy(m.path, output_directory)
-                        copied_files.add(m.path)
-                        #print(f"Copied: {m.filename} from {m.path} to {output_directory}")
-
-        return len(copied_files)
+    @staticmethod
+    def _copy_masters(procedure, output_directory, copied_files):
+        for master in procedure.masters:
+            all_masters = Procedure.collect_all_dependencies(master)
+            for m in all_masters:
+                if m.path not in copied_files:
+                    Procedure.__copy_parents(m.path, output_directory)
+                    copied_files.add(m.path)
     
     @staticmethod
     def copy_file_and_includes(file_path, output_directory, copied_files, all_includes):
@@ -290,7 +258,6 @@ class Procedure:
         if not os.path.exists(dest_path):
             shutil.copy(file_path, dest_path)
             copied_files.add(file_path)
-            print(f"Copied {file_path} to {output_directory}")
 
         includes = all_includes.get(file_path, [])
         for include in includes:
@@ -318,9 +285,6 @@ class Procedure:
     
     @staticmethod
     def get_includes(scan_directory):
-        # search everything in scan_directory
-        # for every file that has includes
-        # append the file path and the list of includes to a dictionary
         include_dictionary = {}
 
         include_regex = re.compile(r"^(?!\s*-?\s*-\*)\s*-?\s*INCLUDE\s*(?:=\s*)?(?:[A-Za-z]+:)?([\/\.\w]+\.fex)", re.IGNORECASE)
@@ -379,24 +343,11 @@ if __name__ == "__main__":
 
     masters = Master.get_masters(scan_directory)
 
-
     Master.find_dependencies(masters)
-
-    #Todo - Add a function for procs to capture includes and add them to the AC_ops_11 dir  getincludes()  copy_included_procs()
-
-    #Todo - Grab all master created_by_proc []
     Master.get_hold_tables(scan_directory, masters)
 
-
     includes = Procedure.get_includes(scan_directory)
-    #Todo - move those procedures (.fex) to the procedure_directory
-    # print(includes)
-
     procedures = Procedure.get_procedures(procedure_directory, masters, includes)
-
-
     num_copied_files = Procedure.copy_used_masters(output_directory, procedures, includes)
-
     output_csv = Procedure.get_output_csv(procedures)
-    #Todo - Output csv : master.filename | procedure.filePath | master.path
     print(f"Total number of master files copied: {num_copied_files}") 
