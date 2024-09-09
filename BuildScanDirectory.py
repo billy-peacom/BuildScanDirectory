@@ -230,7 +230,7 @@ class Procedure:
             Procedure._copy_includes(procedure, all_includes, output_directory, copied_files)
             Procedure._copy_masters(procedure, output_directory, copied_files)
 
-        return len(copied_files),
+        return len(copied_files)
 
     @staticmethod
     def _copy_includes(procedure, all_includes, output_directory, copied_files):
