@@ -8,7 +8,7 @@ debug = False
 class Report:
     def __init__(self, file_path):
         self.file_path = os.path.normpath(file_path)
-        self.filename = os.path.basename(file_path).lower()
+        self.filename = os.path.basename(file_path)
         self.procedures = []
 
     @staticmethod
@@ -39,7 +39,6 @@ class Report:
             artifact_dict[artifact_name] = artifact_files
 
             if pd.isna(artifact_name):
-                print(f"Skipping row due to missing artifact name")
                 continue
             
 

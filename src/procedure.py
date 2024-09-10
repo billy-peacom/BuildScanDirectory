@@ -8,7 +8,7 @@ from master import Master
 class Procedure:
     def __init__(self, file_path, includes=None, includes_key=None):
         self.file_path = os.path.normpath(file_path)  
-        self.filename = os.path.basename(file_path).lower()    
+        self.filename = os.path.basename(file_path)   
         self.includes = includes or [] 
         self.masters = []
         self.includes_key = includes_key
@@ -33,7 +33,7 @@ class Procedure:
         procedures = []
         for root, _, files in os.walk(directory):
             for file in files:
-                if file.lower().endswith('.fex'):    
+                if file.endswith('.fex'):    
                     procedure = Procedure._process_fex_file(root, file, directory, masters, all_includes)
                     procedures.append(procedure)
         return procedures
@@ -47,7 +47,7 @@ class Procedure:
         lines = _read_file_lines(file_path)
         for line in lines:
             if "graph file" in line or "table file" in line or "define file" in line:
-                table_name = line.split()[-1].strip().lower()
+                table_name = line.split()[-1].strip()
                 Procedure._match_table_to_master(table_name, procedure, masters)
         return procedure
 
@@ -124,10 +124,16 @@ class Procedure:
         file_name = os.path.basename(file_path)
         dest_path = os.path.join(output_directory, file_name)
 
+        if not os.path.exists(file_path):
+            print(f"Source file not found: {file_path}")
+            return
+
+        os.makedirs(output_directory, exist_ok=True)
+
         if not os.path.exists(dest_path):
             shutil.copy(file_path, dest_path)
             copied_files.add(file_path)
-
+    
         includes = all_includes.get(file_path, [])
         for include in includes:
             if include not in copied_files:
@@ -141,7 +147,7 @@ class Procedure:
 
         for root, dirs, files in os.walk(scan_directory):
             for file in files:
-                if file.lower().endswith('.fex'):    
+                if file.endswith('.fex'):    
                     procedure_path = os.path.normpath(os.path.join(root, file))
                     found_includes = []
 
@@ -152,7 +158,7 @@ class Procedure:
 
                         include_match = include_regex.search(line)
                         if include_match:
-                            include_name = include_match.group(1).lower()
+                            include_name = include_match.group(1)
 
                             if include_name.startswith("."):
                                 include_name = os.path.normpath(os.path.join(root, include_name))

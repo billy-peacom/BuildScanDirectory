@@ -5,7 +5,7 @@ from utils import _read_file_lines
 class Master:
     def __init__(self, path, filename, created_by=None):
         self.path = os.path.normpath(path)
-        self.filename = filename.lower()     
+        self.filename = filename   
         self.created_by = created_by
         self.dependencies = []    
         self.created_by_proc = []
@@ -26,7 +26,7 @@ class Master:
         masters = []
         for root, _, files in os.walk(directory):
             for file in files:
-                if file.lower().endswith('.mas'):    
+                if file.endswith('.mas'):    
                     file_path = os.path.join(root, file)
                     lines = _read_file_lines(file_path)
                     for line in lines:
@@ -63,11 +63,11 @@ class Master:
         match = crfile_regex.search(line)
         if match:
             crfile_path = match.group(1).strip()
-            dependent_filename = os.path.basename(crfile_path).split('.')[0].lower()
+            dependent_filename = os.path.basename(crfile_path).split('.')[0]
             if dependent_filename in master_dict:
                 master.add_dependency(master_dict[dependent_filename])
             else:
-                print("Dependency file not in master dict")
+                print(f"Dependency file {dependent_filename} not in master {master.filename} dict")
 
     def add_created_by_proc(self, procedure_filename):
         """
@@ -88,14 +88,14 @@ class Master:
 
         for root, _, files in os.walk(directory):
             for file in files:
-                if file.lower().endswith('.fex'):    
+                if file.endswith('.fex'):    
                     file_path = os.path.join(root, file)
                     
                     lines = _read_file_lines(file_path)
                     for line in lines:
                         hold_match = hold_regex.search(line)
                         if hold_match:
-                            hold_name = hold_match.group(2).lower()
+                            hold_name = hold_match.group(2)
                             hold_table_data.append((file_path, hold_name))
     
         return hold_table_data
