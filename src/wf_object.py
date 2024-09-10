@@ -7,6 +7,8 @@ class Master:
         file_path = Path(file_path)  
 
         self.file_path: Path = file_path or '' # Full file path from scan directory
+        self.object_url: str = '' # base path without the scan directory (through functuion)
+        self.output_path: str = '' # remove all up to and including scan, prepend output dir (through function)
         self.access_file_path: Path = file_path.with_suffix('.acx') if file_path else '' # full file path to acx file
         self.name: str = name # maps to filename= 
         self.included_masters: List['Master'] = [] # [Master]
@@ -47,11 +49,7 @@ class Master:
 
 class Procedure:
     def __init__(self, file_path: str) -> None:
-        if is_valid_path(file_path):
-            file_path = Path(file_path)
-        else:
-            print(f'Procedure initalized with invalid path {file_path}')
-            file_path = None
+        file_path = Path(file_path)
         
         self.file_path: Path = file_path or ''# full file path from scan directory
         self.file_name: str = file_path.name if file_path else ''# filename.fex
@@ -72,10 +70,7 @@ class Procedure:
     
     @staticmethod
     def _process_procedure(file_path: str, masters: List['Master']) -> 'Procedure':
-        if is_valid_path(file_path):
-            procedure = Procedure(file_path=file_path)
-        else:
-            return None
+        procedure = Procedure(file_path=file_path) if is_valid_path(file_path) else None
         
         lines: List[str] = read_file_lines(file_path)
 
@@ -83,7 +78,7 @@ class Procedure:
             table_name = Procedure._extract_table_name(line)
             if table_name and is_valid_path(file_path):
                 for master in masters:
-                    if master.name == table_name:
+                    if procedure and master.name == table_name:
                         procedure.add_master(master)
                         return procedure
         

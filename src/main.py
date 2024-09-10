@@ -5,9 +5,8 @@ from report import Report
 from typing import List
 
 if __name__ == "__main__":
-    # procedure_directory = os.path.normpath("../ac_ops_11")
     scan_directory = os.path.normpath("../OD/CM/Ops")
-    output_directory = os.path.normpath("../ac_ops_11/data/fullpath")
+    output_directory = os.path.normpath("../output")
     inventory_file = os.path.normpath("../inventory.csv")
 
     masters: List[Master] = Master.get_masters(scan_directory)
@@ -18,6 +17,4 @@ if __name__ == "__main__":
 
     master_path_dict = {str(master.file_path).lower(): master for master in masters}
     procedure_path_dict = {str(procedure.file_path).lower(): procedure for procedure in procedures}
-    master_name_dict = {master.name.lower(): master for master in masters}
-
-    print(master_path_dict)
+    master_name_dict = {master.name.lower(): master for master in masters}  
