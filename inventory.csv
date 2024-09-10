@@ -1,0 +1,235 @@
+name,procedures
+OPS BI Tool,
+Operated Flights (OPS BI Tool Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/bi_self_serve_op_flights.fex
+IRROP (OPS BI Tool Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/bi_self_serve_irrop.fex
+Real-Time (OPS BI Tool Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/bi_self_serve_realtime_cached.fex
+BI Targets (OPS BI Tool Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/bi_self_serve_targets.fex
+Connecting Flights (OPS BI Tool Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/bi_self_serve_connecting_flights.fex
+Passenger Forecast (General Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/General/self_serve_pax_fcst_NEW.fex
+AC/ACr International Summary (General Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/General/bi_int_summary_report.fex
+Jazz Report Cancel Flight Analysis (General Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/General/jazz_report_cnl_flight_analysis.fex
+Jazz Report CPA Flight Completion (General Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/General/jazz_report_cpa_flt_comp.fex
+Jazz Report Regional Station Summary (General Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/General/jazz_report_regn_stn_perf.fex
+Jazz Billing Report (General Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/General/jazz_billing_report.fex
+Connection Activity Report (General Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/General/cnx_activity_rebuild.fex
+Deice Control Records (General Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/General/deicing_daily_flt_list_stn.fex
+Scheduled Flight Summary Report (General Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/General/scheduled_flight_summary_report.fex
+Ground Handler Invoice Validation Report (General Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/General/GH_Invoice_Validation_2.fex
+Scheduled Flights Extract (General Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/General/Scheduled_Flights_Extract.fex
+Flight Delay Forecast Report (General Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/General/Flight_Delay_Forecast.fex
+OMI Summary Report (ACM Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/ACM/acm_omi_summary_report.fex
+Baggage Tag In Sequence Report (Baggage Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/Baggage/baggage_in_sequence_report.fex
+Employee Search by Day Scanner (Baggage Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/Baggage/Employee_Search_by_Day_Scanner.fex
+PAWOBs By Month (Baggage Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/Baggage/pawobs_by_month_sita.fex
+PAWOB Summary Report (Baggage Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/Baggage/pawobs_summary_report_sita.fex
+Scanner Detail by Day and Employee (Baggage Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/Baggage/Scanner_Detail_by_Day_and_Employee.fex
+FOPS Absenteeism Dashboard CTP (FOPS Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Executive_Reports/Absenteeism/Daily_OpsABS_Report.fex
+Crew Expenses PBS Freeze (FOPS Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/Flight_Ops_Reports/Monthly_Crew_Pairing/fops_crew_expenses_pbs_freeze.fex
+FOPS Crew Planning MMG/DFT (FOPS Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/FOPs_Reports/Flight_Ops_Reports/Monthly_Crew_Planning_Review_-_MMGDFT/crew_planning_composer_graph_19.fex
+BHPP and PTB (FOPS Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/FOPs_Reports/Flight_Ops_Reports/BHPP_and_PTB.fex
+Gauge Change Report (FOPS Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/Flight_Ops_Reports/Gauge_Change_Report.fex
+FOPS Blue Flights (FOPS Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/Flight_Ops_Reports/FOPS_Blue_Flights.fex
+IFS Planned Deadheads (IFS Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/IFS_Reports/ifs_dh_pbs_freeze.fex
+IFS Planned Deadheads - Rouge (IFS Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/IFS_Reports/ifs_dh_pbs_freeze_RV.fex
+Block Hour Guarantee Report (CUPE) (IFS Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/IFS_Reports/CUPE_External.fex
+Block Hour Guarantee Report (Internal) (IFS Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/IFS_Reports/CUPE_Internal.fex
+Aircom LDF Messages (Restricted Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/Restricted/Aircom_LDF_Messages.fex
+AOG Expedite Order Report (Restricted Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/Restricted/AOG_Expedite_Order_Report.fex
+Excess Bag Refund List Report (Restricted Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/Restricted/Excess_Bag_Refund_List_Report.fex
+Delay Code Changes Report (Restricted Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/Restricted/Delay_Code_Changes_Report.fex
+Block Time Report - WINTER (Restricted Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/Restricted/BR_WINTER.fex
+Block Time Report - SUMMER (Restricted Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/Restricted/BR_SUMMER.fex
+Sabre Upload File - WINTER (Restricted Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/Restricted/BR_Sabre_WINTER.fex
+Sabre Upload File - SUMMER (Restricted Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/Restricted/BR_Sabre_SUMMER.fex
+Optimal Block Time Report - WINTER (Restricted Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/Restricted/OBR_WINTER.fex
+Optimal Block Time Report - SUMMER (Restricted Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/Restricted/OBR_SUMMER.fex
+Optimal Sabre Upload File - WINTER (Restricted Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/Restricted/OBR_Sabre_WINTER.fex
+Optimal Sabre Upload File - SUMMER (Restricted Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/Restricted/OBR_Sabre_SUMMER.fex
+What is Percentile Report (Restricted Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/Restricted/OBR_percentile.fex
+Forecast Optimal Block Time Report (Restricted Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/Restricted/OBR_forecast.fex
+Optimal Block Time Report - Ad-hoc Requests (Restricted Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/Restricted/OBR_adhoc.fex
+CPCI Report (Restricted Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/Restricted/CPCI_main.fex
+ACF Engine Check Report (Restricted Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/Restricted/ACF_Reports/ACF_Engine_Check.fex
+Fuel SPIs Report (Restricted Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/Restricted/ACF_Reports/Fuel_SPIs_Report_Data.fex
+Crew Costs Report (Restricted Report - OPS BI Tool Canned Report),IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/Restricted/Crew_Costs.fex
+Real-Time Dashboard,0
+MEL Append Snapshot,/WFC/Repository/Ops_Analytics/OPS/Reports/ETLs/MEL_Append_Process/mel_append_v2.fex
+OMI 7am Snapshot,/WFC/Repository/Ops_Analytics/ACM/Reports/SR4/OMI_Reports/OMI_Snapshot_ETLs/OMI_Snapshot_Append.fex
+Premium Customer Watchlist,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Customer_Reports/VIP_Alert_by_Aeroplane/vip_alert_by_aeroplane.fex
+PAL CPA D0 & CF Reports (Daily),IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/OTP_Reports/PAL_CPA_OTP_Report/PAL_CPA_OTP_Report.fex
+PAL CPA D0 & CF Reports (Weekly),IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/OTP_Reports/PAL_CPA_OTP_Report/PAL_CPA_OTP_Report.fex
+PAL CPA D0 & CF Reports (Monthly),IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/OTP_Reports/PAL_CPA_OTP_Report/PAL_CPA_OTP_Report.fex
+ATPDR PED Fin Swap Update,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Compliance_Reports/ATPDR_Fin_Swap_Report/ATPDR_Fin_Swap_Update.fex
+Daily Carrier OPS Summary (Remediated),IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Remediated_Reports/Daily_Carrier_OPS_Summary/Data_Extract/Ops_Summary_Data_Extract.fex
+Cargo Summary Report,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Misc_Reports/Cargo_Summary_Report/opsis_summary_report_01_data.fex
+Daily Operational Summary (Remediated),IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/oper_perf_summary_composer_daily.fex
+Weekly Operational Summary (Remediated),IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/oper_perf_summary_composer_weekly.fex
+Monthly Operational Summary (Remediated),IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/oper_perf_summary_composer_monthly.fex
+Quarterly Operational Summary,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/oper_perf_summary_composer_quarterly.fex
+All Exec Summary schedule (2pg) (Remediated),IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Remediated_Reports/All_Exec_Operations_Summary/All_Exec_Summary_Composer_2pg.fex
+OPS Summary for Yesterday,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/OTP_Reports/Daily_Yest_Report_Param/daily_yest.fex
+Daily Travel Itinerary,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Misc_Reports/FlightWatch_Reports/ftw_daily_gov_list.fex
+BI Tool Crew Pairing Data Extract,/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/Flight_Ops_Reports/Monthly_Crew_Pairing/crew_pairing_review_hold_file.fex
+BI Tool Hold Files for Monthly Crew Pairing,/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/Flight_Ops_Reports/Monthly_Crew_Pairing/crew_pairing_review_hold_file.fex
+BI Tool Metrics and Dimensions Refresh,/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/Utility_Procedures/bi_tool_dimensions_load.fex
+Daily Flight Tracking Report,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/OTP_Reports/Daily_Flight_Tracking_Report/flight_tracking_report.fex
+DX Schedule Extract,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/ETLs/DX_Schedule_Extract/DX_Schedule_Extract.fex
+Dynamic Distribution List Backup,/WFC/Repository/Ops_Analytics/OPS/Reports/ETLs/Dynamic_Distribution_List_Backup/Dynamic_Distribution_List_Backup.fex
+FOPS App Data Extract,/WFC/Repository/Ops_Analytics/OPS/Reports/ETLs/FOPS_App/FOPS_APP_Data.fex
+FOPS App Data Upload (Details),/WFC/Repository/Ops_Analytics/OPS/Reports/ETLs/FOPS_App/FOPS_APP_Data_Details.fex
+FOPS App Data Upload (Fleet),/WFC/Repository/Ops_Analytics/OPS/Reports/ETLs/FOPS_App/FOPS_APP_Data_Fleet.fex
+FOPS App Data Upload (System),/WFC/Repository/Ops_Analytics/OPS/Reports/ETLs/FOPS_App/FOPS_APP_Data_System.fex
+HZTV Dashboard Upload (NEW),/WFC/Repository/Ops_Analytics/OPS/Reports/ETLs/Portal_Upload/portal_upload_otp_stats_v3.fex
+HZTV Dashboard Upload (Station) (NEW),/WFC/Repository/Ops_Analytics/OPS/Reports/ETLs/Portal_Upload/portal_upload_stn_otp_stats_v3.fex
+Daily IFG Delay Report,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/OTP_Reports/Daily_IFG_Delay_Report/ifg_daily_delays_rep.fex
+OTP for Yesterday / Ponctualité pour hier,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/OTP_Reports/Daily_OTP_AM_Email/daily_am_email_td.fex
+Overnight Aircraft,IBFS:/WFC/Repository/Ops_Analytics/ACM/Reports/MOC/mel_acft_overnight.fex
+Daily Uncoded Flights,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/OTP_Reports/Daily_Uncoded_Flights/Daily_Uncoded_Flights.fex
+Daily VIP List (EXCEL),IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Customer_Reports/Aeroplan_Wkly_VIP_Listing/aeroplan_wkly_vip_listing.fex
+Daily VIP List (PDF),IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Customer_Reports/Aeroplan_Wkly_VIP_Listing/aeroplan_wkly_vip_listing.fex
+ACM WO Material Report,IBFS:/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_BI_Tool/ACM/ACM_WO_Material_Report.fex
+Daily 2MM Alert,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Customer_Reports/Aeroplan_Wkly_VIP_Listing/2MM_Alert.fex
+Daily Delay Code Groundhandler SLA,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/OTP_Reports/Daily_SLA_Delay_Report/sla_daily_delays_rep.fex
+Portal Upload AC,/WFC/Repository/Ops_Analytics/OPS/Reports/ETLs/Portal_Upload/portal_upload_otp_stats.fex
+IFS VER Report,"1) IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/FOPs_Reports/Flight_Ops_Reports/VER_Reports/IFS_500E_VER_data.fex
+2) IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/FOPs_Reports/Flight_Ops_Reports/VER_Reports/IFS_500E_VER_report.fex
+3) IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/FOPs_Reports/Flight_Ops_Reports/VER_Reports/IFS_500E_VER_report_PLN_ACTL.fex"
+Real Time Dashboard - Daily ETL,/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_Real-Time_Dashboard/Utility_Procedures/dash_data_ETL.fex
+Real Time Dashboard - TRAX update,/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_Real-Time_Dashboard/Utility_Procedures/dash_data_trax.fex
+Real-Time Dashboard Update,/WFC/Repository/Ops_Analytics/OPS/Applications/OPS_Real-Time_Dashboard/Utility_Procedures/dash_data_final.fex
+Workload Extract - WAB (FTP),/WFC/Repository/Ops_Analytics/OPS/Reports/ETLs/OPS_IT_-_WAB_Flight_List/workload_extract.fex
+Flight Watchlist and Flight Valuation Summary,"1) IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Misc_Reports/FlightWatch_Reports/ftw_daily_netline_extract.fex
+2) IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Misc_Reports/FlightWatch_Reports/ftw_daily_flight_list.fex
+3) IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Misc_Reports/FlightWatch_Reports/ftw_daily_flt_val.fex
+4) IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Misc_Reports/FlightWatch_Reports/ftw_daily_fqtv_se_list.fex
+5) IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Misc_Reports/FlightWatch_Reports/ftw_daily_groups_list.fex
+6) IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Misc_Reports/FlightWatch_Reports/ftw_daily_avip_list.fex
+7) IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Misc_Reports/FlightWatch_Reports/ftw_daily_wcbw_list.fex"
+Disruption Code Breakdown Report (Weekly),IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Executive_Reports/Disruption_Code_Breakdown_Report/Disruption_Code_Breakdown_Report_v3.fex
+Disruption Code Breakdown Report (Monthly),IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Executive_Reports/Disruption_Code_Breakdown_Report/Disruption_Code_Breakdown_Report_v3.fex
+Corporate Communication Summary (HTML),IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/OTP_Reports/Corp_comm_summary/corporate_comm_summary_html.fex
+Weekly Executive OPS Performance Summary (EXCEL),IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Executive_Reports/Weekly_Executive_OPS_Performance_Summary/Weekly_Executive_Composer.fex
+Weekly Operational Performance Summary,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/OTP_Reports/Weekly_ops_perf/Weekly_OPS_Compose.fex
+Casebank_AC_DELAY_roll_hist,/WFC/Repository/Ops_Analytics/OPS/Reports/Misc_Reports/Casebank/Casebank_AC_DELAY_roll_hist.fex
+Casebank_Defect_Info_roll_hist,/WFC/Repository/Ops_Analytics/OPS/Reports/Misc_Reports/Casebank/Casebank_Defect_Info_roll_hist.fex
+Casebank_Defect_Parts_roll_hist,/WFC/Repository/Ops_Analytics/OPS/Reports/Misc_Reports/Casebank/Casebank_Defect_Parts_roll_hist.fex
+Casebank_Defect_Troubleshooting_roll_hist,/WFC/Repository/Ops_Analytics/OPS/Reports/Misc_Reports/Casebank/Casebank_Defect_Troubleshooting_roll_hist.fex
+catering_fops_crew_cnt,/WFC/Repository/Ops_Analytics/OPS/Reports/Misc_Reports/Catering_Crew_Counts/fops_emp_ftp.fex
+catering_ifs_crew_cnt,/WFC/Repository/Ops_Analytics/OPS/Reports/Misc_Reports/Catering_Crew_Counts/ifs_emp_ftp.fex
+FOPS All Pilots Recency,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/FOPs_Reports/FOPS_Metrics/AllPilots_Recency.fex
+FOPS PCRR Recency Report,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/FOPs_Reports/FOPS_Metrics/Jessicas_Recency_Report.fex
+JAZZ FTP Cancelled Flights,/WFC/Repository/Ops_Analytics/OPS/Reports/ETLs/JAZZ_FTP_Cancelled_Flights/jazz_ftp_cnl_flts.fex
+JAZZ FTP Operated Flights,/WFC/Repository/Ops_Analytics/OPS/Reports/ETLs/JAZZ_FTP_Operated_Flights/jazz_ftp_operated_flts.fex
+OMI Daily 0700 Snapshot Report,IBFS:/WFC/Repository/Ops_Analytics/ACM/Reports/SR4/OMI_Reports/OMI_Daily_Snapshot_Report.fex
+OMI Daily Contribution Report,IBFS:/WFC/Repository/Ops_Analytics/ACM/Reports/SR4/OMI_Reports/OMI_Contribution_Report.fex
+ACF Contingency Fuel Stats,"1) /WFC/Repository/Ops_Analytics/OPS/Reports/Fuel_Reports/Contingency_Fuel_Stats/acf_email.fex
+2) /WFC/Repository/Ops_Analytics/OPS/Reports/Fuel_Reports/Contingency_Fuel_Stats/acf_excel.fex
+3) /WFC/Repository/Ops_Analytics/OPS/Reports/Fuel_Reports/Contingency_Fuel_Stats/acf_tab_dlmtd.fex"
+Crew Activity Pay Report (Monthly),IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/FOPs_Reports/Crew_Activity_Pay_Report/Crew_Activity_Pay_Report.fex
+AIRCOM FUEL Extract,/WFC/Repository/Ops_Analytics/OPS/Reports/ETLs/AIRCOM_ETLs/aircom_extract.fex
+AIRCOM FUEL Extract TDX,/WFC/Repository/Ops_Analytics/OPS/Reports/ETLs/AIRCOM_ETLs/aircom_extract_tdx.fex
+AIRCOM FUEL FLT LVL Extract,/WFC/Repository/Ops_Analytics/OPS/Reports/ETLs/AIRCOM_ETLs/aircom_fuel_extracts.fex
+Daily APM Reports,/WFC/Repository/Ops_Analytics/OPS/Reports/ETLs/Daily_APM_Reports/daily_cumulative_aims_msg_extract.fex
+FOPS Daily Open Pairings,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/FOPs_Reports/FOPS_Daily_Open_Pairings/fops_open_time_pairings.fex
+FOPS Daily Reserve Stats,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/FOPs_Reports/FOPS_Daily_Reserve_Stats/fops_daily_rsv_stats.fex
+FOPS Hotel Report Daily,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/IFS_Reports/IFS_Hotel_Report/ifs_hotel_report.fex
+Forecast Baggage,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Baggage_Reports/Forecast_Baggage_Daily/forecast_bags.fex
+IFS Daily Open Pairings,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/IFS_Reports/IFS_Daily_Open_Pairings/ifs_open_time_pairings.fex
+IFS Daily Reserve Stats,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/IFS_Reports/IFS_Daily_Reserve_Stats/ifs_daily_rsv_stats.fex
+IFS Hotel Report Daily,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/IFS_Reports/IFS_Hotel_Report/ifs_hotel_report.fex
+LHR Passenger Booking Report,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Station_Reports/LHR_Booking_Forecast_Report/LHR_Booking_Forecast.fex
+MSF Report,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Baggage_Reports/CBO_MSF_PROD/sita_msf.fex
+International OTP Summary,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/OTP_Reports/China_ARR_and_DEP/intl_otp_report.fex
+International OTP Summary - EXCEL,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/OTP_Reports/China_ARR_and_DEP/intl_otp_report.fex
+Daily Jetz OTP Report,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/OTP_Reports/Jetz_Daily_OTP_Report/Jetz_Daily_OTP_Report.fex
+MTC Downtime Report,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Misc_Reports/MTC_Downtime_Report/mtc_overnight_fins.fex
+Passenger Groups Report,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Customer_Reports/PAX_Groups_Report/PAX_Groups_Report.fex
+Baggage Handling Success Rate & PAWOB Weekly Report,"1) IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Baggage_Reports/Mish_Bag_Report/Mish_Bag_Report.fex
+2) IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Baggage_Reports/PAWOB_MTD_YTD/sita_PAWOB_Weekly.fex"
+Daily SSCI Acceptance Report,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Customer_Reports/PAX_CheckIn_Stats/Daily_Acceptance_Report_PAX_FLT_STD.fex
+Pilot Supervisors Utilization Report,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/FOPs_Reports/FOPS_Metrics/PilotSupervisorsUtilization.fex
+IOE Tracking Report,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/FOPs_Reports/Flight_Ops_Reports/IOE_Tracking/PQRMcode.fex
+PAWOB GH Monthly,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Baggage_Reports/PAWOB_GH_Monthly/GH_PAWOB_SITA.fex
+PAX Check-in and Bag Tag Printed,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Customer_Reports/PAX_CheckIn_Stats/Monthly_PAX_CheckIn_Stats.fex
+Prime Flight Cargo Daily Evening Report,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Misc_Reports/Prime_Flight_Cargo/PrimeFlight_Cargo.fex
+Prime Flight Cargo Daily Morning Report,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Misc_Reports/Prime_Flight_Cargo/PrimeFlight_Cargo.fex
+Rouge Notification Fin Report,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Misc_Reports/Rouge_Notification_Fin_Report/Rouge_Notification_Fin_Report.fex
+SOC WAB Workload,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/ETLs/WAB_Workload_-_Daily/SOC_WAB_Workload.fex
+USA Stations: Daily OPS Summary,"1) IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/OTP_Reports/Daily_Carrier_OPS_Summary/Data_Extract/Ops_Summary_Data_Extract.fex
+2) IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/OTP_Reports/USA_Daily_OPS_Summary/Ops_Summary_Composer.fex
+"
+RL Integrity Reports,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Baggage_Reports/RL_Integrity_Reports/sita_RL_Integrity.fex
+Monthly QK Irrop Report,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/OTP_Reports/QK_IRROP_Report/soc_irrop_report_00_compound.fex
+PAL Block Hours Report,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Misc_Reports/PAL_Block_Hours_Report/PAL_Block_Hours_Report.fex
+Baggage Handling Success Rate & PAWOB Monthly Report,"1) IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Baggage_Reports/Mish_Bag_Report/Mish_Bag_Report.fex
+2) IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Baggage_Reports/PAWOB_MTD_YTD/sita_PAWOB_Monthly.fex
+3) IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Baggage_Reports/PAWOB_MTD_YTD/sita_PAWOB_Yearly.fex"
+Monthly SSCI Acceptance by AC Destination Report,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Customer_Reports/PAX_CheckIn_Stats/Weekly_Acceptance_Report_PAX_FLT_STD.fex
+Station Gate Compliance Report,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Station_Reports/Station_Gate_Compliance/station_gating_compliance_west.fex
+Station Gate Flight Details Report,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Station_Reports/Station_Gate_Flight_Details_report/Station_Gate_Flight_Details_report.fex
+US Operations Report,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Misc_Reports/US_GECAS_Tracking/US_FIR_GRND_TIME_MERGED.fex
+US Station Delay Summary,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Station_Reports/US_Station/us_station_delay_compose.fex
+US Station Performance,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Station_Reports/US_Station/us_station_sum_monthly.fex
+AC Express Operational Summary,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/OTP_Reports/AC_Express_Operational_Summary/AC_Express_Operational_Summary.fex
+DX 90 day Compliance Report,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Misc_Reports/DX_90_day_Compliance_Report/DX_90_day_Compliance_Report.fex
+Weekly Flight Watchlist,"1) IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Misc_Reports/FlightWatch_Reports/ftw_weekly_flight_list.fex
+2) IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Misc_Reports/FlightWatch_Reports/ftw_weekly_groups_list.fex
+3) IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Misc_Reports/FlightWatch_Reports/ftw_weekly_wab_list.fex"
+FQTV Pax Counts,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Customer_Reports/FQTV_Pax_Counts/FQTV_Pax_Counts.fex
+IADP Self Notification,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Misc_Reports/IADP_Self_Notification/iadp_self_notification.fex
+MTD PAWOB CPA Jazz Report,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Compliance_Reports/CPA_Report_Monthly/SITA_mtd_PAWOB_CPA.fex
+YTZ Daily Flight Details,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Station_Reports/YTZ_Daily_Flight_Details/YTZ_Daily_Flight_Details.fex
+YUL Connecting Flights Report (Day-of),IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Station_Reports/YUL_CNX_Report/YUL_CNX_Report.fex
+YUL Connecting Flights Report(Next-Day),IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Station_Reports/YUL_CNX_Report/YUL_CNX_Report.fex
+YVR Connecting PAX Report,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Station_Reports/YVR_Connecting_PAX/YVR_Connecting_PAX.fex
+YYZ CNX PAWOB breakdown,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Baggage_Reports/YYZ_CNX_PAWOB_breakdown/yyz_cnx_pawob_breakdown_SITA.fex
+OPR Fin Changes Supplementary,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Misc_Reports/OPR_Fin_Changes_Supplementary/wor02_08_table_fin_changes.fex
+OPR Supplement Reports,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/OTP_Reports/OPR_Supplement/wor02_sup_high_impact_delays.fex
+OTP Delay Flight YUL,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/OTP_Reports/OTP_Ivy_Delay_Flight/OTP_IVY_Delay_Report_YUL.fex
+OTP Delay Flight YVR,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/OTP_Reports/OTP_Ivy_Delay_Flight/OTP_IVY_Delay_Report_YUL.fex
+Daily OTP Delay Flight YYZ,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/OTP_Reports/OTP_Ivy_Delay_Flight/OTP_Delay_Flight_Ivy_YYZ_Daily_SF.fex
+OTP Delay Flight YYZ,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/OTP_Reports/OTP_Ivy_Delay_Flight/OTP_IVY_Delay_Report_YUL.fex
+Baggage Handling Success Rate & PAWOB Weekly Report,"1)BFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Baggage_Reports/Mish_Bag_Report/Mish_Bag_Report.fex
+2) IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Baggage_Reports/PAWOB_MTD_YTD/sita_PAWOB_Weekly.fex"
+Baggage Scanning Performance - Monthly,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Baggage_Reports/Baggage_Performance_by_Station/baggage_performace_overall.fex
+BOS Inbound and Outbound Baggage Monthly Summary Report,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Baggage_Reports/Inbound_Outbound_bags_by_Station/INB_OUTB_STN.fex
+CPA Report Monthly,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Compliance_Reports/CPA_Report_Monthly/CPA_MNTHLY_REPORT.fex
+Crew Radiation Report,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/IFS_Reports/Crew_Radiation/crewfops_radiation_report.fex
+FOPS Blockoverfly Monthly Report,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/FOPs_Reports/FOPS_Blockoverfly_monthly_report/fops_blockoverfly_underfly.fex
+FOPS Hotel Report,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/IFS_Reports/IFS_Hotel_Report/ifs_hotel_report.fex
+IFS Hotel Report,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/IFS_Reports/IFS_Hotel_Report/ifs_hotel_report.fex
+Monthly MBG Report,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/FOPs_Reports/Flight_Ops_Reports/NETLINE_MBG_REPORT.fex
+FOPS Synthetics,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/FOPs_Reports/FOPS_Metrics/FOPS_Synthetics.fex
+IFS Block Time Report (Monthly),IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/IFS_Reports/IFS_Block_Time_Report/ifs_blocktime_citypair.fex
+Monthly Crew Absence Report,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/FOPs_Reports/FOPS_NLCREW_ABSCENCE_REPORT/Crew_Absence_Report.fex
+Monthly Ferry Flights Report,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/OTP_Reports/Monthly_Ferry_Flight_Report/monthly_ferry_flight_report.fex
+Monthly DH Report,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/FOPs_Reports/Monthly_DH_Report/monthly_dh_report.fex
+Weekly PAX Check-In Stats Report - Segment Based,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Customer_Reports/PAX_CheckIn_Stats/Weekly_PAX_CheckIn_Stats_v2.fex
+Weekly PAX Check-In Stats Report - Journey Based,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Customer_Reports/PAX_CheckIn_Stats/Weekly_PAX_CheckIn_Stats_v3.fex
+Weekly SSCI Acceptance Report,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Customer_Reports/PAX_CheckIn_Stats/Weekly_Acceptance_Report_PAX_FLT_STD.fex
+Netline UOC Report (Friday),IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Misc_Reports/Netline_UOC_Report/Netline_UOC.fex
+Netline UOC Report (Monday),IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Misc_Reports/Netline_UOC_Report/Netline_UOC.fex
+Weekly Cancelled Flights & Seats Comparison Report,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Executive_Reports/Weekly_CNLs_YoY_Report/Weekly_CNLs_YoY_Report_v2.fex
+Weekly Crew VO Report,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/FOPs_Reports/Crew_VO_Report/Crew_VO_Report.fex
+Weekly MTC Visits,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Misc_Reports/Weekly_MTC_Visits/Weekly_MTC_Visits.fex
+Weekly PAX CheckIn Stats Report - LHR,IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Customer_Reports/PAX_CheckIn_Stats/Weekly_PAX_CheckIn_Stats_LHR.fex
+ACM MEL Stats,/WFC/Repository/Ops_Analytics/OPS/Reports/ETLs/Portal_Upload/portal_acm_data_add.fex
+ACM OTP Stats,/WFC/Repository/Ops_Analytics/OPS/Reports/ETLs/Portal_Upload/portal_upload_stn_otp_stats_acm.fex
+Air Canada YYZ OTP - A15 & D15 (+/-),IBFS:/WFC/Repository/Ops_Analytics/OPS/Reports/Station_Reports/Air_Canada_YYZ_OTP_-_A15_D15/Air_Canada_YYZ_OTP_-_A15_and_D15.fex
+SLVW ITD YEG 24-Hour Forecast,IBFS:/WFC/Repository/Ops_Analytics/Airport/Reports/SLVW_ITD_YVR/slvwyegitd24hourforecast.fex
+SLVW ITD YHZ 24-Hour Forecast,IBFS:/WFC/Repository/Ops_Analytics/Airport/Reports/SLVW_ITD_YVR/slvwyhzitd24hourforecast.fex
+SLVW ITD YUL 24-Hour Forecast,IBFS:/WFC/Repository/Ops_Analytics/Airport/Reports/SLVW_ITD_YVR/slvwyulitd24hourforecast.fex
+SLVW ITD YVR 24-Hour Forecast WF8,IBFS:/WFC/Repository/Ops_Analytics/Airport/Reports/SLVW_ITD_YVR/slvwyvritd24hourforecast.fex
+SLVW ITD YYC 24-Hour Forecast WF8,IBFS:/WFC/Repository/Ops_Analytics/Airport/Reports/SLVW_ITD_YVR/slvwyycitd24hourforecast.fex
+SLVW ITD YYZ 24-Hour Forecast WF8,IBFS:/WFC/Repository/Ops_Analytics/Airport/Reports/SLVW_ITD_YVR/slvw_yyz_itd_24hour_forecast.fex
+MTA Daily - Eastern Stations,IBFS:/WFC/Repository/Ops_Analytics/Airport/Reports/MTA_Daily_YYZ/nick_rouge_station_delays_leg_flown1.fex
+MTA Daily - Western stations,IBFS:/WFC/Repository/Ops_Analytics/Airport/Reports/MTA_Daily_YYZ/nick_rouge_station_delays_leg_flown1.fex
+MTA Daily - Station YYZ,IBFS:/WFC/Repository/Ops_Analytics/Airport/Reports/MTA_Daily_YYZ/nick_rouge_station_delays_leg_flown1.fex
+MTA Weekly - Eastern stations,IBFS:/WFC/Repository/Ops_Analytics/Airport/Reports/MTA_Daily_YYZ/nick_rouge_station_delays_leg_flown1.fex
+MTA Weekly - Western Stations,IBFS:/WFC/Repository/Ops_Analytics/Airport/Reports/MTA_Daily_YYZ/nick_rouge_station_delays_leg_flown1.fex
+MTA Weekly - Station YYZ,IBFS:/WFC/Repository/Ops_Analytics/Airport/Reports/MTA_Daily_YYZ/nick_rouge_station_delays_leg_flown1.fex
+SPAT 2-Day YHZ,IBFS:/WFC/Repository/Ops_Analytics/Airport/Reports/SPAT_2-Day/SPAT_2day.fex
+SPAT 2-Day YOW,IBFS:/WFC/Repository/Ops_Analytics/Airport/Reports/SPAT_2-Day/SPAT_2day.fex
+SPAT 2-Day YYZ,IBFS:/WFC/Repository/Ops_Analytics/Airport/Reports/SPAT_2-Day/SPAT_2day.fex
+SEC Weekly Delays,IBFS:/WFC/Repository/Ops_Analytics/Airport/Reports/SEC_Weekly_delays/catsa_security_delays.fex
+LHR Monthly PAX check-in report WF8,IBFS:/WFC/Repository/Ops_Analytics/Airport/Reports/Salesview_Reports/LHR_CKI_billing_extract.fex
