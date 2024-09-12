@@ -1,4 +1,5 @@
 \od
-\ac_ops
 tmp*
 *\__pycache__
+\output
+pseudo*
