@@ -6,11 +6,13 @@ from utils import _read_file_lines
 class Master:
     def __init__(self, path, filename, created_by=None):
         self.path = os.path.normpath(path)
+        self.file_path = os.path.normpath(self.path)
         self.filename = filename     
         self.created_by = created_by
         self.dependencies = [] #Of type master  (self)   
         self.created_by_proc = [] #of type procedure
-
+        pre, ext = os.path.splitext(self.path)
+        self.access_path = pre + ".acx"
     def add_dependency(self, master):
         """
         Adds a Master object as a dependency to this Master.
@@ -85,28 +87,26 @@ class Master:
         Master is added to the Procedure's list of masters.
         """
         hold_regex = re.compile(r"on\s+(table|graph)\s+hold\s+as\s+(\S+)", re.IGNORECASE)
+        app_hold_regex = re.compile(r"^\s*app\s+", re.IGNORECASE)
         master_dict = {master.filename.lower(): master for master in masters}    
         #procedure_dict = {procedure.file_path: procedure for procedure in procedures}
         for procedure in procedures:            
             lines = _read_file_lines(procedure.file_path)
+            hold = False
             for line in lines:
-                hold_match = hold_regex.search(line)
-                if hold_match:
-                    hold_name = hold_match.group(2)
-                    if hold_name.lower() in master_dict:
-                        master_dict[hold_name.lower()].add_created_by_proc(procedure)
-                        print(master_dict[hold_name.lower()].path)
+                if app_hold_regex.search(line):
+                    hold = True
+                if hold:
+                    hold_match = hold_regex.search(line)
+                    if hold_match:
+                        hold_name = hold_match.group(2)
+                        if "/" in hold_name:
+                            hold_name = hold_name.rsplit('/',1)[-1]
+                        if hold_name.lower() in master_dict:
+                            master_dict[hold_name.lower()].add_created_by_proc(procedure)
+                        #print(master_dict[hold_name.lower()].path)
     
         #return hold_table_data
-
-
-    @staticmethod
-    def _match_master_to_hold(hold_name, masters, procedure):
-        for master in masters:
-            if master.filename == hold_name:
-                master.add_created_by_proc(procedure)
-                break
-
 
 class Procedure:
     def __init__(self, file_path, includes=None, includes_key=None):
@@ -115,7 +115,12 @@ class Procedure:
         self.includes = includes or [] #of type procedure
         self.masters = [] #Of type master
         self.includes_key = includes_key
-        
+        self.obj_url = None
+        self.outputs = self.get_output_format()
+        if not self.outputs:
+            self.outputs = {"N/A"}
+    def update_obj_url(self, obj_url):
+        self.obj_url = obj_url
     def add_master(self, master):
         """
         Adds a Master object to the Procedure's list of masters.
@@ -126,7 +131,34 @@ class Procedure:
     def add_include(self, include):
         if include not in self.includes:
             self.includes.append(include)
-
+    def get_output_format(self):
+        pattern = re.compile(r"\s+FORMAT\s+(\w*)", re.IGNORECASE)
+        lines = _read_file_lines(self.file_path)
+        myset = set()
+        for line in lines:
+            match = pattern.search(line)
+            if match:
+                """
+                Web: 'html','ahtml','jschart','dhtml','htmtable', 'wp'
+                Excel/csv: 'com','excel', 'exl07', 'exl2k', exl97', 'tab', 'tabt', 'comt', 'xlsx', 'lotus'
+                pdf: 'pdf', 'apdf'
+                powerpoint: 'ppt', 'pptx'
+                json/xml: 'json', 'xml'
+                image: 'svg', 'jpeg', 'gif', 'png'"""
+                if match[1] in ['html','ahtml','jschart','dhtml','htmtable', 'wp']:
+                    myset.add("Web")
+                elif match[1] in ['com','excel', 'exl07', 'exl2k', 'exl97', 'tab', 'tabt', 'comt', 'xlsx', 'lotus']:
+                    myset.add("Excel/CSV")
+                elif match[1] in ['pdf', 'apdf']:
+                    myset.add("PDF")
+                elif match[1] in ['ppt', 'pptx']:
+                    myset.add("PowerPoint")
+                elif match[1] in ['json', 'xml']:
+                    myset.add("JSON/XML")
+                elif match[1] in ['svg', 'jpeg', 'gif', 'png']:
+                    myset.add("Image")
+                #myset.add(match[1])
+        return myset
     @staticmethod
     def get_procedures(directory, masters):
         """
@@ -144,166 +176,28 @@ class Procedure:
                     procedure = Procedure(file_path=file_path)
 
                       
-                    with open(file_path, 'r', encoding='utf8') as f:
-                        for line in f:
-                            line_lower = line.strip().lower()  
-                            if re.search(pattern, line_lower):  
-                                  
-                                table_name = line.split()[-1].strip().lower()
-                                  
-                                for master in masters:
-                                    if master.filename == table_name:
-                                        #print(f"{table_name}: {procedure.filename}")
-                                        procedure.add_master(master)
-                                        break    
+                    lines = _read_file_lines(file_path)
+                    for line in lines:
+                        line_lower = line.strip().lower()  
+                        if re.search(pattern, line_lower):  
+                                
+                            table_name = line.split()[-1].strip().lower()
+                                
+                            for master in masters:
+                                if master.filename.lower() == table_name:
+                                    #print(f"{table_name}: {procedure.filename}")
+                                    procedure.add_master(master)
+                                    break    
 
                     procedures.append(procedure)
 
         return procedures
-
-    @staticmethod
-    def _process_fex_file(root, file, directory, masters):
-        file_path = os.path.normpath(os.path.join(root, file))
-        search_path = Procedure._build_search_path(file_path, directory)
-        pattern = re.compile(r"^\s*(table|graph)\s+file", re.IGNORECASE)
-        
-        #includes_key, includes = Procedure._get_includes_key(search_path, all_includes)
-        procedure = Procedure(file_path=file_path)
-        lines = _read_file_lines(file_path)
-        for line in lines:
-            if "graph file" in line or "table file" in line or "define file" in line:
-                table_name = line.split()[-1].strip()
-                Procedure._match_table_to_master(table_name, procedure, masters)
-        return procedure
-
-    @staticmethod
-    def _build_search_path(file_path, directory):
-        relative_path = os.path.relpath(file_path, directory)
-        file_name = os.path.basename(relative_path)
-        parent_folder = os.path.basename(os.path.dirname(relative_path))
-        return os.path.normpath(os.path.join(parent_folder, file_name))
-
-    @staticmethod
-    def _get_includes_key(search_path, all_includes):
-        possible_keys = [key for key in all_includes if search_path in key]
-        includes_key = possible_keys[0] if len(possible_keys) == 1 else None
-        includes = all_includes.get(includes_key, []) if includes_key else []
-        return includes_key, includes
-
-    @staticmethod
-    def _match_table_to_master(table_name, procedure, masters):
-        for master in masters:
-            if master.filename == table_name:
-                procedure.add_master(master)
-                break
-
-    @staticmethod
-    def collect_all_dependencies(master, collected=None):
-        """
-        Recursively collects all dependencies of a master.
-        """
-        if collected is None:
-            collected = set()
-        
-        if master not in collected:
-            collected.add(master)
-            for dependency in master.dependencies:
-                Procedure.collect_all_dependencies(dependency, collected)
-        
-        return collected
-
-    @staticmethod
-    def copy_used_masters(output_directory, procedures):
-        """
-        Copies all Master files associated with any Procedure, including dependencies,
-        to the specified output directory.
-        """
-        os.makedirs(output_directory, exist_ok=True)
-        copied_files = set()
-        for procedure in procedures:
-            #Procedure._copy_includes(procedure, all_includes, output_directory, copied_files)
-            Procedure._copy_masters(procedure, output_directory, copied_files)
-
-        return len(copied_files)
-    @staticmethod
-    def copy_used_masters_2(output_directory, procedures):
-        """
-        Copies all Master files associated with any Procedure, including dependencies,
-        to the specified output directory.
-        """
-        os.makedirs(output_directory, exist_ok=True)
-        copied_files = set()   
-        copied_holds = set() 
-            
-        for procedure in procedures:
-            for master in procedure.masters:
-                all_masters = Procedure.collect_all_dependencies(master)
-                #print(f"Master: {master.file_name}")
-                for m in all_masters:
-                    for created_by in m.created_by_proc:
-                        if created_by.file_path not in copied_holds:
-                            #os.makedirs(f'{output_directory}/holds', exist_ok=True)
-                            #shutil.copy(created_by.file_path, f"{output_directory}/holds/{created_by.filename}") 
-                            Procedure.__copy_parents(created_by.file_path, output_directory)
-                            copied_holds.add(created_by.file_path)
-                            
-                    if m.path not in copied_files:
-                        Procedure.__copy_parents(m.path,output_directory)
-                        pre, ext = os.path.splitext(m.path)
-                        try:
-                            Procedure.__copy_parents(pre + ".acx",output_directory)
-                        except:
-                            pass
-                            # print(f"file not found {pre}.acx")
-                            
-                        #shutil.copy(m.path, output_directory)
-                        copied_files.add(m.path)
-                        #print(f"Copied: {m.filename} from {m.path} to {output_directory}")
-
-        return len(copied_files)
-    @staticmethod
-    def _copy_includes(procedure, all_includes, output_directory, copied_files):
-        includes = all_includes.get(procedure.includes_key, [])
-        for include in includes:
-            Procedure.copy_file_and_includes(include, output_directory, copied_files, all_includes)
-
-    @staticmethod
-    def _copy_masters(procedure, output_directory, copied_files):
-        for master in procedure.masters:
-            all_masters = Procedure.collect_all_dependencies(master)
-            for m in all_masters:
-                if m.path not in copied_files:
-                    Procedure.__copy_parents(m.path, output_directory)
-                    copied_files.add(m.path)
-
-    @staticmethod
-    def copy_file_and_includes(file_path, output_directory, copied_files, all_includes):
-        if file_path in copied_files:
-            return
-        file_name = os.path.basename(file_path)
-        dest_path = os.path.join(output_directory, file_name)
-
-        if not os.path.exists(file_path):
-            print(f"Source file not found: {file_path}")
-            return
-
-        os.makedirs(output_directory, exist_ok=True)
-
-        if not os.path.exists(dest_path):
-            #shutil.copy(file_path, dest_path)
-            Procedure.__copy_parents(file_path,dest_path)
-            copied_files.add(file_path)
-
-        includes = all_includes.get(file_path, [])
-        for include in includes:
-            if include not in copied_files:
-                Procedure.copy_file_and_includes(include, output_directory, copied_files, all_includes)
- 
+    
     @staticmethod
     def get_includes_obj(procedures, scan_directory):
         proc_dict = {procedure.file_path.lower(): procedure for procedure in procedures} 
         #print(proc_dict)   
-        include_regex = re.compile(r"^(?!\s*-?\s*-\*)\s*-?\s*INCLUDE\s*(?:=\s*)?(?:[A-Za-z]+:)?([\/\.\w]+\.fex)", re.IGNORECASE)
+        include_regex = re.compile(r"^(?!\s*-?\s*-\*)\s*-?\s*(INCLUDE|EX)\s*(?:=\s*)?(?:[A-Za-z]+:)?([\/\.\w]+\.fex)", re.IGNORECASE)
         for procedure in procedures:
             lines = _read_file_lines(procedure.file_path)
 
@@ -312,122 +206,139 @@ class Procedure:
 
                 include_match = include_regex.search(line)
                 if include_match:
-                    include_name = include_match.group(1)
-
+                    include_name = include_match.group(2)
+                    
                     if include_name.startswith(".") or "/" not in include_name:
                         include_name = os.path.normpath(os.path.join(os.path.dirname(procedure.file_path), include_name))
                     else:
                         include_name = f"{scan_directory}/{include_name}"
                         include_name = os.path.normpath(include_name)
-                    #print(include_name)
+                    #print(f"{line} : {include_name}")
                     if include_name.lower() in proc_dict:
                         procedure.add_include(proc_dict[include_name.lower()])
-                    else:
-                        print(f"{procedure.filename} : Include not found for {include_name}")    
+                    
+                    #print(f"{procedure.filename} : Include not found for {include_name}")    
                     #found_includes.append(include_name)
-    @staticmethod
-    def get_includes(scan_directory):
-        include_dictionary = {}
-
-        include_regex = re.compile(r"^(?!\s*-?\s*-\*)\s*-?\s*INCLUDE\s*(?:=\s*)?(?:[A-Za-z]+:)?([\/\.\w]+\.fex)", re.IGNORECASE)
-
-        for root, dirs, files in os.walk(scan_directory):
-            for file in files:
-                if file.endswith('.fex'):    
-                    procedure_path = os.path.normpath(os.path.join(root, file))
-                    found_includes = []
-
-                    lines = _read_file_lines(procedure_path)
-
-                    for line in lines:
-                        line = line.strip()
-
-                        include_match = include_regex.search(line)
-                        if include_match:
-                            include_name = include_match.group(1)
-
-                            if include_name.startswith("."):
-                                include_name = os.path.normpath(os.path.join(root, include_name))
-                            else:
-                                include_name = f"{scan_directory}/{include_name}"
-                                include_name = os.path.normpath(include_name)
-                            #print(include_name)
-                            found_includes.append(include_name)
-
-
-
-                    if found_includes and procedure_path not in include_dictionary:
-                        include_dictionary[procedure_path] = found_includes
-                    elif found_includes and procedure_path in include_dictionary:
-                        print(f"Key {procedure_path} already exists in dictionary appending includes")
-                        for include in found_includes:
-                            if include not in include_dictionary[procedure_path]:
-                                include_dictionary[procedure_path].append(include)
-
-
-        return include_dictionary
-
-    @staticmethod
-    def get_output_csv(procedures, output_file="output.csv"):
-        unique_rows = set()
-
-        with open(output_file, 'w', newline='') as csvfile:
-            csvwriter = csv.writer(csvfile)
-
-            csvwriter.writerow(['Master Filename', 'Procedure File Path', 'Master File Path'])
-
-            for procedure in procedures:
-                for master in procedure.masters:
-                    row = (master.filename, procedure.file_path, master.path)
-
-                    if row not in unique_rows:
-                        unique_rows.add(row)
-                        csvwriter.writerow(row)
-
-        print(f"CSV file '{output_file}' created with unique rows.")
-    def copy_all_procs(procedures, output_directory):
-        for procedure in procedures:
-            Procedure.__copy_parents(procedure.file_path,output_directory)
-            for master in procedure.masters:
-                Procedure.__copy_parents(master.path,output_directory)
-                for proc in master.created_by_proc:
-                    Procedure.__copy_parents(proc.file_path,output_directory)
-
-
-    def copy_related_files(procedures, output_directory, copied_files=None):
+    
+                   
+    def copy_related_objects_recurse(wfObjects, output_directory, copied_files=None):
         if copied_files is None:
             copied_files = set()
-
         if not os.path.exists(output_directory):
             os.makedirs(output_directory)
-
-        for procedure in procedures:
-            if procedure.file_path not in copied_files:
-                Procedure.__copy_parents(procedure.file_path,output_directory)
-                #Procedure._copy_masters(procedure, output_directory, copied_files)
-                #shutil.copy(procedure.file_path, os.path.join(output_dir, procedure.filename))
-                copied_files.add(procedure.file_path)
-
-            if procedure.includes:
-                Procedure.copy_related_files(procedure.includes, output_directory, copied_files)
-
-            for master in procedure.masters:
-                if master.path not in copied_files:
-                    Procedure.__copy_parents(master.path,output_directory)
-                    #shutil.copy(master.file_path, os.path.join(output_dir, master.filename))
-                    copied_files.add(master.path)
-
-                Procedure.copy_related_files(master.created_by_proc, output_directory, copied_files)
-                #Procedure.copy_related_files(master.masters, output_directory, copied_files)
-                   
-    
-    def __copy_parents(src, dest_folder, dir_offset=8):
+        for wfObject in wfObjects:
+            if wfObject.file_path not in copied_files:
+                Procedure.__copy_parents(wfObject.file_path,output_directory)
+                copied_files.add(wfObject.file_path)   
+                if isinstance(wfObject,Master):
+                    try:
+                        Procedure.__copy_parents(wfObject.access_path, output_directory)
+                    except:
+                        pass
+                    Procedure.copy_related_objects_recurse(wfObject.created_by_proc, output_directory, copied_files)
+                    Procedure.copy_related_objects_recurse(wfObject.dependencies, output_directory, copied_files)
+                elif isinstance(wfObject, Procedure):
+                    Procedure.copy_related_objects_recurse(wfObject.includes, output_directory, copied_files)
+                    Procedure.copy_related_objects_recurse(wfObject.masters,output_directory, copied_files)
+        
+    def __copy_parents(src, dest_folder, dir_offset=10):
+        parent_folder = os.path.basename(dest_folder)
+        
         prev_offset = 0 if dir_offset == 0 else src.replace('/', '%', dir_offset - 1).find('/') + 1
         post_offset = src.rfind('/')
-
         src_dirs = '' if post_offset == -1 else src[prev_offset:post_offset]
         src_filename = src[post_offset + 1:]
 
         os.makedirs(f'{dest_folder}/{src_dirs}', exist_ok=True)
         shutil.copy(src, f'{dest_folder}/{src_dirs}/{src_filename}')  
+        return f'{parent_folder}/{dest_folder}/{src_dirs}/{src_filename}'
     
+    def copy_related_objects_iterative(wfObjects, output_directory):
+        copied_files = set()
+        to_copy = list(wfObjects)  
+
+        if not os.path.exists(output_directory):
+            os.makedirs(output_directory)
+
+        while to_copy:
+            wfObject = to_copy.pop(0) 
+
+            if wfObject.file_path not in copied_files:
+                objurl = Procedure.__copy_parents(wfObject.file_path, output_directory)[len(output_directory):]
+                copied_files.add(wfObject.file_path)      
+                if isinstance(wfObject, Master):
+                    try:
+                        Procedure.__copy_parents(wfObject.access_path, output_directory)
+                    except:
+                        pass
+                    copied_files.add(wfObject.access_path) 
+                    to_copy.extend(wfObject.created_by_proc)
+                    to_copy.extend(wfObject.dependencies)
+                elif isinstance(wfObject, Procedure):
+                    wfObject.update_obj_url(objurl)
+                    to_copy.extend(wfObject.includes)
+                    to_copy.extend(wfObject.masters)
+    def report_proc_output(reports, csv_file_path):
+
+        with open(csv_file_path, mode='w', newline='') as csv_file:
+            csv_writer = csv.writer(csv_file)
+            csv_writer.writerow(['Report Name', 'Object URL', 'Include Type', 'group_id', 'is duplicate'])
+            for report in reports:
+                to_add = [(proc, 'N') for proc in report.procedures]  
+                procs_added = set()
+                while to_add:
+                    wfObject, is_etl = to_add.pop(0)
+                    if wfObject.file_path not in procs_added:
+                        procs_added.add(wfObject.file_path)
+
+                        if isinstance(wfObject, Master):
+                            to_add.extend([(dep, 'Y') for dep in wfObject.created_by_proc])
+                            to_add.extend([(dep, 'N') for dep in wfObject.dependencies])
+                        elif isinstance(wfObject, Procedure):
+                            csv_writer.writerow([report.report_name, wfObject.obj_url, is_etl,report.group_id ,report.is_duplicate])
+                            to_add.extend([(inc, 'N') for inc in wfObject.includes])
+                            to_add.extend([(mast, 'N') for mast in wfObject.masters])
+    
+    def master_proc_output(reports, csv_file_path):
+
+        with open(csv_file_path, mode='w', newline='') as csv_file:
+            csv_writer = csv.writer(csv_file)
+            csv_writer.writerow(['Master Name', 'created by proc OBJURL'])
+            procs_added = set()
+            for report in reports:
+                to_add = [(proc, 'N', 'None') for proc in report.procedures]  
+                while to_add:
+                    wfObject, is_etl, master_name = to_add.pop(0)
+                    if wfObject.file_path not in procs_added:
+                        procs_added.add(wfObject.file_path)
+
+                        if isinstance(wfObject, Master):
+                            to_add.extend([(dep, 'Y', wfObject.filename) for dep in wfObject.created_by_proc])
+                            to_add.extend([(dep, 'N', 'None') for dep in wfObject.dependencies])
+                        elif isinstance(wfObject, Procedure):
+                            if master_name != 'None':
+                                csv_writer.writerow([master_name, wfObject.obj_url])
+                            to_add.extend([(inc, 'N', 'None') for inc in wfObject.includes])
+                            to_add.extend([(mast, 'N', 'None') for mast in wfObject.masters])
+    def proc_fmt_output(reports, csv_file_path):
+        with open(csv_file_path, mode='w', newline='') as csv_file:
+            csv_writer = csv.writer(csv_file)
+            csv_writer.writerow(['obj_url', 'output format'])
+            procs_added = set()
+            for report in reports:
+                to_add = [(proc) for proc in report.procedures]  
+                
+                while to_add:
+                    wfObject = to_add.pop(0)
+                    if wfObject.file_path not in procs_added:
+                        procs_added.add(wfObject.file_path)
+
+                        if isinstance(wfObject, Master):
+                            to_add.extend([(dep) for dep in wfObject.created_by_proc])
+                            to_add.extend([(dep) for dep in wfObject.dependencies])
+                        elif isinstance(wfObject, Procedure):
+                            for output in wfObject.outputs:
+                                csv_writer.writerow([wfObject.obj_url, output])
+                            to_add.extend([(inc) for inc in wfObject.includes])
+                            to_add.extend([(mast) for mast in wfObject.masters])
+            
