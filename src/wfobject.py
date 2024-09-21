@@ -13,6 +13,9 @@ class Master:
         self.created_by_proc = [] #of type procedure
         pre, ext = os.path.splitext(self.path)
         self.access_path = pre + ".acx"
+        self.obj_url = None
+    def update_obj_url(self, obj_url):
+        self.obj_url = obj_url
     def add_dependency(self, master):
         """
         Adds a Master object as a dependency to this Master.
@@ -104,6 +107,8 @@ class Master:
                             hold_name = hold_name.rsplit('/',1)[-1]
                         if hold_name.lower() in master_dict:
                             master_dict[hold_name.lower()].add_created_by_proc(procedure)
+                            #print(f"{hold_name}: {procedure.filename}")
+                            #procedure.update_type("ETL",hold_name.lower())
                         #print(master_dict[hold_name.lower()].path)
     
         #return hold_table_data
@@ -117,8 +122,14 @@ class Procedure:
         self.includes_key = includes_key
         self.obj_url = None
         self.outputs = self.get_output_format()
+        self.type = "Report Proc"
+        self.created_master_name = None
         if not self.outputs:
             self.outputs = {"N/A"}
+    def update_type(self, type, master_name = None):
+        self.type = type
+        if master_name:
+            self.created_master_name = master_name
     def update_obj_url(self, obj_url):
         self.obj_url = obj_url
     def add_master(self, master):
@@ -265,6 +276,7 @@ class Procedure:
 
             if wfObject.file_path not in copied_files:
                 objurl = Procedure.__copy_parents(wfObject.file_path, output_directory)[len(output_directory):]
+                wfObject.update_obj_url(objurl)
                 copied_files.add(wfObject.file_path)      
                 if isinstance(wfObject, Master):
                     try:
@@ -275,7 +287,6 @@ class Procedure:
                     to_copy.extend(wfObject.created_by_proc)
                     to_copy.extend(wfObject.dependencies)
                 elif isinstance(wfObject, Procedure):
-                    wfObject.update_obj_url(objurl)
                     to_copy.extend(wfObject.includes)
                     to_copy.extend(wfObject.masters)
     def report_proc_output(reports, csv_file_path):
@@ -305,6 +316,7 @@ class Procedure:
             csv_writer = csv.writer(csv_file)
             csv_writer.writerow(['Master Name', 'created by proc OBJURL'])
             procs_added = set()
+            masters = set()
             for report in reports:
                 to_add = [(proc, 'N', 'None') for proc in report.procedures]  
                 while to_add:
@@ -313,13 +325,18 @@ class Procedure:
                         procs_added.add(wfObject.file_path)
 
                         if isinstance(wfObject, Master):
+                            masters.add(wfObject)
                             to_add.extend([(dep, 'Y', wfObject.filename) for dep in wfObject.created_by_proc])
                             to_add.extend([(dep, 'N', 'None') for dep in wfObject.dependencies])
                         elif isinstance(wfObject, Procedure):
-                            if master_name != 'None':
-                                csv_writer.writerow([master_name, wfObject.obj_url])
-                            to_add.extend([(inc, 'N', 'None') for inc in wfObject.includes])
+                            #if wfObject.type == 'ETL':
+                            #    csv_writer.writerow([wfObject.created_master_name, wfObject.obj_url])    
                             to_add.extend([(mast, 'N', 'None') for mast in wfObject.masters])
+                            to_add.extend([(inc, 'N', 'None') for inc in wfObject.includes])
+            for master in masters:
+                for proc in master.created_by_proc:
+                    csv_writer.writerow([master.filename, proc.obj_url])
+
     def proc_fmt_output(reports, csv_file_path):
         with open(csv_file_path, mode='w', newline='') as csv_file:
             csv_writer = csv.writer(csv_file)
@@ -341,4 +358,6 @@ class Procedure:
                                 csv_writer.writerow([wfObject.obj_url, output])
                             to_add.extend([(inc) for inc in wfObject.includes])
                             to_add.extend([(mast) for mast in wfObject.masters])
+                            
+    #def procedure_master(reports, csv_file_path)
             

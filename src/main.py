@@ -43,9 +43,25 @@ if __name__ == "__main__":
     Procedure.report_proc_output(reports, "../report_proc.csv")
     Procedure.master_proc_output(reports, "../master_created_proc.csv")
     Procedure.proc_fmt_output(reports, "../Proc_Output.csv")
-    VizBuilder.generate_report_graph(reports, '../images/reports')
-    VizBuilder.generate_master_graph(reports, '../images/masters')
-    VizBuilder.generate_procedure_graph(reports, '../images/procedures')
+    for report in reports:
+        print(report.report_name)
+        for proc in report.procedures:
+            print(proc.filename)
+            for master in proc.masters:
+                print(master.filename)
+                for created_proc in master.created_by_proc:
+                    print(f"Created proc: {created_proc.filename}")
+    #for master in masters:
+    #    if master.created_by_proc:
+    #        for proc in master.created_by_proc:
+    #            print(f"{master.filename} : {proc.filename}")
+    #VizBuilder.generate_report_graph(reports, '../images/reports')
+    
+    
+            
+    #VizBuilder.generate_master_graph(reports, '../images/masters')
+    #VizBuilder.generate_procedure_graph(reports, '../images/procedures')
+    #VizBuilder.generate_report_dot(reports, "../images/reports_dot")
     #myset = set()
     #for procedure in procedures:
     #    procedure.outputs = procedure.get_output_format()

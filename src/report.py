@@ -3,7 +3,7 @@ import pandas as pd
 import shutil
 import re
 
-debug = True
+debug = False
 
 class Report:
     def __init__(self, report_name):
@@ -65,7 +65,7 @@ class Report:
             artifact_dict[artifact_name] = artifact_files
 
             if pd.isna(artifact_name):
-                print(f"Skipping row due to missing artifact name")
+                #print(f"Skipping row due to missing artifact name")
                 continue
             else:
                 curReport = Report(report_name=artifact_name)

@@ -8,7 +8,7 @@ from wfobject import Master
 from wfobject import Procedure
 from report import Report
 
-
+debug = False
 class VizBuilder:
 
     
@@ -24,12 +24,32 @@ class VizBuilder:
             valid_report_name = re.sub(r'[<>:"/\\|?*]', '_', report.report_name)
             output_image = os.path.join(output_directory, f"{valid_report_name}_dependency.svg")
             G.layout(prog='dot')
+            if debug:
+                print(f"Generating report graph: {report.report_name}")
+            
+            try:
+                G.draw(output_image)
+            except:
+                print(f"Could not draw report image for: {valid_report_name}")
+    def generate_report_dot(reports, output_directory=None):
+        
+        for report in reports:
+            os.makedirs(output_directory, exist_ok=True)
+            G = pgv.AGraph(directed=True)
+            G.graph_attr.update(Gsize='10', Gratio='1.4', overlap='false', rankdir='LR')
+            
+            #VizBuilder.graph_related_objects_dfs(report.procedures, G, report.report_name, 'white', 'bottom', 'Used by')
+            VizBuilder.graph_related_objects_recurse(report.procedures,G, parent=report.report_name, color='lightgreen', group='bottom', label='Component of Report' )
+            valid_report_name = re.sub(r'[<>:"/\\|?*]', '_', report.report_name)
+            output_image = os.path.join(output_directory, f"{valid_report_name}_dependency.dot")
+            G.layout(prog='dot')
             
             
             try:
-                G.draw(output_image).format(grandparent=os.path.dirname(os.path.dirname(__file__)),name=valid_report_name)
+                #G.draw(output_image).format(grandparent=os.path.dirname(os.path.dirname(__file__)),name=valid_report_name)
+                G.write(output_image)
             except:
-                pass
+                print(f"Could not draw report dot for: {valid_report_name}")
     def get_all_masters(reports):
         procs_added = set()
         masters = set()
@@ -84,9 +104,9 @@ class VizBuilder:
             
             
             try:
-                G.draw(output_image).format(grandparent=os.path.dirname(os.path.dirname(__file__)),name=master_name)
+                G.draw(output_image)
             except:
-                pass
+                print(f"Could not draw master image for: {master_name}")
     def generate_procedure_graph(reports, output_directory=None):
         procedures = VizBuilder.get_all_procedures(reports)
         
@@ -103,27 +123,37 @@ class VizBuilder:
             
             
             try:
-                G.draw(output_image).format(grandparent=os.path.dirname(os.path.dirname(__file__)),name=master_name)
+                G.draw(output_image)
             except:
-                pass
+                print(f"Could not draw procedure image for: {procedure_name}")
     def graph_related_objects_recurse(wfObjects,graph, accessed=None, parent=None, color=None, group=None, label=None, edge_color=None):
         if accessed is None:
             accessed = set()
         for wfObject in wfObjects:
             if wfObject.file_path not in accessed:
                 graph.add_node(wfObject.filename, label=wfObject.filename,shape='box', style='filled', fillcolor=color )
-                
+                if debug:
+                    print(f"Node Created {wfObject.filename}")
             
                 accessed.add(wfObject.file_path)   
                 if isinstance(wfObject,Master):
-                    VizBuilder.graph_related_objects_recurse(wfObject.created_by_proc, graph, accessed, wfObject.filename, color='lightblue', label='created', edge_color='darkblue' )
+                    if debug:
+                        print(f"Adding master: {wfObject.filename}")
+                    if wfObject.created_by_proc:
+                        VizBuilder.graph_related_objects_recurse(wfObject.created_by_proc, graph, accessed, wfObject.filename, color='lightblue', label='created', edge_color='darkblue' )
+                        if debug:
+                            print(f"Adding created by proc for: {wfObject.filename}")
+                    else:
+                        if debug:
+                            print(f"No created by proc for {wfObject.filename}")
                     VizBuilder.graph_related_objects_recurse(wfObject.dependencies, graph, accessed, wfObject.filename, color='orange',  label='segment of', edge_color='orange')
                 elif isinstance(wfObject, Procedure):
                     VizBuilder.graph_related_objects_recurse(wfObject.includes, graph, accessed, wfObject.filename, color='lightgreen',  label='included in' , edge_color='darkgreen')
                     VizBuilder.graph_related_objects_recurse(wfObject.masters, graph, accessed, wfObject.filename, color='yellow',  label='used in', edge_color='red')  
             if(parent):
                     graph.add_edge(wfObject.filename, parent, label=label, color='black')
-                              
+                    if debug:
+                        print(f"Adding edge from {parent} to {wfObject.filename} and label= {label}")          
     """@staticmethod
     def create_single_master_image(master, output_dir='master_dependency_images'):
         
