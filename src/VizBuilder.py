@@ -7,30 +7,10 @@ from collections import defaultdict
 from wfobject import Master
 from wfobject import Procedure
 from report import Report
+import networkx as nx
 
 debug = False
-class VizBuilder:
-
-    
-    def generate_report_graph(reports, output_directory=None):
-        
-        for report in reports:
-            os.makedirs(output_directory, exist_ok=True)
-            G = pgv.AGraph(directed=True)
-            G.graph_attr.update(Gsize='10', Gratio='1.4', overlap='false', rankdir='LR')
-            
-            #VizBuilder.graph_related_objects_dfs(report.procedures, G, report.report_name, 'white', 'bottom', 'Used by')
-            VizBuilder.graph_related_objects_recurse(report.procedures,G, parent=report.report_name, color='lightgreen', group='bottom', label='Component of Report' )
-            valid_report_name = re.sub(r'[<>:"/\\|?*]', '_', report.report_name)
-            output_image = os.path.join(output_directory, f"{valid_report_name}_dependency.svg")
-            G.layout(prog='dot')
-            if debug:
-                print(f"Generating report graph: {report.report_name}")
-            
-            try:
-                G.draw(output_image)
-            except:
-                print(f"Could not draw report image for: {valid_report_name}")
+class VizBuilder:          
     def generate_report_dot(reports, output_directory=None):
         
         for report in reports:
@@ -153,7 +133,8 @@ class VizBuilder:
             if(parent):
                     graph.add_edge(wfObject.filename, parent, label=label, color='black')
                     if debug:
-                        print(f"Adding edge from {parent} to {wfObject.filename} and label= {label}")          
+                        print(f"Adding edge from {parent} to {wfObject.filename} and label= {label}")    
+                  
     """@staticmethod
     def create_single_master_image(master, output_dir='master_dependency_images'):
         

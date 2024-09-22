@@ -30,6 +30,7 @@ class Master:
         and returns a list of Master objects.
         """
         masters = []
+        filenames = set()
         for root, _, files in os.walk(directory):
             for file in files:
                 if file.lower().endswith('.mas'):    
@@ -37,9 +38,10 @@ class Master:
                     lines = _read_file_lines(file_path)
                     for line in lines:
                         filename = Master.extract_filename(line)
-                        if filename:
+                        if filename and filename not in filenames:
                             master_obj = Master(path=file_path, filename=filename)   
                             masters.append(master_obj)
+                            filenames.add(filename)
                             break
         return masters
 
@@ -359,5 +361,28 @@ class Procedure:
                             to_add.extend([(inc) for inc in wfObject.includes])
                             to_add.extend([(mast) for mast in wfObject.masters])
                             
-    #def procedure_master(reports, csv_file_path)
+    def report_proc_master_output(reports, csv_file_path):
+        def process_procedure(proc, csv_writer, visited):
+            if proc.file_path in visited:
+                return
+            visited.add(proc.file_path)
+
+            # Write masters associated with the procedure
+            for master in proc.masters:
+                csv_writer.writerow([proc.filename, proc.obj_url, master.filename, master.obj_url])
+
+            # Recursively process dependencies (which are procedures)
+            for dep_proc in proc.includes:
+                process_procedure(dep_proc, csv_writer, visited)
+
+        # Open the CSV file and write headers
+        with open(csv_file_path, mode='w', newline='') as csv_file:
+            csv_writer = csv.writer(csv_file)
+            csv_writer.writerow(['Procedure Name', 'Procedure Path', 'Master Name', 'Master Path'])
+
+            visited = set()  # Track visited procedures to avoid infinite recursion
+            for report in reports:
+                for proc in report.procedures:
+                    process_procedure(proc, csv_writer, visited)
+        
             
