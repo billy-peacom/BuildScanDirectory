@@ -6,13 +6,15 @@ import re
 debug = False
 
 class Report:
-    def __init__(self, report_name):
+    def __init__(self, report_name, output_format = None, ac_type = None):
         #self.file_path = os.path.normpath(file_path)
         #self.filename = os.path.basename(file_path)()
         self.report_name = report_name
         self.procedures = []
         self.group_id = None
         self.is_duplicate = "N"
+        self.output_format = output_format   
+        self.ac_type = ac_type
     def add_procedure(self, procedure):
         if procedure not in self.procedures:
             self.procedures.append(procedure)
@@ -47,6 +49,7 @@ class Report:
         for _, row in inventory_df.iterrows():
             artifact_name = row['Artifact name']
             artifact_data = row['PRIMARY FEX(ES)']
+            
 
             if debug:
                 print()
@@ -92,7 +95,9 @@ class Report:
         for _, row in inventory_df.iterrows():
             artifact_name = row['Artifact name']
             artifact_data = row['PRIMARY FEX(ES)']
-
+            artifact_output = str(row['Output Format']).replace("\r", "").replace("\n", "")
+            artifact_ac_type = str(row['Artifact type (ETL-Integration/Application-Portal/Report)	']).replace("\r", "").replace("\n", "").strip()
+            
             if debug:
                 print()
                 print(f"Processing files for artifact: {artifact_name}")
@@ -106,14 +111,16 @@ class Report:
                 print(f"Artifact files: {artifact_files}")
                 print(f"Source directory: {source_directory}")
                 #print(f"Target directory: {target_directory}")
-
+            if artifact_name in artifact_dict:
+                print(f"Skipping duplicate artifact: {artifact_name}")
+                continue
             artifact_dict[artifact_name] = artifact_files
 
             if pd.isna(artifact_name):
                 print(f"Skipping row due to missing artifact name")
                 continue
             else:
-                curReport = Report(report_name=artifact_name)
+                curReport = Report(report_name=artifact_name, output_format = artifact_output, ac_type=artifact_ac_type)
             for file in artifact_files:
                 source_file_path = os.path.normpath(os.path.join(source_directory, file.lstrip("/")))
                 if source_file_path.lower() in proc_dict:
@@ -128,7 +135,7 @@ class Report:
     def _load_reports(inventory_file):
         inventory_df = pd.read_excel(inventory_file, header=0, skiprows=[1])
         
-        inventory_df = inventory_df[inventory_df['Priority'] != '4. Not Required']
+        inventory_df = inventory_df[inventory_df['Priority'] != '4. Not Required' ]
         
         return inventory_df
 

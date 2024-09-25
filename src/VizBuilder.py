@@ -8,9 +8,196 @@ from wfobject import Master
 from wfobject import Procedure
 from report import Report
 import networkx as nx
+from networkx.drawing.nx_agraph import from_agraph
 
 debug = False
-class VizBuilder:          
+class VizBuilder:    
+    
+    def save_disconnected_subgraphs_as_svg(graph, output_dir, ignore_list=None, only_interdependent=False, output_csv=None):
+        os.makedirs(output_dir, exist_ok=True)
+        
+        if ignore_list:
+            graph = graph.copy()
+            graph.remove_nodes_from(ignore_list)
+        
+        subgraphs = list(nx.weakly_connected_components(graph))
+        csv_data = []
+        group_id = 0
+        for i, component in enumerate(subgraphs):
+            subgraph = graph.subgraph(component).copy()
+            end_nodes = [node for node in subgraph.nodes() if subgraph.out_degree(node) == 0]
+            
+            if only_interdependent:
+                if len(end_nodes) == 1:
+                    continue
+            
+            group_id +=1
+            
+            for node in end_nodes:
+                csv_data.append({'Artifact Group ID': node, 'Interdependency Group ID': group_id})
+            
+            agraph = nx.nx_agraph.to_agraph(subgraph)
+            output_path = f"{output_dir}/subgraph_{group_id}.svg"
+            agraph.layout(prog="dot")
+            agraph.draw(output_path)
+
+        if output_csv:
+            with open(output_csv, mode='w', newline='') as file:
+                writer = csv.DictWriter(file, fieldnames=['Artifact Group ID', 'Interdependency Group ID'])
+                writer.writeheader()
+                writer.writerows(csv_data)
+            
+            print(f"CSV saved to {output_csv}")
+
+        print(f"Saved {len(subgraphs)} disconnected subgraphs as SVG files.")
+        
+    @staticmethod
+    def analyze_graph(nxg, output_csv, ignore_nodes=None):
+        if ignore_nodes is None:
+            ignore_nodes = ['common_dates_ibi.fex', 'utility_functions.fex', 'wor02_01_parameters.fex']
+
+        
+        end_nodes = [node for node in nxg.nodes if nxg.out_degree(node) == 0 and node not in ignore_nodes]
+
+        
+        dependency_trees = {}
+        for node in end_nodes:
+            tree = nx.ancestors(nxg, node)  
+            tree.add(node)  
+            tree_nodes = frozenset(n for n in tree if n not in ignore_nodes)
+            if tree_nodes not in dependency_trees:
+                dependency_trees[tree_nodes] = []
+            dependency_trees[tree_nodes].append(node)
+
+        
+        group1 = []  
+        group2 = []  
+        all_seen_nodes = set()  
+
+        for tree_nodes, reports in dependency_trees.items():
+            
+            if all_seen_nodes.isdisjoint(tree_nodes):
+                group1.extend(reports)  
+            else:
+                group2.extend(reports)  
+            all_seen_nodes.update(tree_nodes)  
+
+        
+        with open(output_csv, mode='w', newline='') as csv_file:
+            csv_writer = csv.writer(csv_file)
+            csv_writer.writerow(['Artifact Group ID', 'grouping'])
+            for report in group1:
+                csv_writer.writerow([report, 'Standalone'])
+            for report in group2:
+                csv_writer.writerow([report, 'Interdependent'])
+
+        print(f"Report grouping written to {output_csv}")
+    
+    def label_interdependent_graphs(reports, csv_file_path, exclusion_list=None):
+        if exclusion_list is None:
+            exclusion_list = ['common_dates_ibi.fex','utility_functions.fex','wor02_01_parameters.fex']
+
+        graphs = VizBuilder.generate_work_graphs(reports)
+        labels = ['standalone' for _ in range(len(graphs))]
+        results = []
+        seen_groups = set()
+
+        def get_end_node(graph):
+            end_nodes = [node for node in graph.nodes if graph.out_degree(node) == 0]
+            return end_nodes[0] if end_nodes else None
+
+        for i in range(len(graphs)):
+            graph_name = get_end_node(graphs[i])
+            if graph_name is None or graph_name in seen_groups:
+                continue
+            
+            for j in range(i + 1, len(graphs)):
+                nodes_i = set(graphs[i].nodes()) - set(exclusion_list)
+                nodes_j = set(graphs[j].nodes()) - set(exclusion_list)
+                if nodes_i.intersection(nodes_j):
+                    labels[i] = 'interdependent'
+                    labels[j] = 'interdependent'
+                    seen_groups.add(graph_name)  
+            
+            results.append((graph_name, labels[i]))
+
+        with open(csv_file_path, mode='w', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow(['Graph Name', 'Label'])
+            writer.writerows(results)
+    
+    
+    def generate_work_graphs(reports):
+        graphs = []
+        seen_groups = set()
+        for report in reports:
+            if report.group_id in seen_groups:
+                continue
+            else:
+                seen_groups.add(report.group_id)
+            
+            #os.makedirs(output_directory, exist_ok=True)
+            G = pgv.AGraph(directed=True)
+            G.graph_attr.update(Gsize='10', Gratio='1.4', overlap='false', rankdir='LR')
+
+            #VizBuilder.graph_related_objects_dfs(report.procedures, G, report.report_name, 'white', 'bottom', 'Used by')
+            VizBuilder.graph_related_objects_recurse(report.procedures,G, parent=report.group_id, color='lightgreen', group='bottom', label='Component of Report' )
+            #valid_report_name = re.sub(r'[<>:"/\\|?*]', '_', report.report_name)
+            #output_image = os.path.join(output_directory, f"{valid_report_name}_dependency.svg")
+            G.layout(prog='dot')
+            graphs.append(nx.DiGraph(nx.drawing.nx_agraph.from_agraph(G)))
+            #if debug:
+            #    print(f"Generating report graph: {report.report_name}")
+            
+            #try:
+            #    G.draw(output_image)
+            #except:
+            #    print(f"Could not draw report image for: {valid_report_name}")
+        return graphs
+    
+    def generate_all_work_graph(reports, output_directory=None):
+        os.makedirs(output_directory, exist_ok=True)
+        G = pgv.AGraph(directed=True)
+        G.graph_attr.update(Gsize='10', Gratio='1.4', overlap='false', rankdir='LR')
+        for report in reports:
+            VizBuilder.graph_related_objects_recurse(report.procedures,G, parent=report.group_id, color='lightgreen', group='bottom', label='Component of Report' )
+            
+        output_image = os.path.join(output_directory, f"All_Work_dependency.svg")
+        G.layout(prog='dot')    
+        G.draw(output_image)
+        return G
+    
+    def generate_all_reports_graph(reports, output_directory=None):
+        os.makedirs(output_directory, exist_ok=True)
+        G = pgv.AGraph(directed=True)
+        G.graph_attr.update(Gsize='10', Gratio='1.4', overlap='false', rankdir='LR')
+        for report in reports:
+            VizBuilder.graph_related_objects_recurse(report.procedures,G, parent=report.report_name, color='lightgreen', group='bottom', label='Component of Report' )
+            
+        output_image = os.path.join(output_directory, f"All_Report_dependency.svg")
+        G.layout(prog='dot')    
+        G.draw(output_image)
+        return G
+    def generate_report_graph(reports, output_directory=None):
+        
+        for report in reports:
+            os.makedirs(output_directory, exist_ok=True)
+            G = pgv.AGraph(directed=True)
+            G.graph_attr.update(Gsize='10', Gratio='1.4', overlap='false', rankdir='LR')
+            
+            #VizBuilder.graph_related_objects_dfs(report.procedures, G, report.report_name, 'white', 'bottom', 'Used by')
+            VizBuilder.graph_related_objects_recurse(report.procedures,G, parent=report.report_name, color='lightgreen', group='bottom', label='Component of Report' )
+            valid_report_name = re.sub(r'[<>:"/\\|?*]', '_', report.report_name)
+            output_image = os.path.join(output_directory, f"{valid_report_name}_dependency.svg")
+            G.layout(prog='dot')
+            if debug:
+                print(f"Generating report graph: {report.report_name}")
+            
+            try:
+                G.draw(output_image)
+            except:
+                print(f"Could not draw report image for: {valid_report_name}")
+                      
     def generate_report_dot(reports, output_directory=None):
         
         for report in reports:
@@ -133,7 +320,8 @@ class VizBuilder:
             if(parent):
                     graph.add_edge(wfObject.filename, parent, label=label, color='black')
                     if debug:
-                        print(f"Adding edge from {parent} to {wfObject.filename} and label= {label}")    
+                        print(f"Adding edge from {parent} to {wfObject.filename} and label= {label}") 
+      
                   
     """@staticmethod
     def create_single_master_image(master, output_dir='master_dependency_images'):

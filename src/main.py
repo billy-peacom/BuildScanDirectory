@@ -51,11 +51,12 @@ if __name__ == "__main__":
     
     
     #VizBuilder.generate_report_graph(reports, '../images/reports')
-    G = VizBuilder.generate_all_reports_graph(reports, '../images')
-    #nxg = nx.DiGraph(nx.drawing.nx_agraph.from_agraph(G))
-    #X = VizBuilder.recursive_subgraph_creation_directed(nxg, strong=True)
-    #print(X)
-            
+    G = VizBuilder.generate_all_work_graph(reports, '../images')
+    nxg = nx.DiGraph(nx.drawing.nx_agraph.from_agraph(G))
+    VizBuilder.label_interdependent_graphs(reports, "../report_grouping.csv")
+    
+    VizBuilder.save_disconnected_subgraphs_as_svg(nxg, "../images/by_group", ['common_dates_ibi.fex', 'utility_functions.fex', 'wor02_01_parameters.fex'], only_interdependent=True, output_csv="../interdependency_group.csv")
+    #VizBuilder.analyze_graph(nxg, "../report_grouping.csv")
     #VizBuilder.generate_master_graph(reports, '../images/masters')
     #VizBuilder.generate_procedure_graph(reports, '../images/procedures')
     #VizBuilder.generate_report_dot(reports, "../images/reports_dot")

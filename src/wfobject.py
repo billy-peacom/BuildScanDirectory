@@ -295,7 +295,7 @@ class Procedure:
 
         with open(csv_file_path, mode='w', newline='') as csv_file:
             csv_writer = csv.writer(csv_file)
-            csv_writer.writerow(['Report Name', 'Object URL', 'Include Type', 'group_id', 'is duplicate'])
+            csv_writer.writerow(['Report Name', 'Object URL', 'Include Type', 'group_id', 'is duplicate', 'report_output_fmt', 'ac_report_type'])
             for report in reports:
                 to_add = [(proc, 'N') for proc in report.procedures]  
                 procs_added = set()
@@ -308,7 +308,7 @@ class Procedure:
                             to_add.extend([(dep, 'Y') for dep in wfObject.created_by_proc])
                             to_add.extend([(dep, 'N') for dep in wfObject.dependencies])
                         elif isinstance(wfObject, Procedure):
-                            csv_writer.writerow([report.report_name, wfObject.obj_url, is_etl,report.group_id ,report.is_duplicate])
+                            csv_writer.writerow([report.report_name, wfObject.obj_url, is_etl,report.group_id ,report.is_duplicate, report.output_format, report.ac_type])
                             to_add.extend([(inc, 'N') for inc in wfObject.includes])
                             to_add.extend([(mast, 'N') for mast in wfObject.masters])
     
@@ -384,5 +384,6 @@ class Procedure:
             for report in reports:
                 for proc in report.procedures:
                     process_procedure(proc, csv_writer, visited)
+    
         
             
