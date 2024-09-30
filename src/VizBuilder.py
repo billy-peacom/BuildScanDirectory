@@ -11,7 +11,7 @@ import networkx as nx
 from networkx.drawing.nx_agraph import from_agraph
 
 debug = False
-class VizBuilder:    
+class VizBuilder:
     
     def save_disconnected_subgraphs_as_svg(graph, output_dir, ignore_list=None, only_interdependent=False, output_csv=None):
         os.makedirs(output_dir, exist_ok=True)
@@ -123,7 +123,7 @@ class VizBuilder:
 
         with open(csv_file_path, mode='w', newline='') as file:
             writer = csv.writer(file)
-            writer.writerow(['Graph Name', 'Label'])
+            writer.writerow(['Report Group ID', 'Label'])
             writer.writerows(results)
     
     

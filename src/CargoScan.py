@@ -7,11 +7,11 @@ import networkx as nx
 from networkx.drawing.nx_agraph import from_agraph
 import csv
 if __name__ == "__main__":
-    scan_directory = os.path.normpath("/home/mike/GetComplexityStats/OneDrive_1_12-8-2024/Change Management - 20240625/Ops_Analytics_20240625/") #scandir proc + master
-    procedure_directory = os.path.normpath("../opsfull/") #folder with fexes for initial scan
-    output_directory = os.path.normpath("../ac_ops_11/full_ops/")
-    inventory_file = os.path.normpath("../20240823_OPSBI_Webfocus inventory.xlsx")
-    exclusion_list = ['common_dates_ibi.fex', 'utility_functions.fex', 'wor02_01_parameters.fex', 'Global_Dates.fex']
+    scan_directory = os.path.normpath("/home/mike/_BuilderBillyFixTest/BuildScanMKChanges/Cargo_20240916/") #scandir proc + master
+    #procedure_directory = os.path.normpath("../cargo/") #folder with fexes for initial scan
+    output_directory = os.path.normpath("../cargo/cargo/")
+    inventory_file = os.path.normpath("../20240823_Cargo WebFOCUS inventory.xlsx")
+    exclusion_list = ['Global_Dates.fex', 'Calendar_Dates.fex']
 
     masters = Master.get_masters(scan_directory) #gets all masters from scan
     procedures = Procedure.get_procedures(scan_directory, masters) 
@@ -59,7 +59,7 @@ if __name__ == "__main__":
     nxg = nx.DiGraph(nx.drawing.nx_agraph.from_agraph(G))
     VizBuilder.label_interdependent_graphs(reports, "../report_grouping.csv", exclusion_list)
     
-    VizBuilder.save_disconnected_subgraphs_as_svg(nxg, "../images/by_group", exclusion_list, only_interdependent=False, output_csv="../interdependency_group.csv")
+    VizBuilder.save_disconnected_subgraphs_as_svg(nxg, "../images/by_group", exclusion_list, only_interdependent=True, output_csv="../interdependency_group.csv")
     #VizBuilder.analyze_graph(nxg, "../report_grouping.csv")
     VizBuilder.generate_master_graph(reports, '../images/masters')
     VizBuilder.generate_procedure_graph(reports, '../images/procedures')

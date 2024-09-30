@@ -1,0 +1,19 @@
+Procedure Not Found: /home/mike/_BuilderBillyFixTest/BuildScanMKChanges/Cargo_20240916/WFC/Repository/Cargo/Reports/ReportCaster/Freighter/Freighter_Transiting_Freight_Revenue.fex
+Procedure Not Found: /home/mike/_BuilderBillyFixTest/BuildScanMKChanges/Cargo_20240916/WFC/Repository/Cargo/Reports/ReportCaster/Inventory_on_Hand/Inventory_on_Hand.fex
+Procedure Not Found: /home/mike/_BuilderBillyFixTest/BuildScanMKChanges/Cargo_20240916/WFC/Repository/Cargo/Reports/ReportCaster/Inventory_on_Hand/Inventory_on_Hand.fex
+Procedure Not Found: /home/mike/_BuilderBillyFixTest/BuildScanMKChanges/Cargo_20240916/WFC/Repository/Cargo/Reports/ReportCaster/Freighter/Freighter_Transiting_Freight_Revenue.fex
+Procedure Not Found: /home/mike/_BuilderBillyFixTest/BuildScanMKChanges/Cargo_20240916/WFC/Repository/Cargo/Reports/ReportCaster/Summit/FAP_Weekly.fex
+Procedure Not Found: /home/mike/_BuilderBillyFixTest/BuildScanMKChanges/Cargo_20240916/no Fexes
+Procedure Not Found: /home/mike/_BuilderBillyFixTest/BuildScanMKChanges/Cargo_20240916/WFC/Repository/Cargo/Reports/ReportCaster/Summit/FAP_Weekly.fex
+Procedure Not Found: /home/mike/_BuilderBillyFixTest/BuildScanMKChanges/Cargo_20240916/WFC/Repository/Cargo/Library/Schedule_Library/Hyperstage/Load_Data.fex
+Procedure Not Found: /home/mike/_BuilderBillyFixTest/BuildScanMKChanges/Cargo_20240916/WFC/Repository/Cargo/Reports/ReportCaster/Freighter/Freighter_Transiting_Freight_Revenue.fex
+Procedure Not Found: /home/mike/_BuilderBillyFixTest/BuildScanMKChanges/Cargo_20240916/WFC/Repository/Cargo/Reports/ReportCaster/Inventory_on_Hand/Inventory_on_Hand.fex
+Procedure Not Found: /home/mike/_BuilderBillyFixTest/BuildScanMKChanges/Cargo_20240916/WFC/Repository/Cargo/Reports/ReportCaster/Inventory_on_Hand/Inventory_on_Hand.fex
+Skipping duplicate artifact: Schedule - Customs Booking Audit 8 Hours
+Procedure Not Found: /home/mike/_BuilderBillyFixTest/BuildScanMKChanges/Cargo_20240916/WFC/Repository/Cargo/Reports/ReportCaster/Freighter/Freighter_Transiting_Freight_Revenue.fex
+Procedure Not Found: /home/mike/_BuilderBillyFixTest/BuildScanMKChanges/Cargo_20240916/WFC/Repository/Cargo/Reports/ReportCaster/Summit/FAP_Weekly.fex
+Procedure Not Found: /home/mike/_BuilderBillyFixTest/BuildScanMKChanges/Cargo_20240916/no Fexes
+Procedure Not Found: /home/mike/_BuilderBillyFixTest/BuildScanMKChanges/Cargo_20240916/WFC/Repository/Cargo/Reports/ReportCaster/Summit/FAP_Weekly.fex
+Procedure Not Found: /home/mike/_BuilderBillyFixTest/BuildScanMKChanges/Cargo_20240916/WFC/Repository/Cargo/Library/Schedule_Library/Hyperstage/Load_Data.fex
+CSV saved to ../interdependency_group.csv
+Saved 109 disconnected subgraphs as SVG files.

@@ -152,8 +152,10 @@ def process_artifacts(artifact_data):
         cleaned_file_path = re.sub(r"^[^:]*:", "", cleaned_file_path).strip()
         if debug:
             print(f"Clean 2: {cleaned_file_path}")
-
-        if cleaned_file_path and not cleaned_file_path.startswith("missing") and not cleaned_file_path.startswith("invalid"):
+        cleaned_file_path = re.sub(r"^[^:]*:", "", cleaned_file_path).strip()
+        cleaned_file_path = re.sub(r"\(DEV ONLY\)", "", cleaned_file_path).strip()
+        
+        if cleaned_file_path and not cleaned_file_path.startswith("missing") and not cleaned_file_path.startswith("invalid") and not cleaned_file_path.startswith("No Fexes"):
             current_files.append(cleaned_file_path)
 
     return current_files

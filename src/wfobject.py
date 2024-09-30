@@ -14,6 +14,9 @@ class Master:
         pre, ext = os.path.splitext(self.path)
         self.access_path = pre + ".acx"
         self.obj_url = None
+        self.alternate_paths = []
+    def add_alternate_path(self, path):
+        self.alternate_paths.append(path)
     def update_obj_url(self, obj_url):
         self.obj_url = obj_url
     def add_dependency(self, master):
@@ -30,7 +33,7 @@ class Master:
         and returns a list of Master objects.
         """
         masters = []
-        filenames = set()
+        master_dict = {}
         for root, _, files in os.walk(directory):
             for file in files:
                 if file.lower().endswith('.mas'):    
@@ -38,11 +41,15 @@ class Master:
                     lines = _read_file_lines(file_path)
                     for line in lines:
                         filename = Master.extract_filename(line)
-                        if filename and filename not in filenames:
-                            master_obj = Master(path=file_path, filename=filename)   
-                            masters.append(master_obj)
-                            filenames.add(filename)
-                            break
+                        if filename: 
+                            if filename not in master_dict:
+                                master_obj = Master(path=file_path, filename=filename)  
+                                masters.append(master_obj)
+                                master_dict[filename] = master_obj
+                                break
+                            else:
+                                master_dict[filename].add_alternate_path(file_path)
+                            
         return masters
 
     @staticmethod
@@ -179,7 +186,7 @@ class Procedure:
         and checks if they match any Master filenames.
         """
         procedures = []
-
+        master_dict = {master.filename.lower(): master for master in masters}  
           
         for root, dirs, files in os.walk(directory):
             pattern = re.compile(r"^\s*(table|graph)\s+file", re.IGNORECASE)
@@ -195,12 +202,22 @@ class Procedure:
                         if re.search(pattern, line_lower):  
                                 
                             table_name = line.split()[-1].strip().lower()
+                            if "/" in table_name:
+                                table_name = table_name.rsplit('/',1)[-1]
+                            if table_name in master_dict:
+                                procedure.add_master(master_dict[table_name])
                                 
-                            for master in masters:
-                                if master.filename.lower() == table_name:
+                            """for master in masters:
+                                if "/" in table_name: 
+                                    master_path, file_name = master.file_path.rsplit('/', 1)
+                                    master_path = f"{master_path}/{master.filename}"
+                                    if master_path.lower().endswith(table_name.lower()):
                                     #print(f"{table_name}: {procedure.filename}")
+                                        procedure.add_master(master)
+                                        break
+                                if master.filename.lower() == table_name.lower():
                                     procedure.add_master(master)
-                                    break    
+                                    break """ 
 
                     procedures.append(procedure)
 
@@ -248,13 +265,16 @@ class Procedure:
                         Procedure.__copy_parents(wfObject.access_path, output_directory)
                     except:
                         pass
+                    if wfObject.alternate_paths:
+                        for path in wfObject.alternate_paths:
+                            Procedure.__copy_parents(path, output_directory)
                     Procedure.copy_related_objects_recurse(wfObject.created_by_proc, output_directory, copied_files)
                     Procedure.copy_related_objects_recurse(wfObject.dependencies, output_directory, copied_files)
                 elif isinstance(wfObject, Procedure):
                     Procedure.copy_related_objects_recurse(wfObject.includes, output_directory, copied_files)
                     Procedure.copy_related_objects_recurse(wfObject.masters,output_directory, copied_files)
         
-    def __copy_parents(src, dest_folder, dir_offset=10):
+    def __copy_parents(src, dest_folder, dir_offset=9):
         parent_folder = os.path.basename(dest_folder)
         
         prev_offset = 0 if dir_offset == 0 else src.replace('/', '%', dir_offset - 1).find('/') + 1
@@ -285,6 +305,14 @@ class Procedure:
                         Procedure.__copy_parents(wfObject.access_path, output_directory)
                     except:
                         pass
+                    if wfObject.alternate_paths:
+                        for path in wfObject.alternate_paths:
+                            Procedure.__copy_parents(path, output_directory)
+                            pre, ext = os.path.splitext(path)
+                            try:
+                                Procedure.__copy_parents(pre+".acx", output_directory)
+                            except:
+                                pass
                     copied_files.add(wfObject.access_path) 
                     to_copy.extend(wfObject.created_by_proc)
                     to_copy.extend(wfObject.dependencies)
