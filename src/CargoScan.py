@@ -9,8 +9,8 @@ import csv
 if __name__ == "__main__":
     scan_directory = os.path.normpath("/home/mike/_BuilderBillyFixTest/BuildScanMKChanges/Cargo_20240916/") #scandir proc + master
     #procedure_directory = os.path.normpath("../cargo/") #folder with fexes for initial scan
-    output_directory = os.path.normpath("../cargo/cargo/")
-    inventory_file = os.path.normpath("../20240823_Cargo WebFOCUS inventory.xlsx")
+    output_directory = os.path.normpath("../ac_ops_11/ac_ops_11/")
+    inventory_file = os.path.normpath("../cargo_inventory_2024-09.xlsx")
     exclusion_list = ['Global_Dates.fex', 'Calendar_Dates.fex']
 
     masters = Master.get_masters(scan_directory) #gets all masters from scan
@@ -19,15 +19,15 @@ if __name__ == "__main__":
     Master.get_hold_tables(scan_directory, masters, procedures)
     Procedure.get_includes_obj(procedures, scan_directory)
     #num_copied_files = Procedure.copy_used_masters(output_directory, procedures, includes)
-    ValidProcs = Report.get_report_procs(procedures, inventory_file, scan_directory)
+    #ValidProcs = Report.get_report_procs(procedures, inventory_file, scan_directory)
     proc_dict = {procedure.file_path: procedure for procedure in procedures} 
     master_dict = {master.filename: master for master in masters}
-    #ValidProcs = []
     
     """for master in masters:
         if not master.file_path.endswith(master.filename + ".mas"):
             print(f"{master.filename} != {master.file_path}")"""
-    reports = Report.get_reports(procedures, inventory_file, scan_directory)
+        
+    reports = Report.get_reports(procedures, inventory_file, scan_directory, exclusion_list)
     Report.add_duplicate_grouping(reports)
     #reports = []
     """with open("/home/mike/_BuilderBillyFixTest/BuildScanDirectory/Ops11Inventory.csv", newline='', encoding='utf-8') as csvfile:
@@ -46,7 +46,7 @@ if __name__ == "__main__":
                     else:
                         pass#print(f"Not Found: {path}")
     """
-    Procedure.copy_related_objects_iterative(ValidProcs, output_directory)    
+    Procedure.copy_related_objects_iterative(reports, output_directory)    
     Procedure.report_proc_output(reports, "../report_proc.csv")
     Procedure.master_proc_output(reports, "../master_created_proc.csv")
     Procedure.report_proc_master_output(reports, "../master_proc.csv")

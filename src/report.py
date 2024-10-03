@@ -85,11 +85,9 @@ class Report:
     
     
     @staticmethod
-    def get_reports(procedures, inventory_file, source_directory):
+    def get_reports(procedures, inventory_file, source_directory, ignore_procs=None):
         proc_dict = {procedure.file_path.lower(): procedure for procedure in procedures} 
         inventory_df = Report._load_reports(inventory_file)
-        procedureList = []
-        #os.makedirs(target_directory, exist_ok=True)
         artifact_dict = {} 
         reports = []
         for _, row in inventory_df.iterrows():
@@ -110,7 +108,7 @@ class Report:
             if debug:
                 print(f"Artifact files: {artifact_files}")
                 print(f"Source directory: {source_directory}")
-                #print(f"Target directory: {target_directory}")
+                
             if artifact_name in artifact_dict:
                 print(f"Skipping duplicate artifact: {artifact_name}")
                 continue
@@ -124,19 +122,22 @@ class Report:
             for file in artifact_files:
                 source_file_path = os.path.normpath(os.path.join(source_directory, file.lstrip("/")))
                 if source_file_path.lower() in proc_dict:
-                    procedureList.append(proc_dict[source_file_path.lower()])
+                    if ignore_procs and proc_dict[source_file_path.lower()].filename in ignore_procs:
+                        continue
                     curReport.add_procedure(proc_dict[source_file_path.lower()])
                 else:
                     print(f"Procedure Not Found: {source_file_path}")
-            reports.append(curReport) 
+            reports.append(curReport)
+            
         return reports           
             
     @staticmethod
     def _load_reports(inventory_file):
         inventory_df = pd.read_excel(inventory_file, header=0, skiprows=[1])
         
-        inventory_df = inventory_df[inventory_df['Priority'] != '4. Not Required' ]
+        inventory_df = inventory_df[inventory_df['Priority'] != '4. Not Required']
         
+        inventory_df = inventory_df[inventory_df['Artifact type (ETL-Integration/Application-Portal/Report)	'] == 'Report']
         return inventory_df
 
 

@@ -3,6 +3,7 @@ import shutil
 import re
 import csv
 from utils import _read_file_lines
+from report import Report
 class Master:
     def __init__(self, path, filename, created_by=None):
         self.path = os.path.normpath(path)
@@ -295,8 +296,9 @@ class Procedure:
 
         while to_copy:
             wfObject = to_copy.pop(0) 
-
-            if wfObject.file_path not in copied_files:
+            if isinstance(wfObject, Report):
+                to_copy.extend(wfObject.procedures)
+            elif wfObject.file_path not in copied_files:
                 objurl = Procedure.__copy_parents(wfObject.file_path, output_directory)[len(output_directory):]
                 wfObject.update_obj_url(objurl)
                 copied_files.add(wfObject.file_path)      

@@ -94,9 +94,7 @@ class VizBuilder:
         print(f"Report grouping written to {output_csv}")
     
     def label_interdependent_graphs(reports, csv_file_path, exclusion_list=None):
-        if exclusion_list is None:
-            exclusion_list = ['common_dates_ibi.fex','utility_functions.fex','wor02_01_parameters.fex']
-
+        
         graphs = VizBuilder.generate_work_graphs(reports)
         labels = ['standalone' for _ in range(len(graphs))]
         results = []
@@ -115,6 +113,7 @@ class VizBuilder:
                 nodes_i = set(graphs[i].nodes()) - set(exclusion_list)
                 nodes_j = set(graphs[j].nodes()) - set(exclusion_list)
                 if nodes_i.intersection(nodes_j):
+                    print(f"{get_end_node(graphs[i])} : {get_end_node(graphs[j])}")
                     labels[i] = 'interdependent'
                     labels[j] = 'interdependent'
                     seen_groups.add(graph_name)  
@@ -263,7 +262,7 @@ class VizBuilder:
             os.makedirs(output_directory, exist_ok=True)
             G = pgv.AGraph(directed=True)
             G.graph_attr.update(Gsize='10', Gratio='1.4', overlap='false', rankdir='LR')
-            #VizBuilder.graph_related_objects_dfs(report.procedures, G, report.report_name, 'white', 'bottom', 'Used by')
+            
             VizBuilder.graph_related_objects_recurse(master_list,G, parent=None, color='yellow', label=None )
             master_name = re.sub(r'[<>:"/\\|?*]', '_', master.filename)
             output_image = os.path.join(output_directory, f"{master_name}_dependency.svg")
@@ -282,7 +281,7 @@ class VizBuilder:
             os.makedirs(output_directory, exist_ok=True)
             G = pgv.AGraph(directed=True)
             G.graph_attr.update(Gsize='10', Gratio='1.4', overlap='false', rankdir='LR')
-            #VizBuilder.graph_related_objects_dfs(report.procedures, G, report.report_name, 'white', 'bottom', 'Used by')
+            
             VizBuilder.graph_related_objects_recurse(procedure_list,G, parent=None, color='lightgreen', label=None )
             procedure_name = re.sub(r'[<>:"/\\|?*]', '_', procedure.filename)
             output_image = os.path.join(output_directory, f"{procedure_name}_dependency.svg")
@@ -321,87 +320,3 @@ class VizBuilder:
                     graph.add_edge(wfObject.filename, parent, label=label, color='black')
                     if debug:
                         print(f"Adding edge from {parent} to {wfObject.filename} and label= {label}") 
-      
-                  
-    """@staticmethod
-    def create_single_master_image(master, output_dir='master_dependency_images'):
-        
-        # Create the output directory if it doesn't exist
-        os.makedirs(output_dir, exist_ok=True)
-
-        # Initialize a directed graph for the master dependency
-        G = pgv.AGraph(directed=True)
-
-        # Add the master as the central node
-        G.add_node(master.filename, label=master.filename, shape='box', style='filled', fillcolor='yellow', group='center')
-
-        # Add dependencies (Masters this master depends on) on the left
-        for dependency in master.dependencies:
-            G.add_node(dependency.filename, label=dependency.filename, shape='box', style='filled', fillcolor='orange', group='left')
-            G.add_edge(dependency.filename, master.filename, label='depends on', color='orange')
-        # Add the procedures that created this master (above the master)
-        for proc in master.created_by_proc:
-            G.add_node(proc.filename, label=proc.filename, shape='box', style='filled', fillcolor='lightblue', group='top')
-            G.add_edge(proc.filename, master.filename, label='created', color='blue')
-
-        # Add the procedures that use this master (on the right)
-        for procedure in Procedure.get_procedures_using_master(master):
-            G.add_node(procedure.filename, label=procedure.filename, shape='box', style='filled', fillcolor='lightgreen', group='right')
-            G.add_edge(master.filename, procedure.filename, label='used in', color='green')
-
-        # Save the graph as an image
-        output_image = os.path.join(output_dir, f"{master.filename}_dependency.svg")
-        G.layout(prog='dot')
-        G.draw(output_image)
-    def create_single_report_image(report, output_dir='../report_dependency_images'):
-        
-        # Create the output directory if it doesn't exist
-        os.makedirs(output_dir, exist_ok=True)
-
-        # Initialize a directed graph for the master dependency
-        G = pgv.AGraph(directed=True)
-
-        
-        # Add the master as the central node
-        G.add_node(master.filename, label=master.filename, shape='box', style='filled', fillcolor='yellow', group='center')
-
-        # Add dependencies (Masters this master depends on) on the left
-        for dependency in master.dependencies:
-            G.add_node(dependency.filename, label=dependency.filename, shape='box', style='filled', fillcolor='orange', group='left')
-            G.add_edge(dependency.filename, master.filename, label='depends on', color='orange')
-            for dependency2nd in dependency.dependencies:
-                G.add_node(dependency2nd.filename, label=dependency2nd.filename, shape='box', style='filled', fillcolor='orange', group='left')
-                G.add_edge(dependency2nd.filename, dependency.filename, label='depends on', color='orange')
-        # Add the procedures that created this master (above the master)
-        for proc in master.created_by_proc:
-            G.add_node(proc.filename, label=proc.filename, shape='box', style='filled', fillcolor='lightblue', group='top')
-            G.add_edge(proc.filename, master.filename, label='created', color='blue')
-
-        # Add the procedures that use this master (on the right)
-        for procedure in Procedure.get_procedures_using_master(master):
-            G.add_node(procedure.filename, label=procedure.filename, shape='box', style='filled', fillcolor='lightgreen', group='right')
-            G.add_edge(master.filename, procedure.filename, label='used in', color='green')
-
-        # Save the graph as an image
-        output_image = os.path.join(output_dir, f"{master.filename}_dependency.svg")
-        G.layout(prog='dot')
-        G.draw(output_image)
-
-    @staticmethod
-    def visualize_each_master(masters, output_dir='master_dependency_images_fulltest'):
-        
-        # Loop through each master and create a separate image
-        for master in masters:
-            MasterCentricVisualization.create_single_master_image(master, output_dir)
-    def load_report_mapping(report_mapping_file):
-        
-        report_mapping = {}
-        with open(report_mapping_file, mode='r') as csvfile:
-            reader = csv.reader(csvfile)
-            for row in reader:
-                if len(row) == 2:
-                    report_name, procedure_path = row
-                    if procedure_path not in report_mapping:
-                        report_mapping[procedure_path] = []
-                    report_mapping[procedure_path].append(report_name)
-        return report_mapping"""
