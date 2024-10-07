@@ -141,7 +141,7 @@ class VizBuilder:
             G.graph_attr.update(Gsize='10', Gratio='1.4', overlap='false', rankdir='LR')
 
             #VizBuilder.graph_related_objects_dfs(report.procedures, G, report.report_name, 'white', 'bottom', 'Used by')
-            VizBuilder.graph_related_objects_recurse(report.procedures,G, parent=report.group_id, color='lightgreen', group='bottom', label='Component of Report' )
+            VizBuilder.graph_related_objects_recurse(report.procedures,G, parent=report.group_id, fill_color='lightgreen', group='bottom', label='Component of Report' )
             #valid_report_name = re.sub(r'[<>:"/\\|?*]', '_', report.report_name)
             #output_image = os.path.join(output_directory, f"{valid_report_name}_dependency.svg")
             G.layout(prog='dot')
@@ -160,7 +160,7 @@ class VizBuilder:
         G = pgv.AGraph(directed=True)
         G.graph_attr.update(Gsize='10', Gratio='1.4', overlap='false', rankdir='LR')
         for report in reports:
-            VizBuilder.graph_related_objects_recurse(report.procedures,G, parent=report.group_id, color='lightgreen', group='bottom', label='Component of Report' )
+            VizBuilder.graph_related_objects_recurse(report.procedures,G, parent=report.group_id, fill_color='lightgreen', group='bottom', label='Component of Report' )
             
         output_image = os.path.join(output_directory, f"All_Work_dependency.svg")
         G.layout(prog='dot')    
@@ -172,7 +172,7 @@ class VizBuilder:
         G = pgv.AGraph(directed=True)
         G.graph_attr.update(Gsize='10', Gratio='1.4', overlap='false', rankdir='LR')
         for report in reports:
-            VizBuilder.graph_related_objects_recurse(report.procedures,G, parent=report.report_name, color='lightgreen', group='bottom', label='Component of Report' )
+            VizBuilder.graph_related_objects_recurse(report.procedures,G, parent=report.report_name, fill_color='lightgreen', group='bottom', label='Component of Report' )
             
         output_image = os.path.join(output_directory, f"All_Report_dependency.svg")
         G.layout(prog='dot')    
@@ -186,7 +186,7 @@ class VizBuilder:
             G.graph_attr.update(Gsize='10', Gratio='1.4', overlap='false', rankdir='LR')
             
             #VizBuilder.graph_related_objects_dfs(report.procedures, G, report.report_name, 'white', 'bottom', 'Used by')
-            VizBuilder.graph_related_objects_recurse(report.procedures,G, parent=report.report_name, color='lightgreen', group='bottom', label='Component of Report' )
+            VizBuilder.graph_related_objects_recurse(report.procedures,G, parent=report.report_name, fill_color='lightgreen', group='bottom', label='Component of Report' )
             valid_report_name = re.sub(r'[<>:"/\\|?*]', '_', report.report_name)
             output_image = os.path.join(output_directory, f"{valid_report_name}_dependency.svg")
             G.layout(prog='dot')
@@ -206,7 +206,7 @@ class VizBuilder:
             G.graph_attr.update(Gsize='10', Gratio='1.4', overlap='false', rankdir='LR')
             
             #VizBuilder.graph_related_objects_dfs(report.procedures, G, report.report_name, 'white', 'bottom', 'Used by')
-            VizBuilder.graph_related_objects_recurse(report.procedures,G, parent=report.report_name, color='lightgreen', group='bottom', label='Component of Report' )
+            VizBuilder.graph_related_objects_recurse(report.procedures,G, parent=report.report_name, fill_color='lightgreen', group='bottom', label='Component of Report' )
             valid_report_name = re.sub(r'[<>:"/\\|?*]', '_', report.report_name)
             output_image = os.path.join(output_directory, f"{valid_report_name}_dependency.dot")
             G.layout(prog='dot')
@@ -264,7 +264,7 @@ class VizBuilder:
             G = pgv.AGraph(directed=True)
             G.graph_attr.update(Gsize='10', Gratio='1.4', overlap='false', rankdir='LR')
             #VizBuilder.graph_related_objects_dfs(report.procedures, G, report.report_name, 'white', 'bottom', 'Used by')
-            VizBuilder.graph_related_objects_recurse(master_list,G, parent=None, color='yellow', label=None )
+            VizBuilder.graph_related_objects_recurse(master_list,G, parent=None, fill_color='yellow', label=None )
             master_name = re.sub(r'[<>:"/\\|?*]', '_', master.filename)
             output_image = os.path.join(output_directory, f"{master_name}_dependency.svg")
             G.layout(prog='dot')
@@ -283,7 +283,7 @@ class VizBuilder:
             G = pgv.AGraph(directed=True)
             G.graph_attr.update(Gsize='10', Gratio='1.4', overlap='false', rankdir='LR')
             #VizBuilder.graph_related_objects_dfs(report.procedures, G, report.report_name, 'white', 'bottom', 'Used by')
-            VizBuilder.graph_related_objects_recurse(procedure_list,G, parent=None, color='lightgreen', label=None )
+            VizBuilder.graph_related_objects_recurse(procedure_list,G, parent=None, fill_color='lightgreen', label=None )
             procedure_name = re.sub(r'[<>:"/\\|?*]', '_', procedure.filename)
             output_image = os.path.join(output_directory, f"{procedure_name}_dependency.svg")
             G.layout(prog='dot')
@@ -293,34 +293,47 @@ class VizBuilder:
                 G.draw(output_image)
             except:
                 print(f"Could not draw procedure image for: {procedure_name}")
-    def graph_related_objects_recurse(wfObjects,graph, accessed=None, parent=None, color=None, group=None, label=None, edge_color=None):
+
+
+    def graph_related_objects_recurse(wfObjects, graph, accessed=None, parent=None, color=None, group=None, label=None, edge_color=None, fill_color=None):
         if accessed is None:
             accessed = set()
         for wfObject in wfObjects:
+            node_label = wfObject.filename
+            
+            if wfObject.migrated:
+                color = "red"
+                node_label = f"{node_label} (Migrated)"
+                style='filled, bold'
+            else:
+                color = "black"
+                style='filled'
+
             if wfObject.file_path not in accessed:
-                graph.add_node(wfObject.filename, label=wfObject.filename,shape='box', style='filled', fillcolor=color )
+                graph.add_node(node_label, label=node_label,shape='box', style=style, fillcolor=fill_color, color=color)
+    
                 if debug:
-                    print(f"Node Created {wfObject.filename}")
+                    print(f"Node Created {node_label}")
             
                 accessed.add(wfObject.file_path)   
                 if isinstance(wfObject,Master):
                     if debug:
-                        print(f"Adding master: {wfObject.filename}")
+                        print(f"Adding master: {node_label}")
                     if wfObject.created_by_proc:
-                        VizBuilder.graph_related_objects_recurse(wfObject.created_by_proc, graph, accessed, wfObject.filename, color='lightblue', label='created', edge_color='darkblue' )
+                        VizBuilder.graph_related_objects_recurse(wfObject.created_by_proc, graph, accessed, node_label, fill_color='lightblue', label='created', edge_color='darkblue')
                         if debug:
-                            print(f"Adding created by proc for: {wfObject.filename}")
+                            print(f"Adding created by proc for: {node_label}")
                     else:
                         if debug:
-                            print(f"No created by proc for {wfObject.filename}")
-                    VizBuilder.graph_related_objects_recurse(wfObject.dependencies, graph, accessed, wfObject.filename, color='orange',  label='segment of', edge_color='orange')
+                            print(f"No created by proc for {node_label}")
+                    VizBuilder.graph_related_objects_recurse(wfObject.dependencies, graph, accessed, node_label, fill_color='orange',  label='segment of', edge_color='orange')
                 elif isinstance(wfObject, Procedure):
-                    VizBuilder.graph_related_objects_recurse(wfObject.includes, graph, accessed, wfObject.filename, color='lightgreen',  label='included in' , edge_color='darkgreen')
-                    VizBuilder.graph_related_objects_recurse(wfObject.masters, graph, accessed, wfObject.filename, color='yellow',  label='used in', edge_color='red')  
+                    VizBuilder.graph_related_objects_recurse(wfObject.includes, graph, accessed, node_label, fill_color='lightgreen',  label='included in' , edge_color='darkgreen')
+                    VizBuilder.graph_related_objects_recurse(wfObject.masters, graph, accessed, node_label, fill_color='yellow',  label='used in', edge_color='red')  
             if(parent):
-                    graph.add_edge(wfObject.filename, parent, label=label, color='black')
+                    graph.add_edge(node_label, parent, label=label, color='black')
                     if debug:
-                        print(f"Adding edge from {parent} to {wfObject.filename} and label= {label}") 
+                        print(f"Adding edge from {parent} to {node_label} and label= {label}") 
       
                   
     """@staticmethod

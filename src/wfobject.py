@@ -3,6 +3,8 @@ import shutil
 import re
 import csv
 from utils import _read_file_lines
+from lark import Lark, UnexpectedToken, Token
+
 class Master:
     def __init__(self, path, filename, created_by=None):
         self.path = os.path.normpath(path)
@@ -15,16 +17,54 @@ class Master:
         self.access_path = pre + ".acx"
         self.obj_url = None
         self.alternate_paths = []
+        self.migrated = False
+
     def add_alternate_path(self, path):
         self.alternate_paths.append(path)
+
     def update_obj_url(self, obj_url):
         self.obj_url = obj_url
+
     def add_dependency(self, master):
         """
         Adds a Master object as a dependency to this Master.
         """
         if isinstance(master, Master) and master not in self.dependencies:
             self.dependencies.append(master)
+
+
+    def mark_as_migrated(self):
+        if self.migrated:
+            return  
+            
+        self.migrated = True
+        
+        for dep in self.dependencies:
+            dep.mark_as_migrated()
+        for proc in self.created_by_proc:
+            proc.mark_as_migrated()
+
+
+    @staticmethod
+    def get_report_procedures(masters, visited = None):
+        if visited is None:
+            visited = set()
+
+        procedures = set()
+
+        for master in masters:
+            if master in visited:
+                continue
+
+            visited.add(master)
+
+            for proc in master.created_by_proc:
+                procedures.add(proc)
+
+            procedures.update(Master.get_report_procedures(master.dependencies, visited))
+
+        return procedures
+
 
     @staticmethod
     def get_masters(directory):
@@ -124,17 +164,102 @@ class Master:
 
 class Procedure:
     def __init__(self, file_path, includes=None, includes_key=None):
+        self.type = "Report Proc"
+
         self.file_path = os.path.normpath(file_path)  
-        self.filename = os.path.basename(file_path)    
+        self.filename = os.path.basename(file_path)   
+
         self.includes = includes or [] #of type procedure
         self.masters = [] #Of type master
-        self.includes_key = includes_key
+        self.holds = set()
+        self.missing_holds = set()
+        self.not_missing_holds = set()
+
         self.obj_url = None
-        self.outputs = self.get_output_format()
-        self.type = "Report Proc"
         self.created_master_name = None
+        self.includes_key = includes_key
+        self.outputs = self.get_output_format()
+
         if not self.outputs:
             self.outputs = {"N/A"}
+
+        self.migrated = False
+
+
+    def get_holds(self, path=None):
+        hold_regex = re.compile(r"on\s+(?:table|graph)\s+hold\s+as\s+['\"]?([^\s'\"]+)['\"]?|SQL\s+SQLSNO\s+PREPARE\s+([^\s]+)", re.IGNORECASE)
+
+        holds = set()
+        if not path:
+            path = self.file_path
+
+        lines = _read_file_lines(path)
+
+        for line in lines:
+            match = hold_regex.search(line)
+            if match:
+                name = match.group(1) or match.group(2)
+                holds.add(name)
+
+        if not path:
+            self.holds.update(holds)
+
+        return holds
+
+
+    def collect_holds(self, holds=None, visited=None):
+        holds = holds if holds else set()
+        visited = visited if visited else set()
+
+        if self in visited:
+            return holds
+        
+        visited.add(self)
+
+        holds.update(self.get_holds())
+
+        for include in self.includes:
+            include.collect_holds(holds, visited)
+
+        self.holds.update(holds)
+
+        return holds
+    
+
+
+
+
+    def get_missing_holds(self, master_dict):
+        holds = self.collect_holds()
+        missing_holds = {}
+        lines = _read_file_lines(self.file_path)
+        pattern = re.compile(r"^(?!\s*-\*)\s*(?:TABLE FILE|TABLE GRAPH)\s+(?:\S+\/)?(\S+)", re.IGNORECASE)
+
+        for line in lines:
+            match = pattern.search(line)
+            if match:  
+                table_name = match.group(1).lower()
+
+                if table_name not in holds and table_name not in master_dict:
+                    self.missing_holds.add(table_name)
+
+        if self.missing_holds:
+            missing_holds[self.filename] = list(self.missing_holds)
+
+        return self.missing_holds
+    
+
+    def mark_as_migrated(self):
+        if self.migrated:
+            return  
+            
+        self.migrated = True
+        
+        for master in self.masters:
+            master.mark_as_migrated()
+        for include in self.includes:
+            include.mark_as_migrated()
+
     def update_type(self, type, master_name = None):
         self.type = type
         if master_name:
@@ -228,13 +353,17 @@ class Procedure:
         proc_dict = {procedure.file_path.lower(): procedure for procedure in procedures} 
         #print(proc_dict)   
         include_regex = re.compile(r"^(?!\s*-?\s*-\*)\s*-?\s*(INCLUDE|EX)\s*(?:=\s*)?(?:[A-Za-z]+:)?([\/\.\w]+\.fex)", re.IGNORECASE)
+        includes_not_found_dict = {}
+
         for procedure in procedures:
             lines = _read_file_lines(procedure.file_path)
+            includes_not_found = []
 
             for line in lines:
                 line = line.strip()
 
                 include_match = include_regex.search(line)
+
                 if include_match:
                     include_name = include_match.group(2)
                     
@@ -243,12 +372,14 @@ class Procedure:
                     else:
                         include_name = f"{scan_directory}/{include_name}"
                         include_name = os.path.normpath(include_name)
-                    #print(f"{line} : {include_name}")
+
                     if include_name.lower() in proc_dict:
                         procedure.add_include(proc_dict[include_name.lower()])
+                    else:
+                        includes_not_found.append(include_match.group(2))
                     
-                    #print(f"{procedure.filename} : Include not found for {include_name}")    
-                    #found_includes.append(include_name)
+            includes_not_found_dict[procedure] = includes_not_found
+        return includes_not_found_dict
     
                    
     def copy_related_objects_recurse(wfObjects, output_directory, copied_files=None):

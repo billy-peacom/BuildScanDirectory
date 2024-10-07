@@ -1,714 +1,716 @@
-Report Name,Object URL,Include Type,group_id,is duplicate
-Operated Flights (OPS BI Tool Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/bi_self_serve_op_flights.fex,N,2,N
-Operated Flights (OPS BI Tool Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/Utility_Procedures/bi_tool_dimensions_load.fex,Y,2,N
-Operated Flights (OPS BI Tool Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/Utility_Procedures/bi_tool_guided_metrics.fex,N,2,N
-Operated Flights (OPS BI Tool Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/Utility_Procedures/bi_tool_target_metrics.fex,N,2,N
-Operated Flights (OPS BI Tool Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/Utility_Procedures/cnx_activity_data_pull.fex,N,2,N
-Operated Flights (OPS BI Tool Report),/ac_ops_11/procedures/common_dates_ibi.fex,N,2,N
-IRROP (OPS BI Tool Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/bi_self_serve_irrop.fex,N,3,N
-Real-Time (OPS BI Tool Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/bi_self_serve_realtime_cached.fex,N,4,N
-Real-Time (OPS BI Tool Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/Utility_Procedures/bi_tool_dimensions_load.fex,Y,4,N
-Real-Time (OPS BI Tool Report),/ac_ops_11/OPS/Applications/OPS_Real-Time_Dashboard/Utility_Procedures/dash_data.fex,Y,4,N
-Real-Time (OPS BI Tool Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/Utility_Procedures/bi_tool_guided_metrics.fex,N,4,N
-Real-Time (OPS BI Tool Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/Utility_Procedures/bi_tool_target_metrics.fex,N,4,N
-Real-Time (OPS BI Tool Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/Utility_Procedures/cnx_activity_data_pull.fex,N,4,N
-Real-Time (OPS BI Tool Report),/ac_ops_11/procedures/common_dates_ibi.fex,N,4,N
-BI Targets (OPS BI Tool Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/bi_self_serve_targets.fex,N,5,N
-Connecting Flights (OPS BI Tool Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/bi_self_serve_connecting_flights.fex,N,6,N
-Passenger Forecast (General Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/General/self_serve_pax_fcst_NEW.fex,N,7,N
-AC/ACr International Summary (General Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/General/bi_int_summary_report.fex,N,8,N
-AC/ACr International Summary (General Report - OPS BI Tool Canned Report),/ac_ops_11/procedures/common_dates_ibi.fex,N,8,N
-Jazz Report Cancel Flight Analysis (General Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/General/jazz_report_cnl_flight_analysis.fex,N,9,N
-Jazz Report CPA Flight Completion (General Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/General/jazz_report_cpa_flt_comp.fex,N,10,N
-Jazz Report Regional Station Summary (General Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/General/jazz_report_regn_stn_perf.fex,N,11,N
-Jazz Billing Report (General Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/General/jazz_billing_report.fex,N,12,N
-Connection Activity Report (General Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/General/cnx_activity_rebuild.fex,N,13,N
-Connection Activity Report (General Report - OPS BI Tool Canned Report),/ac_ops_11/procedures/common_dates_ibi.fex,N,13,N
-Deice Control Records (General Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/General/deicing_daily_flt_list_stn.fex,N,14,N
-Scheduled Flight Summary Report (General Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/General/scheduled_flight_summary_report.fex,N,15,N
-Scheduled Flight Summary Report (General Report - OPS BI Tool Canned Report),/ac_ops_11/procedures/common_dates_ibi.fex,N,15,N
-Ground Handler Invoice Validation Report (General Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/General/GH_Invoice_Validation_2.fex,N,16,N
-Ground Handler Invoice Validation Report (General Report - OPS BI Tool Canned Report),/ac_ops_11/procedures/common_dates_ibi.fex,N,16,N
-Scheduled Flights Extract (General Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/General/Scheduled_Flights_Extract.fex,N,17,N
-Flight Delay Forecast Report (General Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/General/Flight_Delay_Forecast.fex,N,18,N
-OMI Summary Report (ACM Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/ACM/acm_omi_summary_report.fex,N,19,N
-Baggage Tag In Sequence Report (Baggage Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/Baggage/baggage_in_sequence_report.fex,N,20,N
-Employee Search by Day Scanner (Baggage Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/Baggage/Employee_Search_by_Day_Scanner.fex,N,21,N
-Employee Search by Day Scanner (Baggage Report - OPS BI Tool Canned Report),/ac_ops_11/procedures/common_dates_ibi.fex,N,21,N
-PAWOBs By Month (Baggage Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/Baggage/pawobs_by_month_sita.fex,N,22,N
-PAWOB Summary Report (Baggage Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/Baggage/pawobs_summary_report_sita.fex,N,23,N
-Scanner Detail by Day and Employee (Baggage Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/Baggage/Scanner_Detail_by_Day_and_Employee.fex,N,24,N
-Scanner Detail by Day and Employee (Baggage Report - OPS BI Tool Canned Report),/ac_ops_11/procedures/common_dates_ibi.fex,N,24,N
-FOPS Absenteeism Dashboard CTP (FOPS Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Reports/Executive_Reports/Absenteeism/Daily_OpsABS_Report.fex,N,25,N
-Crew Expenses PBS Freeze (FOPS Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/Flight_Ops_Reports/Monthly_Crew_Pairing/fops_crew_expenses_pbs_freeze.fex,N,26,N
-FOPS Crew Planning MMG/DFT (FOPS Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Reports/FOPs_Reports/Flight_Ops_Reports/Monthly_Crew_Planning_Review_-_MMGDFT/crew_planning_composer_graph_19.fex,N,27,N
-FOPS Crew Planning MMG/DFT (FOPS Report - OPS BI Tool Canned Report),/ac_ops_11/procedures/common_dates_ibi.fex,N,27,N
-FOPS Crew Planning MMG/DFT (FOPS Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Reports/FOPs_Reports/Flight_Ops_Reports/Monthly_Crew_Planning_Review_-_MMGDFT/crew_planning_graph01.fex,N,27,N
-FOPS Crew Planning MMG/DFT (FOPS Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Reports/FOPs_Reports/Flight_Ops_Reports/Monthly_Crew_Planning_Review_-_MMGDFT/crew_planning_graph02.fex,N,27,N
-FOPS Crew Planning MMG/DFT (FOPS Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Reports/FOPs_Reports/Flight_Ops_Reports/Monthly_Crew_Planning_Review_-_MMGDFT/crew_planning_graph03.fex,N,27,N
-FOPS Crew Planning MMG/DFT (FOPS Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Reports/FOPs_Reports/Flight_Ops_Reports/Monthly_Crew_Planning_Review_-_MMGDFT/crew_planning_graph04.fex,N,27,N
-FOPS Crew Planning MMG/DFT (FOPS Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Reports/FOPs_Reports/Flight_Ops_Reports/Monthly_Crew_Planning_Review_-_MMGDFT/crew_planning_graph05.fex,N,27,N
-FOPS Crew Planning MMG/DFT (FOPS Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Reports/FOPs_Reports/Flight_Ops_Reports/Monthly_Crew_Planning_Review_-_MMGDFT/crew_planning_graph06.fex,N,27,N
-FOPS Crew Planning MMG/DFT (FOPS Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Reports/FOPs_Reports/Flight_Ops_Reports/Monthly_Crew_Planning_Review_-_MMGDFT/crew_planning_graph07.fex,N,27,N
-FOPS Crew Planning MMG/DFT (FOPS Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Reports/FOPs_Reports/Flight_Ops_Reports/Monthly_Crew_Planning_Review_-_MMGDFT/crew_planning_graph08.fex,N,27,N
-FOPS Crew Planning MMG/DFT (FOPS Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Reports/FOPs_Reports/Flight_Ops_Reports/Monthly_Crew_Planning_Review_-_MMGDFT/crew_planning_graph09.fex,N,27,N
-BHPP and PTB (FOPS Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Reports/FOPs_Reports/Flight_Ops_Reports/BHPP_and_PTB.fex,N,28,N
-BHPP and PTB (FOPS Report - OPS BI Tool Canned Report),/ac_ops_11/procedures/common_dates_ibi.fex,N,28,N
-Gauge Change Report (FOPS Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/Flight_Ops_Reports/Gauge_Change_Report.fex,N,29,N
-FOPS Blue Flights (FOPS Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/Flight_Ops_Reports/FOPS_Blue_Flights.fex,N,30,N
-IFS Planned Deadheads (IFS Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/IFS_Reports/ifs_dh_pbs_freeze.fex,N,31,N
-IFS Planned Deadheads (IFS Report - OPS BI Tool Canned Report),/ac_ops_11/procedures/common_dates_ibi.fex,N,31,N
-IFS Planned Deadheads - Rouge (IFS Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/IFS_Reports/ifs_dh_pbs_freeze_RV.fex,N,32,N
-IFS Planned Deadheads - Rouge (IFS Report - OPS BI Tool Canned Report),/ac_ops_11/procedures/common_dates_ibi.fex,N,32,N
-Block Hour Guarantee Report (CUPE) (IFS Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/IFS_Reports/CUPE_External.fex,N,33,N
-Block Hour Guarantee Report (CUPE) (IFS Report - OPS BI Tool Canned Report),/ac_ops_11/procedures/common_dates_ibi.fex,N,33,N
-Block Hour Guarantee Report (Internal) (IFS Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/IFS_Reports/CUPE_Internal.fex,N,34,N
-Block Hour Guarantee Report (Internal) (IFS Report - OPS BI Tool Canned Report),/ac_ops_11/procedures/common_dates_ibi.fex,N,34,N
-Aircom LDF Messages (Restricted Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/Restricted/Aircom_LDF_Messages.fex,N,35,N
-AOG Expedite Order Report (Restricted Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/Restricted/AOG_Expedite_Order_Report.fex,N,36,N
-Excess Bag Refund List Report (Restricted Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/Restricted/Excess_Bag_Refund_List_Report.fex,N,37,N
-Delay Code Changes Report (Restricted Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/Restricted/Delay_Code_Changes_Report.fex,N,38,N
-Block Time Report - WINTER (Restricted Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/Restricted/BR_WINTER.fex,N,39,N
-Block Time Report - WINTER (Restricted Report - OPS BI Tool Canned Report),/ac_ops_11/procedures/common_dates_ibi.fex,N,39,N
-Block Time Report - SUMMER (Restricted Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/Restricted/BR_SUMMER.fex,N,40,N
-Block Time Report - SUMMER (Restricted Report - OPS BI Tool Canned Report),/ac_ops_11/procedures/common_dates_ibi.fex,N,40,N
-Sabre Upload File - WINTER (Restricted Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/Restricted/BR_Sabre_WINTER.fex,N,41,N
-Sabre Upload File - WINTER (Restricted Report - OPS BI Tool Canned Report),/ac_ops_11/procedures/common_dates_ibi.fex,N,41,N
-Sabre Upload File - SUMMER (Restricted Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/Restricted/BR_Sabre_SUMMER.fex,N,42,N
-Sabre Upload File - SUMMER (Restricted Report - OPS BI Tool Canned Report),/ac_ops_11/procedures/common_dates_ibi.fex,N,42,N
-Optimal Block Time Report - WINTER (Restricted Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/Restricted/OBR_WINTER.fex,N,43,N
-Optimal Block Time Report - WINTER (Restricted Report - OPS BI Tool Canned Report),/ac_ops_11/procedures/common_dates_ibi.fex,N,43,N
-Optimal Block Time Report - SUMMER (Restricted Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/Restricted/OBR_SUMMER.fex,N,44,N
-Optimal Block Time Report - SUMMER (Restricted Report - OPS BI Tool Canned Report),/ac_ops_11/procedures/common_dates_ibi.fex,N,44,N
-Optimal Sabre Upload File - WINTER (Restricted Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/Restricted/OBR_Sabre_WINTER.fex,N,45,N
-Optimal Sabre Upload File - WINTER (Restricted Report - OPS BI Tool Canned Report),/ac_ops_11/procedures/common_dates_ibi.fex,N,45,N
-Optimal Sabre Upload File - SUMMER (Restricted Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/Restricted/OBR_Sabre_SUMMER.fex,N,46,N
-Optimal Sabre Upload File - SUMMER (Restricted Report - OPS BI Tool Canned Report),/ac_ops_11/procedures/common_dates_ibi.fex,N,46,N
-What is Percentile Report (Restricted Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/Restricted/OBR_percentile.fex,N,47,N
-What is Percentile Report (Restricted Report - OPS BI Tool Canned Report),/ac_ops_11/procedures/common_dates_ibi.fex,N,47,N
-Forecast Optimal Block Time Report (Restricted Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/Restricted/OBR_forecast.fex,N,48,N
-Forecast Optimal Block Time Report (Restricted Report - OPS BI Tool Canned Report),/ac_ops_11/procedures/common_dates_ibi.fex,N,48,N
-Optimal Block Time Report - Ad-hoc Requests (Restricted Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/Restricted/OBR_adhoc.fex,N,49,N
-Optimal Block Time Report - Ad-hoc Requests (Restricted Report - OPS BI Tool Canned Report),/ac_ops_11/procedures/common_dates_ibi.fex,N,49,N
-CPCI Report (Restricted Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/Restricted/CPCI_main.fex,N,50,N
-CPCI Report (Restricted Report - OPS BI Tool Canned Report),/ac_ops_11/procedures/common_dates_ibi.fex,N,50,N
-CPCI Report (Restricted Report - OPS BI Tool Canned Report),/ac_ops_11/procedures/utility_functions.fex,N,50,N
-ACF Engine Check Report (Restricted Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/Restricted/ACF_Reports/ACF_Engine_Check.fex,N,51,N
-Fuel SPIs Report (Restricted Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/Restricted/ACF_Reports/Fuel_SPIs_Report_Data.fex,N,52,N
-Crew Costs Report (Restricted Report - OPS BI Tool Canned Report),/ac_ops_11/OPS/Applications/OPS_BI_Tool/Restricted/Crew_Costs.fex,N,53,N
-Crew Costs Report (Restricted Report - OPS BI Tool Canned Report),/ac_ops_11/procedures/common_dates_ibi.fex,N,53,N
-MEL Append Snapshot,/ac_ops_11/OPS/Reports/ETLs/MEL_Append_Process/mel_append_v2.fex,N,54,N
-OMI 7am Snapshot,/ac_ops_11/ACM/Reports/SR4/OMI_Reports/OMI_Snapshot_ETLs/OMI_Snapshot_Append.fex,N,55,N
-OMI 7am Snapshot,/ac_ops_11/ACM/Reports/SR4/OMI_Reports/OMI_Snapshot_ETLs/OMI_Snapshot_Staging.fex,Y,55,N
-Premium Customer Watchlist,/ac_ops_11/OPS/Reports/Customer_Reports/VIP_Alert_by_Aeroplane/vip_alert_by_aeroplane.fex,N,56,N
-Premium Customer Watchlist,/ac_ops_11/procedures/common_dates_ibi.fex,N,56,N
-PAL CPA D0 & CF Reports (Daily),/ac_ops_11/OPS/Reports/OTP_Reports/PAL_CPA_OTP_Report/PAL_CPA_OTP_Report.fex,N,57,Y
-PAL CPA D0 & CF Reports (Daily),/ac_ops_11/procedures/common_dates_ibi.fex,N,57,Y
-PAL CPA D0 & CF Reports (Weekly),/ac_ops_11/OPS/Reports/OTP_Reports/PAL_CPA_OTP_Report/PAL_CPA_OTP_Report.fex,N,57,Y
-PAL CPA D0 & CF Reports (Weekly),/ac_ops_11/procedures/common_dates_ibi.fex,N,57,Y
-PAL CPA D0 & CF Reports (Monthly),/ac_ops_11/OPS/Reports/OTP_Reports/PAL_CPA_OTP_Report/PAL_CPA_OTP_Report.fex,N,57,Y
-PAL CPA D0 & CF Reports (Monthly),/ac_ops_11/procedures/common_dates_ibi.fex,N,57,Y
-ATPDR PED Fin Swap Update,/ac_ops_11/OPS/Reports/Compliance_Reports/ATPDR_Fin_Swap_Report/ATPDR_Fin_Swap_Update.fex,N,58,N
-Daily Carrier OPS Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/Daily_Carrier_OPS_Summary/Data_Extract/Ops_Summary_Data_Extract.fex,N,59,N
-Daily Carrier OPS Summary (Remediated),/ac_ops_11/procedures/common_dates_ibi.fex,N,59,N
-Cargo Summary Report,/ac_ops_11/OPS/Reports/Misc_Reports/Cargo_Summary_Report/opsis_summary_report_01_data.fex,N,60,N
-Cargo Summary Report,/ac_ops_11/procedures/common_dates_ibi.fex,N,60,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/oper_perf_summary_composer_daily.fex,N,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_parameters.fex,N,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_all_data.fex,N,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_otp_sum.fex,N,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_otp_mtd_sum.fex,N,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_otp_ytd_sum_cargo.fex,N,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_pax_sum.fex,N,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_mta_perf.fex,N,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_mta_dly_code_sum.fex,N,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_irrop_sum.fex,N,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_high_impact_delays.fex,N,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_startup_delays.fex,N,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_long_delays.fex,N,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_gate_returns.fex,N,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_time_on_ground.fex,N,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_block_sum.fex,N,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_dly_code_sum.fex,N,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_hub_perf.fex,N,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_hub_flt_phases.fex,N,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_mtc_sum.fex,N,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_mel_sum.fex,N,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_fuel_sum.fex,N,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_fuel_2_sum.fex,N,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_transatlantic_startup.fex,N,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_line_of_flying.fex,N,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_glossary.fex,N,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/procedures/common_dates_ibi.fex,N,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_calendar.fex,N,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_mta_perf.fex,N,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_mel.fex,N,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_fuel.fex,N,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_fuel_2.fex,N,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_targets.fex,N,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_v2.fex,N,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_high_impact_delays.fex,N,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_dly_codes.fex,N,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_hub_thruput.fex,N,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_mtc.fex,N,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_fin_perf.fex,N,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data.fex,Y,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data.fex,Y,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data_mta_perf.fex,Y,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data_dly_codes.fex,Y,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data_high_impact_delays.fex,Y,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data_hub_thruput.fex,Y,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data_mtc.fex,Y,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data_mel.fex,Y,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data_fuel.fex,Y,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data_fuel_2.fex,Y,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data_calendar.fex,Y,61,N
-Daily Operational Summary (Remediated),/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_parameters.fex,N,61,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/oper_perf_summary_composer_weekly.fex,N,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_parameters.fex,N,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_all_data.fex,N,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_otp_sum.fex,N,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_pax_sum.fex,N,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_mta_perf.fex,N,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_mta_dly_code_sum.fex,N,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_irrop_sum.fex,N,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_block_sum.fex,N,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_dly_code_sum.fex,N,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_hub_perf.fex,N,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_hub_ground_phase.fex,N,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_hub_flt_phases.fex,N,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_mtc_sum.fex,N,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_mel_sum.fex,N,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_fuel_sum.fex,N,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_fuel_2_sum.fex,N,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_skd_chain_sum.fex,N,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_skd_chain_details.fex,N,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_glossary.fex,N,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/procedures/common_dates_ibi.fex,N,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_calendar.fex,N,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_mta_perf.fex,N,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_mel.fex,N,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_fuel.fex,N,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_fuel_2.fex,N,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_targets.fex,N,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_v2.fex,N,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_high_impact_delays.fex,N,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_dly_codes.fex,N,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_hub_thruput.fex,N,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_mtc.fex,N,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_fin_perf.fex,N,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data.fex,Y,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data.fex,Y,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data_mta_perf.fex,Y,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data_dly_codes.fex,Y,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data_hub_thruput.fex,Y,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data_mtc.fex,Y,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data_mel.fex,Y,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data_fuel.fex,Y,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data_fuel_2.fex,Y,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data_fin_perf.fex,Y,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_fin_perf_bkp20230623.fex,Y,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data_calendar.fex,Y,62,N
-Weekly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_parameters.fex,N,62,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/oper_perf_summary_composer_monthly.fex,N,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_parameters.fex,N,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_all_data.fex,N,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_otp_sum.fex,N,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_pax_sum.fex,N,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_mta_perf.fex,N,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_mta_dly_code_sum.fex,N,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_irrop_sum.fex,N,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_block_sum.fex,N,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_dly_code_sum.fex,N,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_hub_perf.fex,N,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_hub_ground_phase.fex,N,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_hub_flt_phases.fex,N,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_mtc_sum.fex,N,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_fuel_sum.fex,N,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_fuel_2_sum.fex,N,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_skd_chain_sum.fex,N,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_skd_chain_details.fex,N,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_glossary.fex,N,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/procedures/common_dates_ibi.fex,N,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_calendar.fex,N,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_mta_perf.fex,N,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_mel.fex,N,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_fuel.fex,N,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_fuel_2.fex,N,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_targets.fex,N,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_v2.fex,N,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_high_impact_delays.fex,N,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_dly_codes.fex,N,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_hub_thruput.fex,N,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_mtc.fex,N,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_fin_perf.fex,N,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data.fex,Y,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data.fex,Y,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data_mta_perf.fex,Y,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data_dly_codes.fex,Y,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data_hub_thruput.fex,Y,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data_mtc.fex,Y,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data_fuel.fex,Y,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data_fuel_2.fex,Y,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data_fin_perf.fex,Y,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_fin_perf_bkp20230623.fex,Y,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data_calendar.fex,Y,63,N
-Monthly Operational Summary (Remediated),/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_parameters.fex,N,63,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/oper_perf_summary_composer_quarterly.fex,N,64,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_parameters.fex,N,64,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_all_data.fex,N,64,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_otp_sum.fex,N,64,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_pax_sum.fex,N,64,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_mta_perf.fex,N,64,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_mta_dly_code_sum.fex,N,64,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_irrop_sum.fex,N,64,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_block_sum.fex,N,64,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_dly_code_sum.fex,N,64,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_hub_perf.fex,N,64,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_hub_ground_phase.fex,N,64,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_hub_flt_phases.fex,N,64,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_mtc_sum.fex,N,64,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_fuel_sum.fex,N,64,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_fuel_2_sum.fex,N,64,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_skd_chain_sum.fex,N,64,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_skd_chain_details.fex,N,64,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_glossary.fex,N,64,N
-Quarterly Operational Summary,/ac_ops_11/procedures/common_dates_ibi.fex,N,64,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_calendar.fex,N,64,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_mta_perf.fex,N,64,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_mel.fex,N,64,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_fuel.fex,N,64,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_fuel_2.fex,N,64,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_targets.fex,N,64,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_v2.fex,N,64,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_high_impact_delays.fex,N,64,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_dly_codes.fex,N,64,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_hub_thruput.fex,N,64,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_mtc.fex,N,64,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_fin_perf.fex,N,64,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data.fex,Y,64,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data.fex,Y,64,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data_mta_perf.fex,Y,64,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data_dly_codes.fex,Y,64,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data_hub_thruput.fex,Y,64,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data_mtc.fex,Y,64,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data_fuel.fex,Y,64,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data_fuel_2.fex,Y,64,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data_fin_perf.fex,Y,64,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_fin_perf_bkp20230623.fex,Y,64,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data_calendar.fex,Y,64,N
-Quarterly Operational Summary,/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_parameters.fex,N,64,N
-All Exec Summary schedule (2pg) (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/All_Exec_Operations_Summary/All_Exec_Summary_Composer_2pg.fex,N,65,N
-All Exec Summary schedule (2pg) (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_parameters.fex,N,65,N
-All Exec Summary schedule (2pg) (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_exec_data.fex,N,65,N
-All Exec Summary schedule (2pg) (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/All_Exec_Operations_Summary/Report_Components/All_Exec_Summary_LWK.fex,N,65,N
-All Exec Summary schedule (2pg) (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/All_Exec_Operations_Summary/Report_Components/All_Exec_Summary_MTD_YTD.fex,N,65,N
-All Exec Summary schedule (2pg) (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/All_Exec_Operations_Summary/Report_Components/All_Exec_Summary_MEL.fex,N,65,N
-All Exec Summary schedule (2pg) (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/All_Exec_Operations_Summary/Report_Components/All_Exec_Summary_MTC.fex,N,65,N
-All Exec Summary schedule (2pg) (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/All_Exec_Operations_Summary/Report_Components/All_Exec_Summary_LWK_Daily.fex,N,65,N
-All Exec Summary schedule (2pg) (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/All_Exec_Operations_Summary/Report_Components/All_Exec_Summary_HUB.fex,N,65,N
-All Exec Summary schedule (2pg) (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/All_Exec_Operations_Summary/Report_Components/All_Exec_Summary_Perf_Monitor.fex,N,65,N
-All Exec Summary schedule (2pg) (Remediated),/ac_ops_11/procedures/common_dates_ibi.fex,N,65,N
-All Exec Summary schedule (2pg) (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_calendar.fex,N,65,N
-All Exec Summary schedule (2pg) (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_mel.fex,N,65,N
-All Exec Summary schedule (2pg) (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_mtc.fex,N,65,N
-All Exec Summary schedule (2pg) (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_targets.fex,N,65,N
-All Exec Summary schedule (2pg) (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_v2.fex,N,65,N
-All Exec Summary schedule (2pg) (Remediated),/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_parameters.fex,N,65,N
-All Exec Summary schedule (2pg) (Remediated),/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data.fex,Y,65,N
-All Exec Summary schedule (2pg) (Remediated),/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data.fex,Y,65,N
-All Exec Summary schedule (2pg) (Remediated),/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data_mel.fex,Y,65,N
-All Exec Summary schedule (2pg) (Remediated),/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data_mtc.fex,Y,65,N
-All Exec Summary schedule (2pg) (Remediated),/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data_calendar.fex,Y,65,N
-OPS Summary for Yesterday,/ac_ops_11/OPS/Reports/OTP_Reports/Daily_Yest_Report_Param/daily_yest.fex,N,66,N
-OPS Summary for Yesterday,/ac_ops_11/OPS/Reports/OTP_Reports/Daily_Yest_Report_Param/Report_Components/daily_yest_ops_summary.fex,N,66,N
-OPS Summary for Yesterday,/ac_ops_11/OPS/Reports/OTP_Reports/Daily_Yest_Report_Param/Report_Components/daily_yest_delay_cde.fex,N,66,N
-OPS Summary for Yesterday,/ac_ops_11/OPS/Reports/OTP_Reports/Daily_Yest_Report_Param/Report_Components/daily_yest_best_flt_hf.fex,N,66,N
-OPS Summary for Yesterday,/ac_ops_11/OPS/Reports/OTP_Reports/Daily_Yest_Report_Param/Report_Components/daily_yest_best_flt_lf.fex,N,66,N
-OPS Summary for Yesterday,/ac_ops_11/OPS/Reports/OTP_Reports/Daily_Yest_Report_Param/Report_Components/daily_yest_wrst_stn_hf.fex,N,66,N
-OPS Summary for Yesterday,/ac_ops_11/OPS/Reports/OTP_Reports/Daily_Yest_Report_Param/Report_Components/daily_yest_wrst_flt_hf.fex,N,66,N
-OPS Summary for Yesterday,/ac_ops_11/OPS/Reports/OTP_Reports/Daily_Yest_Report_Param/Report_Components/daily_yest_wrst_flt_lf.fex,N,66,N
-OPS Summary for Yesterday,/ac_ops_11/OPS/Reports/OTP_Reports/Daily_Yest_Report_Param/Report_Components/daily_yest_list.fex,N,66,N
-OPS Summary for Yesterday,/ac_ops_11/procedures/common_dates_ibi.fex,N,66,N
-OPS Summary for Yesterday,/ac_ops_11/OPS/Reports/OTP_Reports/Daily_Startup_Report/Data_Extract/daily_ft_data_startup.fex,Y,66,N
-OPS Summary for Yesterday,/ac_ops_11/OPS/Reports/OTP_Reports/Daily_Yest_Report_Param/Data_Extract/daily_ft_data_yest.fex,Y,66,N
-Daily Travel Itinerary,/ac_ops_11/OPS/Reports/Misc_Reports/FlightWatch_Reports/ftw_daily_gov_list.fex,N,67,N
-Daily Travel Itinerary,/ac_ops_11/procedures/common_dates_ibi.fex,N,67,N
-BI Tool Crew Pairing Data Extract,/ac_ops_11/OPS/Applications/OPS_BI_Tool/Flight_Ops_Reports/Monthly_Crew_Pairing/crew_pairing_review_hold_file.fex,N,68,Y
-BI Tool Crew Pairing Data Extract,/ac_ops_11/procedures/common_dates_ibi.fex,N,68,Y
-BI Tool Hold Files for Monthly Crew Pairing,/ac_ops_11/OPS/Applications/OPS_BI_Tool/Flight_Ops_Reports/Monthly_Crew_Pairing/crew_pairing_review_hold_file.fex,N,68,Y
-BI Tool Hold Files for Monthly Crew Pairing,/ac_ops_11/procedures/common_dates_ibi.fex,N,68,Y
-BI Tool Metrics and Dimensions Refresh,/ac_ops_11/OPS/Applications/OPS_BI_Tool/Utility_Procedures/bi_tool_dimensions_load.fex,N,69,N
-BI Tool Metrics and Dimensions Refresh,/ac_ops_11/OPS/Applications/OPS_BI_Tool/Utility_Procedures/bi_tool_guided_metrics.fex,N,69,N
-BI Tool Metrics and Dimensions Refresh,/ac_ops_11/OPS/Applications/OPS_BI_Tool/Utility_Procedures/bi_tool_target_metrics.fex,N,69,N
-BI Tool Metrics and Dimensions Refresh,/ac_ops_11/OPS/Applications/OPS_BI_Tool/Utility_Procedures/cnx_activity_data_pull.fex,N,69,N
-BI Tool Metrics and Dimensions Refresh,/ac_ops_11/procedures/common_dates_ibi.fex,N,69,N
-BI Tool Real Time Data Load,/ac_ops_11/OPS/Applications/OPS_BI_Tool/Utility_Procedures/data_load_realtime.fex,N,70,N
-Daily Flight Tracking Report,/ac_ops_11/OPS/Reports/OTP_Reports/Daily_Flight_Tracking_Report/flight_tracking_report.fex,N,71,N
-DX Schedule Extract,/ac_ops_11/OPS/Reports/ETLs/DX_Schedule_Extract/DX_Schedule_Extract.fex,N,72,N
-Dynamic Distribution List Backup,/ac_ops_11/OPS/Reports/ETLs/Dynamic_Distribution_List_Backup/Dynamic_Distribution_List_Backup.fex,N,73,N
-FOPS App Data Extract,/ac_ops_11/OPS/Reports/ETLs/FOPS_App/FOPS_APP_Data.fex,N,74,N
-FOPS App Data Extract,/ac_ops_11/procedures/common_dates_ibi.fex,N,74,N
-FOPS App Data Upload (Details),/ac_ops_11/OPS/Reports/ETLs/FOPS_App/FOPS_APP_Data_Details.fex,N,75,N
-FOPS App Data Upload (Details),/ac_ops_11/OPS/Reports/FOPs_Reports/Flight_Ops_Reports/FOPS_App/FOPS_APP_Data.fex,Y,75,N
-FOPS App Data Upload (Details),/ac_ops_11/OPS/Reports/ETLs/FOPS_App/FOPS_APP_Data.fex,Y,75,N
-FOPS App Data Upload (Details),/ac_ops_11/procedures/common_dates_ibi.fex,N,75,N
-FOPS App Data Upload (Fleet),/ac_ops_11/OPS/Reports/ETLs/FOPS_App/FOPS_APP_Data_Fleet.fex,N,76,N
-FOPS App Data Upload (Fleet),/ac_ops_11/OPS/Reports/FOPs_Reports/Flight_Ops_Reports/FOPS_App/FOPS_APP_Data.fex,Y,76,N
-FOPS App Data Upload (Fleet),/ac_ops_11/OPS/Reports/ETLs/FOPS_App/FOPS_APP_Data.fex,Y,76,N
-FOPS App Data Upload (Fleet),/ac_ops_11/procedures/common_dates_ibi.fex,N,76,N
-FOPS App Data Upload (System),/ac_ops_11/OPS/Reports/ETLs/FOPS_App/FOPS_APP_Data_System.fex,N,77,N
-FOPS App Data Upload (System),/ac_ops_11/OPS/Reports/FOPs_Reports/Flight_Ops_Reports/FOPS_App/FOPS_APP_Data.fex,Y,77,N
-FOPS App Data Upload (System),/ac_ops_11/OPS/Reports/ETLs/FOPS_App/FOPS_APP_Data.fex,Y,77,N
-FOPS App Data Upload (System),/ac_ops_11/procedures/common_dates_ibi.fex,N,77,N
-HZTV Dashboard Upload (NEW),/ac_ops_11/OPS/Reports/ETLs/Portal_Upload/portal_upload_otp_stats_v3.fex,N,78,N
-HZTV Dashboard Upload (NEW),/ac_ops_11/OPS/Reports/ETLs/Portal_Upload/portal_upload_otp_mtd_extract.fex,N,78,N
-HZTV Dashboard Upload (NEW),/ac_ops_11/OPS/Applications/OPS_Real-Time_Dashboard/Utility_Procedures/dash_data.fex,Y,78,N
-HZTV Dashboard Upload (Station) (NEW),/ac_ops_11/OPS/Reports/ETLs/Portal_Upload/portal_upload_stn_otp_stats_v3.fex,N,79,N
-HZTV Dashboard Upload (Station) (NEW),/ac_ops_11/OPS/Reports/ETLs/Portal_Upload/portal_upload_otp_mtd_extract.fex,N,79,N
-HZTV Dashboard Upload (Station) (NEW),/ac_ops_11/OPS/Applications/OPS_Real-Time_Dashboard/Utility_Procedures/dash_data.fex,Y,79,N
-Daily IFG Delay Report,/ac_ops_11/OPS/Reports/OTP_Reports/Daily_IFG_Delay_Report/ifg_daily_delays_rep.fex,N,80,N
-Daily IFG Delay Report,/ac_ops_11/procedures/common_dates_ibi.fex,N,80,N
-OTP for Yesterday / Ponctualité pour hier,/ac_ops_11/OPS/Reports/OTP_Reports/Daily_OTP_AM_Email/daily_am_email_td.fex,N,81,N
-OTP for Yesterday / Ponctualité pour hier,/ac_ops_11/procedures/common_dates_ibi.fex,N,81,N
-Overnight Aircraft,/ac_ops_11/ACM/Reports/MOC/mel_acft_overnight.fex,N,82,N
-Daily Uncoded Flights,/ac_ops_11/OPS/Reports/OTP_Reports/Daily_Uncoded_Flights/Daily_Uncoded_Flights.fex,N,83,N
-Daily Uncoded Flights,/ac_ops_11/procedures/common_dates_ibi.fex,N,83,N
-Daily VIP List (EXCEL),/ac_ops_11/OPS/Reports/Customer_Reports/Aeroplan_Wkly_VIP_Listing/aeroplan_wkly_vip_listing.fex,N,84,Y
-Daily VIP List (EXCEL),/ac_ops_11/procedures/common_dates_ibi.fex,N,84,Y
-Daily VIP List (PDF),/ac_ops_11/OPS/Reports/Customer_Reports/Aeroplan_Wkly_VIP_Listing/aeroplan_wkly_vip_listing.fex,N,84,Y
-Daily VIP List (PDF),/ac_ops_11/procedures/common_dates_ibi.fex,N,84,Y
-ACM WO Material Report,/ac_ops_11/OPS/Applications/OPS_BI_Tool/ACM/ACM_WO_Material_Report.fex,N,85,N
-Daily 2MM Alert,/ac_ops_11/OPS/Reports/Customer_Reports/Aeroplan_Wkly_VIP_Listing/2MM_Alert.fex,N,86,N
-Daily Delay Code Groundhandler SLA,/ac_ops_11/OPS/Reports/OTP_Reports/Daily_SLA_Delay_Report/sla_daily_delays_rep.fex,N,87,N
-Daily Delay Code Groundhandler SLA,/ac_ops_11/procedures/common_dates_ibi.fex,N,87,N
-Portal Upload AC,/ac_ops_11/OPS/Reports/ETLs/Portal_Upload/portal_upload_otp_stats.fex,N,88,N
-Portal Upload AC,/ac_ops_11/OPS/Applications/OPS_Real-Time_Dashboard/Utility_Procedures/dash_data_sum_gdgt.fex,Y,88,N
-Portal Upload AC,/ac_ops_11/procedures/common_dates_ibi.fex,N,88,N
-Portal Upload AC,/ac_ops_11/OPS/Applications/OPS_Real-Time_Dashboard/Utility_Procedures/dash_data_trax.fex,Y,88,N
-Portal Upload AC,/ac_ops_11/OPS/Applications/OPS_Real-Time_Dashboard/Utility_Procedures/dash_data.fex,Y,88,N
-IFS VER Report,/ac_ops_11/OPS/Reports/FOPs_Reports/Flight_Ops_Reports/VER_Reports/IFS_500E_VER_data.fex,N,89,N
-IFS VER Report,/ac_ops_11/OPS/Reports/FOPs_Reports/Flight_Ops_Reports/VER_Reports/IFS_500E_VER_report.fex,N,89,N
-IFS VER Report,/ac_ops_11/OPS/Reports/FOPs_Reports/Flight_Ops_Reports/VER_Reports/IFS_500E_VER_report_PLN_ACTL.fex,N,89,N
-IFS VER Report,/ac_ops_11/procedures/common_dates_ibi.fex,N,89,N
-IFS VER Report,/ac_ops_11/OPS/Reports/FOPs_Reports/Flight_Ops_Reports/VER_Reports/IFS_500E_VER_data_test.fex,Y,89,N
-Real Time Dashboard - Daily ETL,/ac_ops_11/OPS/Applications/OPS_Real-Time_Dashboard/Utility_Procedures/dash_data_ETL.fex,N,90,N
-Real Time Dashboard - Daily ETL,/ac_ops_11/procedures/common_dates_ibi.fex,N,90,N
-Real Time Dashboard - TRAX update,/ac_ops_11/OPS/Applications/OPS_Real-Time_Dashboard/Utility_Procedures/dash_data_trax.fex,N,91,N
-Real-Time Dashboard Update,/ac_ops_11/OPS/Applications/OPS_Real-Time_Dashboard/Utility_Procedures/dash_data_final.fex,N,92,N
-Real-Time Dashboard Update,/ac_ops_11/OPS/Applications/OPS_Real-Time_Dashboard/Utility_Procedures/dash_data.fex,N,92,N
-Real-Time Dashboard Update,/ac_ops_11/OPS/Applications/OPS_Real-Time_Dashboard/Utility_Procedures/dash_data_stats.fex,N,92,N
-Real-Time Dashboard Update,/ac_ops_11/OPS/Applications/OPS_Real-Time_Dashboard/Utility_Procedures/dash_data_flt_list.fex,N,92,N
-Real-Time Dashboard Update,/ac_ops_11/OPS/Applications/OPS_Real-Time_Dashboard/Utility_Procedures/dash_data_sum_gdgt.fex,N,92,N
-Real-Time Dashboard Update,/ac_ops_11/procedures/common_dates_ibi.fex,N,92,N
-Real-Time Dashboard Update,/ac_ops_11/OPS/Applications/OPS_Real-Time_Dashboard/Utility_Procedures/dash_data_top4_stations.fex,Y,92,N
-Real-Time Dashboard Update,/ac_ops_11/OPS/Applications/OPS_Real-Time_Dashboard/Utility_Procedures/dash_data_ETL.fex,Y,92,N
-Real-Time Dashboard Update,/ac_ops_11/OPS/Applications/OPS_Real-Time_Dashboard/Utility_Procedures/dash_data_trax.fex,Y,92,N
-Workload Extract - WAB (FTP),/ac_ops_11/OPS/Reports/ETLs/OPS_IT_-_WAB_Flight_List/workload_extract.fex,N,93,N
-Flight Watchlist and Flight Valuation Summary,/ac_ops_11/OPS/Reports/Misc_Reports/FlightWatch_Reports/ftw_daily_netline_extract.fex,N,94,N
-Flight Watchlist and Flight Valuation Summary,/ac_ops_11/OPS/Reports/Misc_Reports/FlightWatch_Reports/ftw_daily_flight_list.fex,N,94,N
-Flight Watchlist and Flight Valuation Summary,/ac_ops_11/OPS/Reports/Misc_Reports/FlightWatch_Reports/ftw_daily_flt_val.fex,N,94,N
-Flight Watchlist and Flight Valuation Summary,/ac_ops_11/OPS/Reports/Misc_Reports/FlightWatch_Reports/ftw_daily_fqtv_se_list.fex,N,94,N
-Flight Watchlist and Flight Valuation Summary,/ac_ops_11/OPS/Reports/Misc_Reports/FlightWatch_Reports/ftw_daily_groups_list.fex,N,94,N
-Flight Watchlist and Flight Valuation Summary,/ac_ops_11/OPS/Reports/Misc_Reports/FlightWatch_Reports/ftw_daily_avip_list.fex,N,94,N
-Flight Watchlist and Flight Valuation Summary,/ac_ops_11/OPS/Reports/Misc_Reports/FlightWatch_Reports/ftw_daily_wcbw_list.fex,N,94,N
-Flight Watchlist and Flight Valuation Summary,/ac_ops_11/procedures/common_dates_ibi.fex,N,94,N
-Flight Watchlist and Flight Valuation Summary,/ac_ops_11/OPS/Reports/Misc_Reports/FlightWatch_Reports/ftw_daily_netline_lookup.fex,N,94,N
-Flight Watchlist and Flight Valuation Summary,/ac_ops_11/OPS/Applications/OPS_BI_Tool/Utility_Procedures/cnx_activity_data_pull.fex,Y,94,N
-Flight Watchlist and Flight Valuation Summary,/ac_ops_11/OPS/Reports/Misc_Reports/FlightWatch_Reports/ftw_weekly_netline_extract.fex,Y,94,N
-Disruption Code Breakdown Report (Weekly),/ac_ops_11/OPS/Reports/Executive_Reports/Disruption_Code_Breakdown_Report/Disruption_Code_Breakdown_Report_v3.fex,N,95,Y
-Disruption Code Breakdown Report (Weekly),/ac_ops_11/procedures/common_dates_ibi.fex,N,95,Y
-Disruption Code Breakdown Report (Weekly),/ac_ops_11/procedures/utility_functions.fex,N,95,Y
-Disruption Code Breakdown Report (Monthly),/ac_ops_11/OPS/Reports/Executive_Reports/Disruption_Code_Breakdown_Report/Disruption_Code_Breakdown_Report_v3.fex,N,95,Y
-Disruption Code Breakdown Report (Monthly),/ac_ops_11/procedures/common_dates_ibi.fex,N,95,Y
-Disruption Code Breakdown Report (Monthly),/ac_ops_11/procedures/utility_functions.fex,N,95,Y
-Corporate Communication Summary (HTML),/ac_ops_11/OPS/Reports/OTP_Reports/Corp_comm_summary/corporate_comm_summary_html.fex,N,96,N
-Corporate Communication Summary (HTML),/ac_ops_11/procedures/common_dates_ibi.fex,N,96,N
-Weekly Executive OPS Performance Summary (EXCEL),/ac_ops_11/OPS/Reports/Executive_Reports/Weekly_Executive_OPS_Performance_Summary/Weekly_Executive_Composer.fex,N,97,N
-Weekly Executive OPS Performance Summary (EXCEL),/ac_ops_11/OPS/Reports/Executive_Reports/Weekly_Executive_OPS_Performance_Summary/Weekly_Executive_Branch_Data_v2.fex,N,97,N
-Weekly Executive OPS Performance Summary (EXCEL),/ac_ops_11/OPS/Reports/Executive_Reports/Weekly_Executive_OPS_Performance_Summary/Weekly_Executive_Carrier_Summary_v2.fex,N,97,N
-Weekly Executive OPS Performance Summary (EXCEL),/ac_ops_11/OPS/Reports/Executive_Reports/Weekly_Executive_OPS_Performance_Summary/Weekly_Executive_Branch_Metrics.fex,N,97,N
-Weekly Executive OPS Performance Summary (EXCEL),/ac_ops_11/OPS/Reports/Executive_Reports/Weekly_Executive_OPS_Performance_Summary/Weekly_Executive_Parameters.fex,N,97,N
-Weekly Executive OPS Performance Summary (EXCEL),/ac_ops_11/procedures/common_dates_ibi.fex,N,97,N
-Weekly Executive OPS Performance Summary (EXCEL),/ac_ops_11/procedures/utility_functions.fex,N,97,N
-Weekly Executive OPS Performance Summary (EXCEL),/ac_ops_11/OPS/Reports/Executive_Reports/Weekly_Executive_OPS_Performance_Summary/Weekly_Executive_Branch_Data.fex,Y,97,N
-Weekly Operational Performance Summary,/ac_ops_11/OPS/Reports/OTP_Reports/Weekly_ops_perf/Weekly_OPS_Compose.fex,N,98,N
-Weekly Operational Performance Summary,/ac_ops_11/OPS/Reports/OTP_Reports/Weekly_ops_perf/Data_Extract/Ops_Perf_Data_Extract.fex,N,98,N
-Weekly Operational Performance Summary,/ac_ops_11/OPS/Reports/OTP_Reports/Weekly_ops_perf/Report_Components/ops_perf_summary_v2.fex,N,98,N
-Weekly Operational Performance Summary,/ac_ops_11/OPS/Reports/OTP_Reports/Weekly_ops_perf/Report_Components/ops_perf_HUB.fex,N,98,N
-Weekly Operational Performance Summary,/ac_ops_11/OPS/Reports/OTP_Reports/Weekly_ops_perf/Report_Components/ops_perf_monitor.fex,N,98,N
-Weekly Operational Performance Summary,/ac_ops_11/OPS/Reports/OTP_Reports/Weekly_ops_perf/Report_Components/ops_perf_daily.fex,N,98,N
-Weekly Operational Performance Summary,/ac_ops_11/OPS/Reports/OTP_Reports/Weekly_ops_perf/Report_Components/ops_perf_dv.fex,N,98,N
-Weekly Operational Performance Summary,/ac_ops_11/OPS/Reports/OTP_Reports/Weekly_ops_perf/Report_Components/ops_perf_delays_over_3hrs.fex,N,98,N
-Weekly Operational Performance Summary,/ac_ops_11/OPS/Reports/OTP_Reports/Weekly_ops_perf/Report_Components/ops_perf_startup_dly_breakdown.fex,N,98,N
-Weekly Operational Performance Summary,/ac_ops_11/procedures/common_dates_ibi.fex,N,98,N
-Casebank_AC_DELAY_roll_hist,/ac_ops_11/OPS/Reports/Misc_Reports/Casebank/Casebank_AC_DELAY_roll_hist.fex,N,99,N
-Casebank_Defect_Info_roll_hist,/ac_ops_11/OPS/Reports/Misc_Reports/Casebank/Casebank_Defect_Info_roll_hist.fex,N,100,N
-Casebank_Defect_Parts_roll_hist,/ac_ops_11/OPS/Reports/Misc_Reports/Casebank/Casebank_Defect_Parts_roll_hist.fex,N,101,N
-Casebank_Defect_Troubleshooting_roll_hist,/ac_ops_11/OPS/Reports/Misc_Reports/Casebank/Casebank_Defect_Troubleshooting_roll_hist.fex,N,102,N
-catering_fops_crew_cnt,/ac_ops_11/OPS/Reports/Misc_Reports/Catering_Crew_Counts/fops_emp_ftp.fex,N,103,N
-catering_ifs_crew_cnt,/ac_ops_11/OPS/Reports/Misc_Reports/Catering_Crew_Counts/ifs_emp_ftp.fex,N,104,N
-FOPS All Pilots Recency,/ac_ops_11/OPS/Reports/FOPs_Reports/FOPS_Metrics/AllPilots_Recency.fex,N,105,N
-FOPS PCRR Recency Report,/ac_ops_11/OPS/Reports/FOPs_Reports/FOPS_Metrics/Jessicas_Recency_Report.fex,N,106,N
-JAZZ FTP Cancelled Flights,/ac_ops_11/OPS/Reports/ETLs/JAZZ_FTP_Cancelled_Flights/jazz_ftp_cnl_flts.fex,N,107,N
-JAZZ FTP Cancelled Flights,/ac_ops_11/procedures/common_dates_ibi.fex,N,107,N
-JAZZ FTP Operated Flights,/ac_ops_11/OPS/Reports/ETLs/JAZZ_FTP_Operated_Flights/jazz_ftp_operated_flts.fex,N,108,N
-JAZZ FTP Operated Flights,/ac_ops_11/procedures/common_dates_ibi.fex,N,108,N
-OMI Daily 0700 Snapshot Report,/ac_ops_11/ACM/Reports/SR4/OMI_Reports/OMI_Daily_Snapshot_Report.fex,N,109,N
-OMI Daily 0700 Snapshot Report,/ac_ops_11/procedures/common_dates_ibi.fex,N,109,N
-OMI Daily 0700 Snapshot Report,/ac_ops_11/procedures/utility_functions.fex,N,109,N
-OMI Daily 0700 Snapshot Report,/ac_ops_11/ACM/Reports/SR4/OMI_Reports/OMI_Snapshot_ETLs/OMI_Snapshot_Staging.fex,Y,109,N
-OMI Daily Contribution Report,/ac_ops_11/ACM/Reports/SR4/OMI_Reports/OMI_Contribution_Report.fex,N,110,N
-ACF Contingency Fuel Stats,/ac_ops_11/OPS/Reports/Fuel_Reports/Contingency_Fuel_Stats/acf_email.fex,N,111,N
-ACF Contingency Fuel Stats,/ac_ops_11/OPS/Reports/Fuel_Reports/Contingency_Fuel_Stats/acf_excel.fex,N,111,N
-ACF Contingency Fuel Stats,/ac_ops_11/OPS/Reports/Fuel_Reports/Contingency_Fuel_Stats/acf_tab_dlmtd.fex,N,111,N
-ACF Contingency Fuel Stats,/ac_ops_11/OPS/Reports/Fuel_Reports/Contingency_Fuel_Stats/acf_parameters.fex,N,111,N
-ACF Contingency Fuel Stats,/ac_ops_11/OPS/Reports/Fuel_Reports/Contingency_Fuel_Stats/acf_data.fex,N,111,N
-Crew Activity Pay Report (Monthly),/ac_ops_11/OPS/Reports/FOPs_Reports/Crew_Activity_Pay_Report/Crew_Activity_Pay_Report.fex,N,112,N
-AIRCOM FUEL Extract,/ac_ops_11/OPS/Reports/ETLs/AIRCOM_ETLs/aircom_extract.fex,N,113,N
-AIRCOM FUEL Extract,/ac_ops_11/procedures/common_dates_ibi.fex,N,113,N
-AIRCOM FUEL Extract TDX,/ac_ops_11/OPS/Reports/ETLs/AIRCOM_ETLs/aircom_extract_tdx.fex,N,114,N
-AIRCOM FUEL Extract TDX,/ac_ops_11/procedures/common_dates_ibi.fex,N,114,N
-AIRCOM FUEL FLT LVL Extract,/ac_ops_11/OPS/Reports/ETLs/AIRCOM_ETLs/aircom_fuel_extracts.fex,N,115,N
-AIRCOM FUEL FLT LVL Extract,/ac_ops_11/procedures/common_dates_ibi.fex,N,115,N
-Daily APM Reports,/ac_ops_11/OPS/Reports/ETLs/Daily_APM_Reports/daily_cumulative_aims_msg_extract.fex,N,116,N
-FOPS Daily Open Pairings,/ac_ops_11/OPS/Reports/FOPs_Reports/FOPS_Daily_Open_Pairings/fops_open_time_pairings.fex,N,117,N
-FOPS Daily Open Pairings,/ac_ops_11/procedures/common_dates_ibi.fex,N,117,N
-FOPS Daily Reserve Stats,/ac_ops_11/OPS/Reports/FOPs_Reports/FOPS_Daily_Reserve_Stats/fops_daily_rsv_stats.fex,N,118,N
-FOPS Daily Reserve Stats,/ac_ops_11/procedures/common_dates_ibi.fex,N,118,N
-FOPS Hotel Report Daily,/ac_ops_11/OPS/Reports/IFS_Reports/IFS_Hotel_Report/ifs_hotel_report.fex,N,119,Y
-FOPS Hotel Report Daily,/ac_ops_11/procedures/common_dates_ibi.fex,N,119,Y
-Forecast Baggage,/ac_ops_11/OPS/Reports/Baggage_Reports/Forecast_Baggage_Daily/forecast_bags.fex,N,120,N
-IFS Daily Open Pairings,/ac_ops_11/OPS/Reports/IFS_Reports/IFS_Daily_Open_Pairings/ifs_open_time_pairings.fex,N,121,N
-IFS Daily Open Pairings,/ac_ops_11/procedures/common_dates_ibi.fex,N,121,N
-IFS Daily Reserve Stats,/ac_ops_11/OPS/Reports/IFS_Reports/IFS_Daily_Reserve_Stats/ifs_daily_rsv_stats.fex,N,122,N
-IFS Daily Reserve Stats,/ac_ops_11/procedures/common_dates_ibi.fex,N,122,N
-IFS Hotel Report Daily,/ac_ops_11/OPS/Reports/IFS_Reports/IFS_Hotel_Report/ifs_hotel_report.fex,N,119,Y
-IFS Hotel Report Daily,/ac_ops_11/procedures/common_dates_ibi.fex,N,119,Y
-LHR Passenger Booking Report,/ac_ops_11/OPS/Reports/Station_Reports/LHR_Booking_Forecast_Report/LHR_Booking_Forecast.fex,N,123,N
-LHR Passenger Booking Report,/ac_ops_11/procedures/common_dates_ibi.fex,N,123,N
-MSF Report,/ac_ops_11/OPS/Reports/Baggage_Reports/CBO_MSF_PROD/sita_msf.fex,N,124,N
-International OTP Summary,/ac_ops_11/OPS/Reports/OTP_Reports/China_ARR_and_DEP/intl_otp_report.fex,N,125,Y
-International OTP Summary,/ac_ops_11/OPS/Reports/OTP_Reports/China_ARR_and_DEP/intl_otp_parameters.fex,N,125,Y
-International OTP Summary,/ac_ops_11/OPS/Reports/OTP_Reports/China_ARR_and_DEP/intl_otp_data_extract.fex,N,125,Y
-International OTP Summary,/ac_ops_11/OPS/Reports/OTP_Reports/China_ARR_and_DEP/intl_otp_carrier_summary.fex,N,125,Y
-International OTP Summary,/ac_ops_11/OPS/Reports/OTP_Reports/China_ARR_and_DEP/intl_otp_region_summary.fex,N,125,Y
-International OTP Summary,/ac_ops_11/OPS/Reports/OTP_Reports/China_ARR_and_DEP/intl_otp_station_summary.fex,N,125,Y
-International OTP Summary,/ac_ops_11/OPS/Reports/OTP_Reports/China_ARR_and_DEP/intl_otp_flight_details.fex,N,125,Y
-International OTP Summary,/ac_ops_11/procedures/common_dates_ibi.fex,N,125,Y
-International OTP Summary - EXCEL,/ac_ops_11/OPS/Reports/OTP_Reports/China_ARR_and_DEP/intl_otp_report.fex,N,125,Y
-International OTP Summary - EXCEL,/ac_ops_11/OPS/Reports/OTP_Reports/China_ARR_and_DEP/intl_otp_parameters.fex,N,125,Y
-International OTP Summary - EXCEL,/ac_ops_11/OPS/Reports/OTP_Reports/China_ARR_and_DEP/intl_otp_data_extract.fex,N,125,Y
-International OTP Summary - EXCEL,/ac_ops_11/OPS/Reports/OTP_Reports/China_ARR_and_DEP/intl_otp_carrier_summary.fex,N,125,Y
-International OTP Summary - EXCEL,/ac_ops_11/OPS/Reports/OTP_Reports/China_ARR_and_DEP/intl_otp_region_summary.fex,N,125,Y
-International OTP Summary - EXCEL,/ac_ops_11/OPS/Reports/OTP_Reports/China_ARR_and_DEP/intl_otp_station_summary.fex,N,125,Y
-International OTP Summary - EXCEL,/ac_ops_11/OPS/Reports/OTP_Reports/China_ARR_and_DEP/intl_otp_flight_details.fex,N,125,Y
-International OTP Summary - EXCEL,/ac_ops_11/procedures/common_dates_ibi.fex,N,125,Y
-Daily Jetz OTP Report,/ac_ops_11/OPS/Reports/OTP_Reports/Jetz_Daily_OTP_Report/Jetz_Daily_OTP_Report.fex,N,126,N
-MTC Downtime Report,/ac_ops_11/OPS/Reports/Misc_Reports/MTC_Downtime_Report/mtc_overnight_fins.fex,N,127,N
-Passenger Groups Report,/ac_ops_11/OPS/Reports/Customer_Reports/PAX_Groups_Report/PAX_Groups_Report.fex,N,128,N
-Passenger Groups Report,/ac_ops_11/procedures/common_dates_ibi.fex,N,128,N
-Baggage Handling Success Rate & PAWOB Weekly Report,/ac_ops_11/OPS/Reports/Baggage_Reports/Mish_Bag_Report/Mish_Bag_Report.fex,N,129,Y
-Baggage Handling Success Rate & PAWOB Weekly Report,/ac_ops_11/OPS/Reports/Baggage_Reports/PAWOB_MTD_YTD/sita_PAWOB_Weekly.fex,N,129,Y
-Baggage Handling Success Rate & PAWOB Weekly Report,/ac_ops_11/procedures/common_dates_ibi.fex,N,129,Y
-Baggage Handling Success Rate & PAWOB Weekly Report,/ac_ops_11/OPS/Reports/Baggage_Reports/PAWOB_MTD_YTD/PAWOB-GraphGen.fex,Y,129,Y
-Baggage Handling Success Rate & PAWOB Weekly Report,/ac_ops_11/OPS/Reports/OTP_Reports/Tier_2_and_3_Carrier_OPR_Report/wor02_03_graph_06_pawob.fex,Y,129,Y
-Baggage Handling Success Rate & PAWOB Weekly Report,/ac_ops_11/OPS/Reports/OTP_Reports/OPR_Report/wor02_01_parameters.fex,N,129,Y
-Daily SSCI Acceptance Report,/ac_ops_11/OPS/Reports/Customer_Reports/PAX_CheckIn_Stats/Daily_Acceptance_Report_PAX_FLT_STD.fex,N,130,N
-Daily SSCI Acceptance Report,/ac_ops_11/procedures/common_dates_ibi.fex,N,130,N
-Pilot Supervisors Utilization Report,/ac_ops_11/OPS/Reports/FOPs_Reports/FOPS_Metrics/PilotSupervisorsUtilization.fex,N,131,N
-Pilot Supervisors Utilization Report,/ac_ops_11/procedures/common_dates_ibi.fex,N,131,N
-IOE Tracking Report,/ac_ops_11/OPS/Reports/FOPs_Reports/Flight_Ops_Reports/IOE_Tracking/PQRMcode.fex,N,132,N
-IOE Tracking Report,/ac_ops_11/OPS/Reports/FOPs_Reports/Flight_Ops_Reports/IOE_Tracking/PQRMcode_partI.fex,N,132,N
-IOE Tracking Report,/ac_ops_11/OPS/Reports/FOPs_Reports/Flight_Ops_Reports/IOE_Tracking/PQRMcode_partII.fex,N,132,N
-IOE Tracking Report,/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_parameters.fex,N,132,N
-IOE Tracking Report,/ac_ops_11/procedures/common_dates_ibi.fex,N,132,N
-IOE Tracking Report,/ac_ops_11/OPS/Reports/FOPs_Reports/IOE_Tracking/PQRMcode_partII.fex,Y,132,N
-PAWOB GH Monthly,/ac_ops_11/OPS/Reports/Baggage_Reports/PAWOB_GH_Monthly/GH_PAWOB_SITA.fex,N,133,N
-PAWOB GH Monthly,/ac_ops_11/procedures/common_dates_ibi.fex,N,133,N
-PAX Check-in and Bag Tag Printed,/ac_ops_11/OPS/Reports/Customer_Reports/PAX_CheckIn_Stats/Monthly_PAX_CheckIn_Stats.fex,N,134,N
-PAX Check-in and Bag Tag Printed,/ac_ops_11/procedures/common_dates_ibi.fex,N,134,N
-PAX Check-in and Bag Tag Printed,/ac_ops_11/procedures/utility_functions.fex,N,134,N
-Prime Flight Cargo Daily Evening Report,/ac_ops_11/OPS/Reports/Misc_Reports/Prime_Flight_Cargo/PrimeFlight_Cargo.fex,N,135,Y
-Prime Flight Cargo Daily Morning Report,/ac_ops_11/OPS/Reports/Misc_Reports/Prime_Flight_Cargo/PrimeFlight_Cargo.fex,N,135,Y
-Rouge Notification Fin Report,/ac_ops_11/OPS/Reports/Misc_Reports/Rouge_Notification_Fin_Report/Rouge_Notification_Fin_Report.fex,N,136,N
-SOC WAB Workload,/ac_ops_11/OPS/Reports/ETLs/WAB_Workload_-_Daily/SOC_WAB_Workload.fex,N,137,N
-USA Stations: Daily OPS Summary,/ac_ops_11/OPS/Reports/OTP_Reports/Daily_Carrier_OPS_Summary/Data_Extract/Ops_Summary_Data_Extract.fex,N,138,N
-USA Stations: Daily OPS Summary,/ac_ops_11/OPS/Reports/OTP_Reports/USA_Daily_OPS_Summary/Ops_Summary_Composer.fex,N,138,N
-USA Stations: Daily OPS Summary,/ac_ops_11/procedures/common_dates_ibi.fex,N,138,N
-USA Stations: Daily OPS Summary,/ac_ops_11/OPS/Reports/OTP_Reports/USA_Daily_OPS_Summary/Ops_Summary_Summary_v2.fex,N,138,N
-USA Stations: Daily OPS Summary,/ac_ops_11/OPS/Reports/OTP_Reports/USA_Daily_OPS_Summary/Ops_Summary_IRROPS_v2.fex,N,138,N
-USA Stations: Daily OPS Summary,/ac_ops_11/OPS/Reports/OTP_Reports/USA_Daily_OPS_Summary/Ops_Summary_CNLS.fex,N,138,N
-USA Stations: Daily OPS Summary,/ac_ops_11/OPS/Reports/OTP_Reports/USA_Daily_OPS_Summary/Ops_Summary_PAX.fex,N,138,N
-USA Stations: Daily OPS Summary,/ac_ops_11/OPS/Reports/OTP_Reports/USA_Daily_OPS_Summary/Ops_Summary_Delays_Most_Common.fex,N,138,N
-USA Stations: Daily OPS Summary,/ac_ops_11/OPS/Reports/OTP_Reports/USA_Daily_OPS_Summary/Ops_Summary_Delays_Less_Common.fex,N,138,N
-USA Stations: Daily OPS Summary,/ac_ops_11/OPS/Reports/OTP_Reports/USA_Daily_OPS_Summary/Ops_Summary_Delays_Uncontrollable.fex,N,138,N
-USA Stations: Daily OPS Summary,/ac_ops_11/OPS/Reports/Remediated_Reports/Daily_Carrier_OPS_Summary/Data_Extract/Ops_Summary_Data_Extract.fex,Y,138,N
-RL Integrity Reports,/ac_ops_11/OPS/Reports/Baggage_Reports/RL_Integrity_Reports/sita_RL_Integrity.fex,N,139,N
-Monthly QK Irrop Report,/ac_ops_11/OPS/Reports/OTP_Reports/QK_IRROP_Report/soc_irrop_report_00_compound.fex,N,140,N
-Monthly QK Irrop Report,/ac_ops_11/procedures/common_dates_ibi.fex,N,140,N
-Monthly QK Irrop Report,/ac_ops_11/OPS/Reports/OTP_Reports/QK_IRROP_Report/soc_irrop_report_01_downgauges_v2.fex,N,140,N
-Monthly QK Irrop Report,/ac_ops_11/OPS/Reports/OTP_Reports/QK_IRROP_Report/soc_irrop_report_00_upgauges_v2.fex,N,140,N
-Monthly QK Irrop Report,/ac_ops_11/OPS/Reports/OTP_Reports/QK_IRROP_Report/soc_irrop_report_02_cancellations.fex,N,140,N
-Monthly QK Irrop Report,/ac_ops_11/OPS/Reports/OTP_Reports/QK_IRROP_Report/soc_irrop_report_03_long_delays.fex,N,140,N
-Monthly QK Irrop Report,/ac_ops_11/OPS/Reports/OTP_Reports/QK_IRROP_Report/soc_irrop_report_04_fin_changes.fex,N,140,N
-PAL Block Hours Report,/ac_ops_11/OPS/Reports/Misc_Reports/PAL_Block_Hours_Report/PAL_Block_Hours_Report.fex,N,141,N
-PAL Block Hours Report,/ac_ops_11/procedures/common_dates_ibi.fex,N,141,N
-Baggage Handling Success Rate & PAWOB Monthly Report,/ac_ops_11/OPS/Reports/Baggage_Reports/Mish_Bag_Report/Mish_Bag_Report.fex,N,142,N
-Baggage Handling Success Rate & PAWOB Monthly Report,/ac_ops_11/OPS/Reports/Baggage_Reports/PAWOB_MTD_YTD/sita_PAWOB_Monthly.fex,N,142,N
-Baggage Handling Success Rate & PAWOB Monthly Report,/ac_ops_11/OPS/Reports/Baggage_Reports/PAWOB_MTD_YTD/sita_PAWOB_Yearly.fex,N,142,N
-Baggage Handling Success Rate & PAWOB Monthly Report,/ac_ops_11/procedures/common_dates_ibi.fex,N,142,N
-Baggage Handling Success Rate & PAWOB Monthly Report,/ac_ops_11/OPS/Reports/Baggage_Reports/PAWOB_MTD_YTD/PAWOB-GraphGen.fex,Y,142,N
-Baggage Handling Success Rate & PAWOB Monthly Report,/ac_ops_11/OPS/Reports/OTP_Reports/Tier_2_and_3_Carrier_OPR_Report/wor02_03_graph_06_pawob.fex,Y,142,N
-Baggage Handling Success Rate & PAWOB Monthly Report,/ac_ops_11/OPS/Reports/OTP_Reports/OPR_Report/wor02_01_parameters.fex,N,142,N
-Monthly SSCI Acceptance by AC Destination Report,/ac_ops_11/OPS/Reports/Customer_Reports/PAX_CheckIn_Stats/Weekly_Acceptance_Report_PAX_FLT_STD.fex,N,143,Y
-Monthly SSCI Acceptance by AC Destination Report,/ac_ops_11/procedures/common_dates_ibi.fex,N,143,Y
-Station Gate Compliance Report,/ac_ops_11/OPS/Reports/Station_Reports/Station_Gate_Compliance/station_gating_compliance_west.fex,N,144,N
-Station Gate Compliance Report,/ac_ops_11/procedures/common_dates_ibi.fex,N,144,N
-Station Gate Flight Details Report,/ac_ops_11/OPS/Reports/Station_Reports/Station_Gate_Flight_Details_report/Station_Gate_Flight_Details_report.fex,N,145,N
-Station Gate Flight Details Report,/ac_ops_11/procedures/common_dates_ibi.fex,N,145,N
-US Operations Report,/ac_ops_11/OPS/Reports/Misc_Reports/US_GECAS_Tracking/US_FIR_GRND_TIME_MERGED.fex,N,146,N
-US Operations Report,/ac_ops_11/procedures/common_dates_ibi.fex,N,146,N
-US Station Delay Summary,/ac_ops_11/OPS/Reports/Station_Reports/US_Station/us_station_delay_compose.fex,N,147,N
-US Station Delay Summary,/ac_ops_11/procedures/common_dates_ibi.fex,N,147,N
-US Station Delay Summary,/ac_ops_11/OPS/Reports/Station_Reports/US_Station/us_station_delay_sum.fex,N,147,N
-US Station Delay Summary,/ac_ops_11/OPS/Reports/Station_Reports/US_Station/us_station_delay_grph.fex,N,147,N
-US Station Performance,/ac_ops_11/OPS/Reports/Station_Reports/US_Station/us_station_sum_monthly.fex,N,148,N
-US Station Performance,/ac_ops_11/procedures/common_dates_ibi.fex,N,148,N
-AC Express Operational Summary,/ac_ops_11/OPS/Reports/OTP_Reports/AC_Express_Operational_Summary/AC_Express_Operational_Summary.fex,N,149,N
-AC Express Operational Summary,/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data.fex,Y,149,N
-AC Express Operational Summary,/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_v2.fex,Y,149,N
-AC Express Operational Summary,/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data.fex,Y,149,N
-AC Express Operational Summary,/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data_dly_codes.fex,Y,149,N
-AC Express Operational Summary,/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_dly_codes.fex,Y,149,N
-AC Express Operational Summary,/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_parameters.fex,N,149,N
-AC Express Operational Summary,/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_parameters.fex,N,149,N
-AC Express Operational Summary,/ac_ops_11/procedures/common_dates_ibi.fex,N,149,N
-AC Express Operational Summary,/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_data_calendar.fex,Y,149,N
-AC Express Operational Summary,/ac_ops_11/OPS/Reports/Remediated_Reports/OPR_Data/oper_perf_summary_data_calendar.fex,Y,149,N
-DX 90 day Compliance Report,/ac_ops_11/OPS/Reports/Misc_Reports/DX_90_day_Compliance_Report/DX_90_day_Compliance_Report.fex,N,150,N
-Weekly Flight Watchlist,/ac_ops_11/OPS/Reports/Misc_Reports/FlightWatch_Reports/ftw_weekly_flight_list.fex,N,151,N
-Weekly Flight Watchlist,/ac_ops_11/OPS/Reports/Misc_Reports/FlightWatch_Reports/ftw_weekly_groups_list.fex,N,151,N
-Weekly Flight Watchlist,/ac_ops_11/OPS/Reports/Misc_Reports/FlightWatch_Reports/ftw_weekly_wab_list.fex,N,151,N
-Weekly Flight Watchlist,/ac_ops_11/procedures/common_dates_ibi.fex,N,151,N
-Weekly Flight Watchlist,/ac_ops_11/OPS/Reports/Misc_Reports/FlightWatch_Reports/ftw_weekly_netline_extract.fex,N,151,N
-Weekly Flight Watchlist,/ac_ops_11/OPS/Reports/Misc_Reports/FlightWatch_Reports/ftw_daily_netline_extract.fex,Y,151,N
-FQTV Pax Counts,/ac_ops_11/OPS/Reports/Customer_Reports/FQTV_Pax_Counts/FQTV_Pax_Counts.fex,N,152,N
-FQTV Pax Counts,/ac_ops_11/procedures/common_dates_ibi.fex,N,152,N
-IADP Self Notification,/ac_ops_11/OPS/Reports/Misc_Reports/IADP_Self_Notification/iadp_self_notification.fex,N,153,N
-MTD PAWOB CPA Jazz Report,/ac_ops_11/OPS/Reports/Compliance_Reports/CPA_Report_Monthly/SITA_mtd_PAWOB_CPA.fex,N,154,N
-MTD PAWOB CPA Jazz Report,/ac_ops_11/procedures/common_dates_ibi.fex,N,154,N
-YTZ Daily Flight Details,/ac_ops_11/OPS/Reports/Station_Reports/YTZ_Daily_Flight_Details/YTZ_Daily_Flight_Details.fex,N,155,N
-YTZ Daily Flight Details,/ac_ops_11/procedures/common_dates_ibi.fex,N,155,N
-YUL Connecting Flights Report (Day-of),/ac_ops_11/OPS/Reports/Station_Reports/YUL_CNX_Report/YUL_CNX_Report.fex,N,156,Y
-YUL Connecting Flights Report(Next-Day),/ac_ops_11/OPS/Reports/Station_Reports/YUL_CNX_Report/YUL_CNX_Report.fex,N,156,Y
-YVR Connecting PAX Report,/ac_ops_11/OPS/Reports/Station_Reports/YVR_Connecting_PAX/YVR_Connecting_PAX.fex,N,157,N
-YYZ CNX PAWOB breakdown,/ac_ops_11/OPS/Reports/Baggage_Reports/YYZ_CNX_PAWOB_breakdown/yyz_cnx_pawob_breakdown_SITA.fex,N,158,N
-OPR Fin Changes Supplementary,/ac_ops_11/OPS/Reports/Misc_Reports/OPR_Fin_Changes_Supplementary/wor02_08_table_fin_changes.fex,N,159,N
-OPR Fin Changes Supplementary,/ac_ops_11/OPS/Reports/OTP_Reports/OPR_Report/wor02_01_parameters.fex,N,159,N
-OPR Fin Changes Supplementary,/ac_ops_11/procedures/common_dates_ibi.fex,N,159,N
-OPR Supplement Reports,/ac_ops_11/OPS/Reports/OTP_Reports/OPR_Supplement/wor02_sup_high_impact_delays.fex,N,160,N
-OPR Supplement Reports,/ac_ops_11/procedures/common_dates_ibi.fex,N,160,N
-OTP Delay Flight YUL,/ac_ops_11/OPS/Reports/OTP_Reports/OTP_Ivy_Delay_Flight/OTP_IVY_Delay_Report_YUL.fex,N,161,Y
-OTP Delay Flight YUL,/ac_ops_11/procedures/common_dates_ibi.fex,N,161,Y
-OTP Delay Flight YVR,/ac_ops_11/OPS/Reports/OTP_Reports/OTP_Ivy_Delay_Flight/OTP_IVY_Delay_Report_YUL.fex,N,161,Y
-OTP Delay Flight YVR,/ac_ops_11/procedures/common_dates_ibi.fex,N,161,Y
-Daily OTP Delay Flight YYZ,/ac_ops_11/OPS/Reports/OTP_Reports/OTP_Ivy_Delay_Flight/OTP_Delay_Flight_Ivy_YYZ_Daily_SF.fex,N,162,N
-Daily OTP Delay Flight YYZ,/ac_ops_11/procedures/common_dates_ibi.fex,N,162,N
-OTP Delay Flight YYZ,/ac_ops_11/OPS/Reports/OTP_Reports/OTP_Ivy_Delay_Flight/OTP_IVY_Delay_Report_YUL.fex,N,161,Y
-OTP Delay Flight YYZ,/ac_ops_11/procedures/common_dates_ibi.fex,N,161,Y
-Baggage Handling Success Rate & PAWOB Weekly Report,/ac_ops_11/OPS/Reports/Baggage_Reports/Mish_Bag_Report/Mish_Bag_Report.fex,N,129,Y
-Baggage Handling Success Rate & PAWOB Weekly Report,/ac_ops_11/OPS/Reports/Baggage_Reports/PAWOB_MTD_YTD/sita_PAWOB_Weekly.fex,N,129,Y
-Baggage Handling Success Rate & PAWOB Weekly Report,/ac_ops_11/procedures/common_dates_ibi.fex,N,129,Y
-Baggage Handling Success Rate & PAWOB Weekly Report,/ac_ops_11/OPS/Reports/Baggage_Reports/PAWOB_MTD_YTD/PAWOB-GraphGen.fex,Y,129,Y
-Baggage Handling Success Rate & PAWOB Weekly Report,/ac_ops_11/OPS/Reports/OTP_Reports/Tier_2_and_3_Carrier_OPR_Report/wor02_03_graph_06_pawob.fex,Y,129,Y
-Baggage Handling Success Rate & PAWOB Weekly Report,/ac_ops_11/OPS/Reports/OTP_Reports/OPR_Report/wor02_01_parameters.fex,N,129,Y
-Baggage Scanning Performance - Monthly,/ac_ops_11/OPS/Reports/Baggage_Reports/Baggage_Performance_by_Station/baggage_performace_overall.fex,N,163,N
-Baggage Scanning Performance - Monthly,/ac_ops_11/procedures/common_dates_ibi.fex,N,163,N
-Baggage Segregation Compliance Report,/ac_ops_11/OPS/Reports/Baggage_Reports/Baggage_Segregation_Compliance_Report/Baggage_Segregation_Compliance_Report.fex,N,164,N
-Baggage Segregation Compliance Report,/ac_ops_11/procedures/common_dates_ibi.fex,N,164,N
-BOS Inbound and Outbound Baggage Monthly Summary Report,/ac_ops_11/OPS/Reports/Baggage_Reports/Inbound_Outbound_bags_by_Station/INB_OUTB_STN.fex,N,165,N
-BOS Inbound and Outbound Baggage Monthly Summary Report,/ac_ops_11/procedures/common_dates_ibi.fex,N,165,N
-CPA Report Monthly,/ac_ops_11/OPS/Reports/Compliance_Reports/CPA_Report_Monthly/CPA_MNTHLY_REPORT.fex,N,166,N
-CPA Report Monthly,/ac_ops_11/procedures/common_dates_ibi.fex,N,166,N
-Crew Radiation Report,/ac_ops_11/OPS/Reports/IFS_Reports/Crew_Radiation/crewfops_radiation_report.fex,N,167,N
-Crew Radiation Report,/ac_ops_11/procedures/common_dates_ibi.fex,N,167,N
-FOPS Blockoverfly Monthly Report,/ac_ops_11/OPS/Reports/FOPs_Reports/FOPS_Blockoverfly_monthly_report/fops_blockoverfly_underfly.fex,N,168,N
-FOPS Blockoverfly Monthly Report,/ac_ops_11/procedures/common_dates_ibi.fex,N,168,N
-FOPS Hotel Report,/ac_ops_11/OPS/Reports/IFS_Reports/IFS_Hotel_Report/ifs_hotel_report.fex,N,119,Y
-FOPS Hotel Report,/ac_ops_11/procedures/common_dates_ibi.fex,N,119,Y
-IFS Hotel Report,/ac_ops_11/OPS/Reports/IFS_Reports/IFS_Hotel_Report/ifs_hotel_report.fex,N,119,Y
-IFS Hotel Report,/ac_ops_11/procedures/common_dates_ibi.fex,N,119,Y
-Monthly MBG Report,/ac_ops_11/OPS/Reports/FOPs_Reports/Flight_Ops_Reports/NETLINE_MBG_REPORT.fex,N,169,N
-FOPS Synthetics,/ac_ops_11/OPS/Reports/FOPs_Reports/FOPS_Metrics/FOPS_Synthetics.fex,N,170,N
-FOPS Synthetics,/ac_ops_11/procedures/common_dates_ibi.fex,N,170,N
-FOPS Synthetics,/ac_ops_11/OPS/Applications/OPS_BI_Tool/Flight_Ops_Reports/Monthly_Crew_Pairing/crew_pairing_review_hold_file.fex,Y,170,N
-FOPS Synthetics,/ac_ops_11/OPS/Reports/FOPs_Reports/Flight_Ops_Reports/Monthly_Crew_Pairing/crew_pairing_review_hold_file.fex,Y,170,N
-IFS Block Time Report (Monthly),/ac_ops_11/OPS/Reports/IFS_Reports/IFS_Block_Time_Report/ifs_blocktime_citypair.fex,N,171,N
-IFS Block Time Report (Monthly),/ac_ops_11/procedures/common_dates_ibi.fex,N,171,N
-Monthly Crew Absence Report,/ac_ops_11/OPS/Reports/FOPs_Reports/FOPS_NLCREW_ABSCENCE_REPORT/Crew_Absence_Report.fex,N,172,N
-Monthly Ferry Flights Report,/ac_ops_11/OPS/Reports/OTP_Reports/Monthly_Ferry_Flight_Report/monthly_ferry_flight_report.fex,N,173,N
-Monthly Ferry Flights Report,/ac_ops_11/procedures/common_dates_ibi.fex,N,173,N
-Monthly DH Report,/ac_ops_11/OPS/Reports/FOPs_Reports/Monthly_DH_Report/monthly_dh_report.fex,N,174,N
-Monthly DH Report,/ac_ops_11/procedures/common_dates_ibi.fex,N,174,N
-Weekly PAX Check-In Stats Report - Segment Based,/ac_ops_11/OPS/Reports/Customer_Reports/PAX_CheckIn_Stats/Weekly_PAX_CheckIn_Stats_v2.fex,N,175,N
-Weekly PAX Check-In Stats Report - Segment Based,/ac_ops_11/procedures/common_dates_ibi.fex,N,175,N
-Weekly PAX Check-In Stats Report - Journey Based,/ac_ops_11/OPS/Reports/Customer_Reports/PAX_CheckIn_Stats/Weekly_PAX_CheckIn_Stats_v3.fex,N,176,N
-Weekly PAX Check-In Stats Report - Journey Based,/ac_ops_11/procedures/common_dates_ibi.fex,N,176,N
-Weekly SSCI Acceptance Report,/ac_ops_11/OPS/Reports/Customer_Reports/PAX_CheckIn_Stats/Weekly_Acceptance_Report_PAX_FLT_STD.fex,N,143,Y
-Weekly SSCI Acceptance Report,/ac_ops_11/procedures/common_dates_ibi.fex,N,143,Y
-Netline UOC Report (Friday),/ac_ops_11/OPS/Reports/Misc_Reports/Netline_UOC_Report/Netline_UOC.fex,N,177,Y
-Netline UOC Report (Monday),/ac_ops_11/OPS/Reports/Misc_Reports/Netline_UOC_Report/Netline_UOC.fex,N,177,Y
-Weekly Cancelled Flights & Seats Comparison Report,/ac_ops_11/OPS/Reports/Executive_Reports/Weekly_CNLs_YoY_Report/Weekly_CNLs_YoY_Report_v2.fex,N,178,N
-Weekly Cancelled Flights & Seats Comparison Report,/ac_ops_11/procedures/utility_functions.fex,N,178,N
-Weekly Crew VO Report,/ac_ops_11/OPS/Reports/FOPs_Reports/Crew_VO_Report/Crew_VO_Report.fex,N,179,N
-Weekly Crew VO Report,/ac_ops_11/procedures/common_dates_ibi.fex,N,179,N
-Weekly MTC Visits,/ac_ops_11/OPS/Reports/Misc_Reports/Weekly_MTC_Visits/Weekly_MTC_Visits.fex,N,180,N
-Weekly MTC Visits,/ac_ops_11/procedures/common_dates_ibi.fex,N,180,N
-Weekly PAX CheckIn Stats Report - LHR,/ac_ops_11/OPS/Reports/Customer_Reports/PAX_CheckIn_Stats/Weekly_PAX_CheckIn_Stats_LHR.fex,N,181,N
-Weekly PAX CheckIn Stats Report - LHR,/ac_ops_11/procedures/common_dates_ibi.fex,N,181,N
-ACM MEL Stats,/ac_ops_11/OPS/Reports/ETLs/Portal_Upload/portal_acm_data_add.fex,N,182,N
-ACM MEL Stats,/ac_ops_11/procedures/common_dates_ibi.fex,N,182,N
-ACM OTP Stats,/ac_ops_11/OPS/Reports/ETLs/Portal_Upload/portal_upload_stn_otp_stats_acm.fex,N,183,N
-ACM OTP Stats,/ac_ops_11/OPS/Reports/ETLs/Portal_Upload/portal_upload_stn_otp_stats_acm_working.fex,N,183,N
-ACM OTP Stats,/ac_ops_11/OPS/Reports/ETLs/OPR_Data/oper_perf_summary_parameters.fex,N,183,N
-ACM OTP Stats,/ac_ops_11/OPS/Applications/OPS_Real-Time_Dashboard/Utility_Procedures/dash_data.fex,Y,183,N
-ACM OTP Stats,/ac_ops_11/OPS/Applications/OPS_Real-Time_Dashboard/Utility_Procedures/dash_data_sum_gdgt.fex,Y,183,N
-ACM OTP Stats,/ac_ops_11/procedures/common_dates_ibi.fex,N,183,N
-ACM OTP Stats,/ac_ops_11/OPS/Applications/OPS_Real-Time_Dashboard/Utility_Procedures/dash_data_trax.fex,Y,183,N
-Air Canada YYZ OTP - A15 & D15 (+/-),/ac_ops_11/OPS/Reports/Station_Reports/Air_Canada_YYZ_OTP_-_A15_D15/Air_Canada_YYZ_OTP_-_A15_and_D15.fex,N,184,N
-Air Canada YYZ OTP - A15 & D15 (+/-),/ac_ops_11/procedures/common_dates_ibi.fex,N,184,N
-SLVW ITD YEG 24-Hour Forecast,/ac_ops_11/Airport/Reports/SLVW_ITD_YVR/slvwyegitd24hourforecast.fex,N,185,N
-SLVW ITD YEG 24-Hour Forecast,/ac_ops_11/procedures/common_dates_ibi.fex,N,185,N
-SLVW ITD YHZ 24-Hour Forecast,/ac_ops_11/Airport/Reports/SLVW_ITD_YVR/slvwyhzitd24hourforecast.fex,N,186,N
-SLVW ITD YHZ 24-Hour Forecast,/ac_ops_11/procedures/common_dates_ibi.fex,N,186,N
-SLVW ITD YUL 24-Hour Forecast,/ac_ops_11/Airport/Reports/SLVW_ITD_YVR/slvwyulitd24hourforecast.fex,N,187,N
-SLVW ITD YUL 24-Hour Forecast,/ac_ops_11/procedures/common_dates_ibi.fex,N,187,N
-SLVW ITD YVR 24-Hour Forecast WF8,/ac_ops_11/Airport/Reports/SLVW_ITD_YVR/slvwyvritd24hourforecast.fex,N,188,N
-SLVW ITD YVR 24-Hour Forecast WF8,/ac_ops_11/procedures/common_dates_ibi.fex,N,188,N
-SLVW ITD YYC 24-Hour Forecast WF8,/ac_ops_11/Airport/Reports/SLVW_ITD_YVR/slvwyycitd24hourforecast.fex,N,189,N
-SLVW ITD YYC 24-Hour Forecast WF8,/ac_ops_11/procedures/common_dates_ibi.fex,N,189,N
-SLVW ITD YYZ 24-Hour Forecast WF8,/ac_ops_11/Airport/Reports/SLVW_ITD_YVR/slvw_yyz_itd_24hour_forecast.fex,N,190,N
-SLVW ITD YYZ 24-Hour Forecast WF8,/ac_ops_11/procedures/common_dates_ibi.fex,N,190,N
-MTA Daily - Eastern Stations,/ac_ops_11/Airport/Reports/MTA_Daily_YYZ/nick_rouge_station_delays_leg_flown1.fex,N,191,Y
-MTA Daily - Eastern Stations,/ac_ops_11/procedures/common_dates_ibi.fex,N,191,Y
-MTA Daily - Western stations,/ac_ops_11/Airport/Reports/MTA_Daily_YYZ/nick_rouge_station_delays_leg_flown1.fex,N,191,Y
-MTA Daily - Western stations,/ac_ops_11/procedures/common_dates_ibi.fex,N,191,Y
-MTA Daily - Station YYZ,/ac_ops_11/Airport/Reports/MTA_Daily_YYZ/nick_rouge_station_delays_leg_flown1.fex,N,191,Y
-MTA Daily - Station YYZ,/ac_ops_11/procedures/common_dates_ibi.fex,N,191,Y
-MTA Weekly - Eastern stations,/ac_ops_11/Airport/Reports/MTA_Daily_YYZ/nick_rouge_station_delays_leg_flown1.fex,N,191,Y
-MTA Weekly - Eastern stations,/ac_ops_11/procedures/common_dates_ibi.fex,N,191,Y
-MTA Weekly - Western Stations,/ac_ops_11/Airport/Reports/MTA_Daily_YYZ/nick_rouge_station_delays_leg_flown1.fex,N,191,Y
-MTA Weekly - Western Stations,/ac_ops_11/procedures/common_dates_ibi.fex,N,191,Y
-MTA Weekly - Station YYZ,/ac_ops_11/Airport/Reports/MTA_Daily_YYZ/nick_rouge_station_delays_leg_flown1.fex,N,191,Y
-MTA Weekly - Station YYZ,/ac_ops_11/procedures/common_dates_ibi.fex,N,191,Y
-SPAT 2-Day YHZ,/ac_ops_11/Airport/Reports/SPAT_2-Day/SPAT_2day.fex,N,192,Y
-SPAT 2-Day YHZ,/ac_ops_11/procedures/common_dates_ibi.fex,N,192,Y
-SPAT 2-Day YOW,/ac_ops_11/Airport/Reports/SPAT_2-Day/SPAT_2day.fex,N,192,Y
-SPAT 2-Day YOW,/ac_ops_11/procedures/common_dates_ibi.fex,N,192,Y
-SPAT 2-Day YYZ,/ac_ops_11/Airport/Reports/SPAT_2-Day/SPAT_2day.fex,N,192,Y
-SPAT 2-Day YYZ,/ac_ops_11/procedures/common_dates_ibi.fex,N,192,Y
-SEC Weekly Delays,/ac_ops_11/Airport/Reports/SEC_Weekly_delays/catsa_security_delays.fex,N,193,N
-SEC Weekly Delays,/ac_ops_11/procedures/common_dates_ibi.fex,N,193,N
-LHR Monthly PAX check-in report WF8,/ac_ops_11/Airport/Reports/Salesview_Reports/LHR_CKI_billing_extract.fex,N,194,N
-LHR Monthly PAX check-in report WF8,/ac_ops_11/procedures/common_dates_ibi.fex,N,194,N
+Report Name,Object URL,Include Type,group_id,is duplicate,report_output_fmt,ac_report_type
+Operated Flights (OPS BI Tool Report),/output/OPS_BI_Tool/bi_self_serve_op_flights.fex,N,2,N,"HTML Document, or Excel Document",Report
+Operated Flights (OPS BI Tool Report),/output/OPS_BI_Tool/Utility_Procedures/bi_tool_dimensions_load.fex,Y,2,N,"HTML Document, or Excel Document",Report
+Operated Flights (OPS BI Tool Report),/output//home/BuildScanDirectory/ops/WFC/Repository/Ops_Analytics/~tp038123/bi_tool_dimensions_load.fex,Y,2,N,"HTML Document, or Excel Document",Report
+Operated Flights (OPS BI Tool Report),/output/OPS_BI_Tool/Utility_Procedures/bi_tool_guided_metrics.fex,N,2,N,"HTML Document, or Excel Document",Report
+Operated Flights (OPS BI Tool Report),/output/OPS_BI_Tool/Utility_Procedures/bi_tool_target_metrics.fex,N,2,N,"HTML Document, or Excel Document",Report
+Operated Flights (OPS BI Tool Report),/output/OPS_BI_Tool/Utility_Procedures/cnx_activity_data_pull.fex,N,2,N,"HTML Document, or Excel Document",Report
+Operated Flights (OPS BI Tool Report),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,2,N,"HTML Document, or Excel Document",Report
+IRROP (OPS BI Tool Report),/output/OPS_BI_Tool/bi_self_serve_irrop.fex,N,3,N,"HTML Document, or Excel Document",Report
+Real-Time (OPS BI Tool Report),/output/OPS_BI_Tool/bi_self_serve_realtime_cached.fex,N,4,N,"HTML Document, or Excel Document",Report
+Real-Time (OPS BI Tool Report),/output/OPS_BI_Tool/Utility_Procedures/bi_tool_dimensions_load.fex,Y,4,N,"HTML Document, or Excel Document",Report
+Real-Time (OPS BI Tool Report),/output//home/BuildScanDirectory/ops/WFC/Repository/Ops_Analytics/~tp038123/bi_tool_dimensions_load.fex,Y,4,N,"HTML Document, or Excel Document",Report
+Real-Time (OPS BI Tool Report),/output/OPS_Real-Time_Dashboard/Utility_Procedures/dash_data.fex,Y,4,N,"HTML Document, or Excel Document",Report
+Real-Time (OPS BI Tool Report),/output/OPS_BI_Tool/Utility_Procedures/bi_tool_guided_metrics.fex,N,4,N,"HTML Document, or Excel Document",Report
+Real-Time (OPS BI Tool Report),/output/OPS_BI_Tool/Utility_Procedures/bi_tool_target_metrics.fex,N,4,N,"HTML Document, or Excel Document",Report
+Real-Time (OPS BI Tool Report),/output/OPS_BI_Tool/Utility_Procedures/cnx_activity_data_pull.fex,N,4,N,"HTML Document, or Excel Document",Report
+Real-Time (OPS BI Tool Report),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,4,N,"HTML Document, or Excel Document",Report
+BI Targets (OPS BI Tool Report),/output/OPS_BI_Tool/bi_self_serve_targets.fex,N,5,N,"HTML Document, or Excel Document",Report
+Connecting Flights (OPS BI Tool Report),/output/OPS_BI_Tool/bi_self_serve_connecting_flights.fex,N,6,N,"HTML Document, or Excel Document",Report
+Passenger Forecast (General Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/General/self_serve_pax_fcst_NEW.fex,N,7,N,Excel Document,Report
+AC/ACr International Summary (General Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/General/bi_int_summary_report.fex,N,8,N,Excel Document,Report
+AC/ACr International Summary (General Report - OPS BI Tool Canned Report),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,8,N,Excel Document,Report
+Jazz Report Cancel Flight Analysis (General Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/General/jazz_report_cnl_flight_analysis.fex,N,9,N,Excel Document,Report
+Jazz Report CPA Flight Completion (General Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/General/jazz_report_cpa_flt_comp.fex,N,10,N,Excel Document,Report
+Jazz Report Regional Station Summary (General Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/General/jazz_report_regn_stn_perf.fex,N,11,N,Excel Document,Report
+Jazz Billing Report (General Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/General/jazz_billing_report.fex,N,12,N,Excel Document,Report
+Connection Activity Report (General Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/General/cnx_activity_rebuild.fex,N,13,N,Excel Document,Report
+Connection Activity Report (General Report - OPS BI Tool Canned Report),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,13,N,Excel Document,Report
+Deice Control Records (General Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/General/deicing_daily_flt_list_stn.fex,N,14,N,PDF Document,Report
+Scheduled Flight Summary Report (General Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/General/scheduled_flight_summary_report.fex,N,15,N,Excel Document,Report
+Scheduled Flight Summary Report (General Report - OPS BI Tool Canned Report),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,15,N,Excel Document,Report
+Ground Handler Invoice Validation Report (General Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/General/GH_Invoice_Validation_2.fex,N,16,N,Excel Document,Report
+Ground Handler Invoice Validation Report (General Report - OPS BI Tool Canned Report),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,16,N,Excel Document,Report
+Scheduled Flights Extract (General Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/General/Scheduled_Flights_Extract.fex,N,17,N,Excel Document,Report
+Flight Delay Forecast Report (General Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/General/Flight_Delay_Forecast.fex,N,18,N,Excel Document,Report
+OMI Summary Report (ACM Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/ACM/acm_omi_summary_report.fex,N,19,N,Excel Document,Report
+Baggage Tag In Sequence Report (Baggage Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/Baggage/baggage_in_sequence_report.fex,N,20,N,nan,Report
+Employee Search by Day Scanner (Baggage Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/Baggage/Employee_Search_by_Day_Scanner.fex,N,21,N,nan,Report
+Employee Search by Day Scanner (Baggage Report - OPS BI Tool Canned Report),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,21,N,nan,Report
+PAWOBs By Month (Baggage Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/Baggage/pawobs_by_month_sita.fex,N,22,N,nan,Report
+PAWOB Summary Report (Baggage Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/Baggage/pawobs_summary_report_sita.fex,N,23,N,nan,Report
+Scanner Detail by Day and Employee (Baggage Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/Baggage/Scanner_Detail_by_Day_and_Employee.fex,N,24,N,nan,Report
+Scanner Detail by Day and Employee (Baggage Report - OPS BI Tool Canned Report),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,24,N,nan,Report
+FOPS Absenteeism Dashboard CTP (FOPS Report - OPS BI Tool Canned Report),/output/Executive_Reports/Absenteeism/Daily_OpsABS_Report.fex,N,25,N,nan,Report
+Crew Expenses PBS Freeze (FOPS Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/Flight_Ops_Reports/Monthly_Crew_Pairing/fops_crew_expenses_pbs_freeze.fex,N,26,N,nan,Report
+FOPS Crew Planning MMG/DFT (FOPS Report - OPS BI Tool Canned Report),/output/FOPs_Reports/Flight_Ops_Reports/Monthly_Crew_Planning_Review_-_MMGDFT/crew_planning_composer_graph_19.fex,N,27,N,nan,Report
+FOPS Crew Planning MMG/DFT (FOPS Report - OPS BI Tool Canned Report),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,27,N,nan,Report
+FOPS Crew Planning MMG/DFT (FOPS Report - OPS BI Tool Canned Report),/output/FOPs_Reports/Flight_Ops_Reports/Monthly_Crew_Planning_Review_-_MMGDFT/crew_planning_graph01.fex,N,27,N,nan,Report
+FOPS Crew Planning MMG/DFT (FOPS Report - OPS BI Tool Canned Report),/output/FOPs_Reports/Flight_Ops_Reports/Monthly_Crew_Planning_Review_-_MMGDFT/crew_planning_graph02.fex,N,27,N,nan,Report
+FOPS Crew Planning MMG/DFT (FOPS Report - OPS BI Tool Canned Report),/output/FOPs_Reports/Flight_Ops_Reports/Monthly_Crew_Planning_Review_-_MMGDFT/crew_planning_graph03.fex,N,27,N,nan,Report
+FOPS Crew Planning MMG/DFT (FOPS Report - OPS BI Tool Canned Report),/output/FOPs_Reports/Flight_Ops_Reports/Monthly_Crew_Planning_Review_-_MMGDFT/crew_planning_graph04.fex,N,27,N,nan,Report
+FOPS Crew Planning MMG/DFT (FOPS Report - OPS BI Tool Canned Report),/output/FOPs_Reports/Flight_Ops_Reports/Monthly_Crew_Planning_Review_-_MMGDFT/crew_planning_graph05.fex,N,27,N,nan,Report
+FOPS Crew Planning MMG/DFT (FOPS Report - OPS BI Tool Canned Report),/output/FOPs_Reports/Flight_Ops_Reports/Monthly_Crew_Planning_Review_-_MMGDFT/crew_planning_graph06.fex,N,27,N,nan,Report
+FOPS Crew Planning MMG/DFT (FOPS Report - OPS BI Tool Canned Report),/output/FOPs_Reports/Flight_Ops_Reports/Monthly_Crew_Planning_Review_-_MMGDFT/crew_planning_graph07.fex,N,27,N,nan,Report
+FOPS Crew Planning MMG/DFT (FOPS Report - OPS BI Tool Canned Report),/output/FOPs_Reports/Flight_Ops_Reports/Monthly_Crew_Planning_Review_-_MMGDFT/crew_planning_graph08.fex,N,27,N,nan,Report
+FOPS Crew Planning MMG/DFT (FOPS Report - OPS BI Tool Canned Report),/output/FOPs_Reports/Flight_Ops_Reports/Monthly_Crew_Planning_Review_-_MMGDFT/crew_planning_graph09.fex,N,27,N,nan,Report
+BHPP and PTB (FOPS Report - OPS BI Tool Canned Report),/output/FOPs_Reports/Flight_Ops_Reports/BHPP_and_PTB.fex,N,28,N,nan,Report
+BHPP and PTB (FOPS Report - OPS BI Tool Canned Report),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,28,N,nan,Report
+Gauge Change Report (FOPS Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/Flight_Ops_Reports/Gauge_Change_Report.fex,N,29,N,nan,Report
+FOPS Blue Flights (FOPS Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/Flight_Ops_Reports/FOPS_Blue_Flights.fex,N,30,N,nan,Report
+IFS Planned Deadheads (IFS Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/IFS_Reports/ifs_dh_pbs_freeze.fex,N,31,N,nan,Report
+IFS Planned Deadheads (IFS Report - OPS BI Tool Canned Report),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,31,N,nan,Report
+IFS Planned Deadheads - Rouge (IFS Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/IFS_Reports/ifs_dh_pbs_freeze_RV.fex,N,32,N,nan,Report
+IFS Planned Deadheads - Rouge (IFS Report - OPS BI Tool Canned Report),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,32,N,nan,Report
+Block Hour Guarantee Report (CUPE) (IFS Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/IFS_Reports/CUPE_External.fex,N,33,N,nan,Report
+Block Hour Guarantee Report (CUPE) (IFS Report - OPS BI Tool Canned Report),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,33,N,nan,Report
+Block Hour Guarantee Report (Internal) (IFS Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/IFS_Reports/CUPE_Internal.fex,N,34,N,nan,Report
+Block Hour Guarantee Report (Internal) (IFS Report - OPS BI Tool Canned Report),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,34,N,nan,Report
+Aircom LDF Messages (Restricted Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/Restricted/Aircom_LDF_Messages.fex,N,35,N,Excel Document,Report
+AOG Expedite Order Report (Restricted Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/Restricted/AOG_Expedite_Order_Report.fex,N,36,N,PDF Document,Report
+Excess Bag Refund List Report (Restricted Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/Restricted/Excess_Bag_Refund_List_Report.fex,N,37,N,Excel Document,Report
+Delay Code Changes Report (Restricted Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/Restricted/Delay_Code_Changes_Report.fex,N,38,N,Excel Document,Report
+Block Time Report - WINTER (Restricted Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/Restricted/BR_WINTER.fex,N,39,N,Excel Document,Report
+Block Time Report - WINTER (Restricted Report - OPS BI Tool Canned Report),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,39,N,Excel Document,Report
+Block Time Report - SUMMER (Restricted Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/Restricted/BR_SUMMER.fex,N,40,N,Excel Document,Report
+Block Time Report - SUMMER (Restricted Report - OPS BI Tool Canned Report),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,40,N,Excel Document,Report
+Sabre Upload File - WINTER (Restricted Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/Restricted/BR_Sabre_WINTER.fex,N,41,N,Excel Document,Report
+Sabre Upload File - WINTER (Restricted Report - OPS BI Tool Canned Report),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,41,N,Excel Document,Report
+Sabre Upload File - SUMMER (Restricted Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/Restricted/BR_Sabre_SUMMER.fex,N,42,N,Excel Document,Report
+Sabre Upload File - SUMMER (Restricted Report - OPS BI Tool Canned Report),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,42,N,Excel Document,Report
+Optimal Block Time Report - WINTER (Restricted Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/Restricted/OBR_WINTER.fex,N,43,N,Excel Document,Report
+Optimal Block Time Report - WINTER (Restricted Report - OPS BI Tool Canned Report),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,43,N,Excel Document,Report
+Optimal Block Time Report - SUMMER (Restricted Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/Restricted/OBR_SUMMER.fex,N,44,N,Excel Document,Report
+Optimal Block Time Report - SUMMER (Restricted Report - OPS BI Tool Canned Report),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,44,N,Excel Document,Report
+Optimal Sabre Upload File - WINTER (Restricted Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/Restricted/OBR_Sabre_WINTER.fex,N,45,N,Excel Document,Report
+Optimal Sabre Upload File - WINTER (Restricted Report - OPS BI Tool Canned Report),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,45,N,Excel Document,Report
+Optimal Sabre Upload File - SUMMER (Restricted Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/Restricted/OBR_Sabre_SUMMER.fex,N,46,N,Excel Document,Report
+Optimal Sabre Upload File - SUMMER (Restricted Report - OPS BI Tool Canned Report),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,46,N,Excel Document,Report
+What is Percentile Report (Restricted Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/Restricted/OBR_percentile.fex,N,47,N,Excel Document,Report
+What is Percentile Report (Restricted Report - OPS BI Tool Canned Report),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,47,N,Excel Document,Report
+Forecast Optimal Block Time Report (Restricted Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/Restricted/OBR_forecast.fex,N,48,N,Excel Document,Report
+Forecast Optimal Block Time Report (Restricted Report - OPS BI Tool Canned Report),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,48,N,Excel Document,Report
+Optimal Block Time Report - Ad-hoc Requests (Restricted Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/Restricted/OBR_adhoc.fex,N,49,N,Excel Document,Report
+Optimal Block Time Report - Ad-hoc Requests (Restricted Report - OPS BI Tool Canned Report),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,49,N,Excel Document,Report
+CPCI Report (Restricted Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/Restricted/CPCI_main.fex,N,50,N,Excel Document,Report
+CPCI Report (Restricted Report - OPS BI Tool Canned Report),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,50,N,Excel Document,Report
+CPCI Report (Restricted Report - OPS BI Tool Canned Report),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/utility_functions.fex,N,50,N,Excel Document,Report
+ACF Engine Check Report (Restricted Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/Restricted/ACF_Reports/ACF_Engine_Check.fex,N,51,N,Excel Document,Report
+Fuel SPIs Report (Restricted Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/Restricted/ACF_Reports/Fuel_SPIs_Report_Data.fex,N,52,N,Excel Document,Report
+Crew Costs Report (Restricted Report - OPS BI Tool Canned Report),/output/OPS_BI_Tool/Restricted/Crew_Costs.fex,N,53,N,Excel Document,Report
+Crew Costs Report (Restricted Report - OPS BI Tool Canned Report),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,53,N,Excel Document,Report
+MEL Append Snapshot,/output/ETLs/MEL_Append_Process/mel_append_v2.fex,N,54,N,Snowflake Table,ETL-Integration
+OMI 7am Snapshot,/output/SR4/OMI_Reports/OMI_Snapshot_ETLs/OMI_Snapshot_Append.fex,N,55,N,WF Hold Files,ETL-Integration
+OMI 7am Snapshot,/output/SR4/OMI_Reports/OMI_Snapshot_ETLs/OMI_Snapshot_Staging.fex,Y,55,N,WF Hold Files,ETL-Integration
+Premium Customer Watchlist,/output/Customer_Reports/VIP_Alert_by_Aeroplane/vip_alert_by_aeroplane.fex,N,56,N,E-Mail (HTML Document),Report
+Premium Customer Watchlist,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,56,N,E-Mail (HTML Document),Report
+PAL CPA D0 & CF Reports (Daily),/output/OTP_Reports/PAL_CPA_OTP_Report/PAL_CPA_OTP_Report.fex,N,57,Y,Two PDF documents,Report
+PAL CPA D0 & CF Reports (Daily),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,57,Y,Two PDF documents,Report
+PAL CPA D0 & CF Reports (Weekly),/output/OTP_Reports/PAL_CPA_OTP_Report/PAL_CPA_OTP_Report.fex,N,57,Y,Two PDF documents,Report
+PAL CPA D0 & CF Reports (Weekly),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,57,Y,Two PDF documents,Report
+PAL CPA D0 & CF Reports (Monthly),/output/OTP_Reports/PAL_CPA_OTP_Report/PAL_CPA_OTP_Report.fex,N,57,Y,Two PDF documents,Report
+PAL CPA D0 & CF Reports (Monthly),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,57,Y,Two PDF documents,Report
+ATPDR PED Fin Swap Update,/output/Compliance_Reports/ATPDR_Fin_Swap_Report/ATPDR_Fin_Swap_Update.fex,N,58,N,E-Mail (HTML Document),Report
+Daily Carrier OPS Summary (Remediated),/output/Remediated_Reports/Daily_Carrier_OPS_Summary/Data_Extract/Ops_Summary_Data_Extract.fex,N,59,N,PDF Document(s),Report
+Daily Carrier OPS Summary (Remediated),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,59,N,PDF Document(s),Report
+Cargo Summary Report,/output/Misc_Reports/Cargo_Summary_Report/opsis_summary_report_01_data.fex,N,60,N,Excel Document,Report
+Cargo Summary Report,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,60,N,Excel Document,Report
+Daily Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/oper_perf_summary_composer_daily.fex,N,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_parameters.fex,N,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_all_data.fex,N,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_otp_sum.fex,N,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_otp_mtd_sum.fex,N,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_otp_ytd_sum_cargo.fex,N,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_pax_sum.fex,N,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_mta_perf.fex,N,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_mta_dly_code_sum.fex,N,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_irrop_sum.fex,N,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_high_impact_delays.fex,N,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_startup_delays.fex,N,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_long_delays.fex,N,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_gate_returns.fex,N,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_time_on_ground.fex,N,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_block_sum.fex,N,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_dly_code_sum.fex,N,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_hub_perf.fex,N,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_hub_flt_phases.fex,N,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_mtc_sum.fex,N,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_mel_sum.fex,N,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_fuel_sum.fex,N,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_fuel_2_sum.fex,N,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_transatlantic_startup.fex,N,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_line_of_flying.fex,N,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_glossary.fex,N,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_calendar.fex,N,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_mta_perf.fex,N,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_mel.fex,N,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_fuel.fex,N,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_fuel_2.fex,N,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_targets.fex,N,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_v2.fex,N,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_high_impact_delays.fex,N,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_dly_codes.fex,N,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_hub_thruput.fex,N,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_mtc.fex,N,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_fin_perf.fex,N,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/ETLs/OPR_Data/oper_perf_summary_data.fex,Y,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data.fex,Y,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/ETLs/OPR_Data/oper_perf_summary_data_mta_perf.fex,Y,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/ETLs/OPR_Data/oper_perf_summary_data_dly_codes.fex,Y,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/ETLs/OPR_Data/oper_perf_summary_data_high_impact_delays.fex,Y,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/ETLs/OPR_Data/oper_perf_summary_data_hub_thruput.fex,Y,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/ETLs/OPR_Data/oper_perf_summary_data_mtc.fex,Y,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/ETLs/OPR_Data/oper_perf_summary_data_mel.fex,Y,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/ETLs/OPR_Data/oper_perf_summary_data_fuel.fex,Y,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/ETLs/OPR_Data/oper_perf_summary_data_fuel_2.fex,Y,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/ETLs/OPR_Data/oper_perf_summary_data_calendar.fex,Y,61,N,PDF Document,Report
+Daily Operational Summary (Remediated),/output/ETLs/OPR_Data/oper_perf_summary_parameters.fex,N,61,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/oper_perf_summary_composer_weekly.fex,N,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_parameters.fex,N,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_all_data.fex,N,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_otp_sum.fex,N,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_pax_sum.fex,N,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_mta_perf.fex,N,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_mta_dly_code_sum.fex,N,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_irrop_sum.fex,N,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_block_sum.fex,N,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_dly_code_sum.fex,N,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_hub_perf.fex,N,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_hub_ground_phase.fex,N,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_hub_flt_phases.fex,N,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_mtc_sum.fex,N,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_mel_sum.fex,N,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_fuel_sum.fex,N,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_fuel_2_sum.fex,N,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_skd_chain_sum.fex,N,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_skd_chain_details.fex,N,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_glossary.fex,N,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_calendar.fex,N,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_mta_perf.fex,N,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_mel.fex,N,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_fuel.fex,N,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_fuel_2.fex,N,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_targets.fex,N,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_v2.fex,N,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_high_impact_delays.fex,N,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_dly_codes.fex,N,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_hub_thruput.fex,N,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_mtc.fex,N,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_fin_perf.fex,N,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/ETLs/OPR_Data/oper_perf_summary_data.fex,Y,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data.fex,Y,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/ETLs/OPR_Data/oper_perf_summary_data_mta_perf.fex,Y,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/ETLs/OPR_Data/oper_perf_summary_data_dly_codes.fex,Y,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/ETLs/OPR_Data/oper_perf_summary_data_hub_thruput.fex,Y,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/ETLs/OPR_Data/oper_perf_summary_data_mtc.fex,Y,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/ETLs/OPR_Data/oper_perf_summary_data_mel.fex,Y,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/ETLs/OPR_Data/oper_perf_summary_data_fuel.fex,Y,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/ETLs/OPR_Data/oper_perf_summary_data_fuel_2.fex,Y,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/ETLs/OPR_Data/oper_perf_summary_data_fin_perf.fex,Y,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_fin_perf_bkp20230623.fex,Y,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/ETLs/OPR_Data/oper_perf_summary_data_calendar.fex,Y,62,N,PDF Document,Report
+Weekly Operational Summary (Remediated),/output/ETLs/OPR_Data/oper_perf_summary_parameters.fex,N,62,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/oper_perf_summary_composer_monthly.fex,N,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_parameters.fex,N,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_all_data.fex,N,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_otp_sum.fex,N,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_pax_sum.fex,N,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_mta_perf.fex,N,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_mta_dly_code_sum.fex,N,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_irrop_sum.fex,N,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_block_sum.fex,N,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_dly_code_sum.fex,N,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_hub_perf.fex,N,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_hub_ground_phase.fex,N,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_hub_flt_phases.fex,N,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_mtc_sum.fex,N,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_fuel_sum.fex,N,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_fuel_2_sum.fex,N,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_skd_chain_sum.fex,N,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_skd_chain_details.fex,N,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_glossary.fex,N,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_calendar.fex,N,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_mta_perf.fex,N,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_mel.fex,N,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_fuel.fex,N,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_fuel_2.fex,N,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_targets.fex,N,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_v2.fex,N,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_high_impact_delays.fex,N,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_dly_codes.fex,N,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_hub_thruput.fex,N,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_mtc.fex,N,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_fin_perf.fex,N,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/ETLs/OPR_Data/oper_perf_summary_data.fex,Y,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data.fex,Y,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/ETLs/OPR_Data/oper_perf_summary_data_mta_perf.fex,Y,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/ETLs/OPR_Data/oper_perf_summary_data_dly_codes.fex,Y,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/ETLs/OPR_Data/oper_perf_summary_data_hub_thruput.fex,Y,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/ETLs/OPR_Data/oper_perf_summary_data_mtc.fex,Y,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/ETLs/OPR_Data/oper_perf_summary_data_fuel.fex,Y,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/ETLs/OPR_Data/oper_perf_summary_data_fuel_2.fex,Y,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/ETLs/OPR_Data/oper_perf_summary_data_fin_perf.fex,Y,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_fin_perf_bkp20230623.fex,Y,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/ETLs/OPR_Data/oper_perf_summary_data_calendar.fex,Y,63,N,PDF Document,Report
+Monthly Operational Summary (Remediated),/output/ETLs/OPR_Data/oper_perf_summary_parameters.fex,N,63,N,PDF Document,Report
+Quarterly Operational Summary,/output/Remediated_Reports/OPR_Summary_Reports/oper_perf_summary_composer_quarterly.fex,N,64,N,PDF Document,Report
+Quarterly Operational Summary,/output/Remediated_Reports/OPR_Data/oper_perf_summary_parameters.fex,N,64,N,PDF Document,Report
+Quarterly Operational Summary,/output/Remediated_Reports/OPR_Data/oper_perf_summary_all_data.fex,N,64,N,PDF Document,Report
+Quarterly Operational Summary,/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_otp_sum.fex,N,64,N,PDF Document,Report
+Quarterly Operational Summary,/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_pax_sum.fex,N,64,N,PDF Document,Report
+Quarterly Operational Summary,/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_mta_perf.fex,N,64,N,PDF Document,Report
+Quarterly Operational Summary,/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_mta_dly_code_sum.fex,N,64,N,PDF Document,Report
+Quarterly Operational Summary,/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_irrop_sum.fex,N,64,N,PDF Document,Report
+Quarterly Operational Summary,/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_block_sum.fex,N,64,N,PDF Document,Report
+Quarterly Operational Summary,/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_dly_code_sum.fex,N,64,N,PDF Document,Report
+Quarterly Operational Summary,/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_hub_perf.fex,N,64,N,PDF Document,Report
+Quarterly Operational Summary,/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_hub_ground_phase.fex,N,64,N,PDF Document,Report
+Quarterly Operational Summary,/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_hub_flt_phases.fex,N,64,N,PDF Document,Report
+Quarterly Operational Summary,/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_mtc_sum.fex,N,64,N,PDF Document,Report
+Quarterly Operational Summary,/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_fuel_sum.fex,N,64,N,PDF Document,Report
+Quarterly Operational Summary,/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_fuel_2_sum.fex,N,64,N,PDF Document,Report
+Quarterly Operational Summary,/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_skd_chain_sum.fex,N,64,N,PDF Document,Report
+Quarterly Operational Summary,/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_skd_chain_details.fex,N,64,N,PDF Document,Report
+Quarterly Operational Summary,/output/Remediated_Reports/OPR_Summary_Reports/Report_Components/oper_perf_summary_glossary.fex,N,64,N,PDF Document,Report
+Quarterly Operational Summary,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,64,N,PDF Document,Report
+Quarterly Operational Summary,/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_calendar.fex,N,64,N,PDF Document,Report
+Quarterly Operational Summary,/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_mta_perf.fex,N,64,N,PDF Document,Report
+Quarterly Operational Summary,/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_mel.fex,N,64,N,PDF Document,Report
+Quarterly Operational Summary,/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_fuel.fex,N,64,N,PDF Document,Report
+Quarterly Operational Summary,/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_fuel_2.fex,N,64,N,PDF Document,Report
+Quarterly Operational Summary,/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_targets.fex,N,64,N,PDF Document,Report
+Quarterly Operational Summary,/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_v2.fex,N,64,N,PDF Document,Report
+Quarterly Operational Summary,/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_high_impact_delays.fex,N,64,N,PDF Document,Report
+Quarterly Operational Summary,/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_dly_codes.fex,N,64,N,PDF Document,Report
+Quarterly Operational Summary,/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_hub_thruput.fex,N,64,N,PDF Document,Report
+Quarterly Operational Summary,/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_mtc.fex,N,64,N,PDF Document,Report
+Quarterly Operational Summary,/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_fin_perf.fex,N,64,N,PDF Document,Report
+Quarterly Operational Summary,/output/ETLs/OPR_Data/oper_perf_summary_data.fex,Y,64,N,PDF Document,Report
+Quarterly Operational Summary,/output/Remediated_Reports/OPR_Data/oper_perf_summary_data.fex,Y,64,N,PDF Document,Report
+Quarterly Operational Summary,/output/ETLs/OPR_Data/oper_perf_summary_data_mta_perf.fex,Y,64,N,PDF Document,Report
+Quarterly Operational Summary,/output/ETLs/OPR_Data/oper_perf_summary_data_dly_codes.fex,Y,64,N,PDF Document,Report
+Quarterly Operational Summary,/output/ETLs/OPR_Data/oper_perf_summary_data_hub_thruput.fex,Y,64,N,PDF Document,Report
+Quarterly Operational Summary,/output/ETLs/OPR_Data/oper_perf_summary_data_mtc.fex,Y,64,N,PDF Document,Report
+Quarterly Operational Summary,/output/ETLs/OPR_Data/oper_perf_summary_data_fuel.fex,Y,64,N,PDF Document,Report
+Quarterly Operational Summary,/output/ETLs/OPR_Data/oper_perf_summary_data_fuel_2.fex,Y,64,N,PDF Document,Report
+Quarterly Operational Summary,/output/ETLs/OPR_Data/oper_perf_summary_data_fin_perf.fex,Y,64,N,PDF Document,Report
+Quarterly Operational Summary,/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_fin_perf_bkp20230623.fex,Y,64,N,PDF Document,Report
+Quarterly Operational Summary,/output/ETLs/OPR_Data/oper_perf_summary_data_calendar.fex,Y,64,N,PDF Document,Report
+Quarterly Operational Summary,/output/ETLs/OPR_Data/oper_perf_summary_parameters.fex,N,64,N,PDF Document,Report
+All Exec Summary schedule (2pg) (Remediated),/output/Remediated_Reports/All_Exec_Operations_Summary/All_Exec_Summary_Composer_2pg.fex,N,65,N,PDF Document,Report
+All Exec Summary schedule (2pg) (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_parameters.fex,N,65,N,PDF Document,Report
+All Exec Summary schedule (2pg) (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_exec_data.fex,N,65,N,PDF Document,Report
+All Exec Summary schedule (2pg) (Remediated),/output/Remediated_Reports/All_Exec_Operations_Summary/Report_Components/All_Exec_Summary_LWK.fex,N,65,N,PDF Document,Report
+All Exec Summary schedule (2pg) (Remediated),/output/Remediated_Reports/All_Exec_Operations_Summary/Report_Components/All_Exec_Summary_MTD_YTD.fex,N,65,N,PDF Document,Report
+All Exec Summary schedule (2pg) (Remediated),/output/Remediated_Reports/All_Exec_Operations_Summary/Report_Components/All_Exec_Summary_MEL.fex,N,65,N,PDF Document,Report
+All Exec Summary schedule (2pg) (Remediated),/output/Remediated_Reports/All_Exec_Operations_Summary/Report_Components/All_Exec_Summary_MTC.fex,N,65,N,PDF Document,Report
+All Exec Summary schedule (2pg) (Remediated),/output/Remediated_Reports/All_Exec_Operations_Summary/Report_Components/All_Exec_Summary_LWK_Daily.fex,N,65,N,PDF Document,Report
+All Exec Summary schedule (2pg) (Remediated),/output/Remediated_Reports/All_Exec_Operations_Summary/Report_Components/All_Exec_Summary_HUB.fex,N,65,N,PDF Document,Report
+All Exec Summary schedule (2pg) (Remediated),/output/Remediated_Reports/All_Exec_Operations_Summary/Report_Components/All_Exec_Summary_Perf_Monitor.fex,N,65,N,PDF Document,Report
+All Exec Summary schedule (2pg) (Remediated),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,65,N,PDF Document,Report
+All Exec Summary schedule (2pg) (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_calendar.fex,N,65,N,PDF Document,Report
+All Exec Summary schedule (2pg) (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_mel.fex,N,65,N,PDF Document,Report
+All Exec Summary schedule (2pg) (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_mtc.fex,N,65,N,PDF Document,Report
+All Exec Summary schedule (2pg) (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_targets.fex,N,65,N,PDF Document,Report
+All Exec Summary schedule (2pg) (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_v2.fex,N,65,N,PDF Document,Report
+All Exec Summary schedule (2pg) (Remediated),/output/ETLs/OPR_Data/oper_perf_summary_parameters.fex,N,65,N,PDF Document,Report
+All Exec Summary schedule (2pg) (Remediated),/output/ETLs/OPR_Data/oper_perf_summary_data.fex,Y,65,N,PDF Document,Report
+All Exec Summary schedule (2pg) (Remediated),/output/Remediated_Reports/OPR_Data/oper_perf_summary_data.fex,Y,65,N,PDF Document,Report
+All Exec Summary schedule (2pg) (Remediated),/output/ETLs/OPR_Data/oper_perf_summary_data_mel.fex,Y,65,N,PDF Document,Report
+All Exec Summary schedule (2pg) (Remediated),/output/ETLs/OPR_Data/oper_perf_summary_data_mtc.fex,Y,65,N,PDF Document,Report
+All Exec Summary schedule (2pg) (Remediated),/output/ETLs/OPR_Data/oper_perf_summary_data_calendar.fex,Y,65,N,PDF Document,Report
+OPS Summary for Yesterday,/output/OTP_Reports/Daily_Yest_Report_Param/daily_yest.fex,N,66,N,E-Mail (HTML Document),Report
+OPS Summary for Yesterday,/output/OTP_Reports/Daily_Yest_Report_Param/Report_Components/daily_yest_ops_summary.fex,N,66,N,E-Mail (HTML Document),Report
+OPS Summary for Yesterday,/output/OTP_Reports/Daily_Yest_Report_Param/Report_Components/daily_yest_delay_cde.fex,N,66,N,E-Mail (HTML Document),Report
+OPS Summary for Yesterday,/output/OTP_Reports/Daily_Yest_Report_Param/Report_Components/daily_yest_best_flt_hf.fex,N,66,N,E-Mail (HTML Document),Report
+OPS Summary for Yesterday,/output/OTP_Reports/Daily_Yest_Report_Param/Report_Components/daily_yest_best_flt_lf.fex,N,66,N,E-Mail (HTML Document),Report
+OPS Summary for Yesterday,/output/OTP_Reports/Daily_Yest_Report_Param/Report_Components/daily_yest_wrst_stn_hf.fex,N,66,N,E-Mail (HTML Document),Report
+OPS Summary for Yesterday,/output/OTP_Reports/Daily_Yest_Report_Param/Report_Components/daily_yest_wrst_flt_hf.fex,N,66,N,E-Mail (HTML Document),Report
+OPS Summary for Yesterday,/output/OTP_Reports/Daily_Yest_Report_Param/Report_Components/daily_yest_wrst_flt_lf.fex,N,66,N,E-Mail (HTML Document),Report
+OPS Summary for Yesterday,/output/OTP_Reports/Daily_Yest_Report_Param/Report_Components/daily_yest_list.fex,N,66,N,E-Mail (HTML Document),Report
+OPS Summary for Yesterday,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,66,N,E-Mail (HTML Document),Report
+OPS Summary for Yesterday,/output/OTP_Reports/Daily_Startup_Report/Data_Extract/daily_ft_data_startup.fex,Y,66,N,E-Mail (HTML Document),Report
+OPS Summary for Yesterday,/output/OTP_Reports/Daily_Yest_Report_Param/Data_Extract/daily_ft_data_yest.fex,Y,66,N,E-Mail (HTML Document),Report
+Daily Travel Itinerary,/output/Misc_Reports/FlightWatch_Reports/ftw_daily_gov_list.fex,N,67,N,PDF Document,Report
+Daily Travel Itinerary,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,67,N,PDF Document,Report
+BI Tool Crew Pairing Data Extract,/output/OPS_BI_Tool/Flight_Ops_Reports/Monthly_Crew_Pairing/crew_pairing_review_hold_file.fex,N,68,Y,nan,ETL-Integration
+BI Tool Crew Pairing Data Extract,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,68,Y,nan,ETL-Integration
+BI Tool Hold Files for Monthly Crew Pairing,/output/OPS_BI_Tool/Flight_Ops_Reports/Monthly_Crew_Pairing/crew_pairing_review_hold_file.fex,N,68,Y,nan,ETL-Integration
+BI Tool Hold Files for Monthly Crew Pairing,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,68,Y,nan,ETL-Integration
+BI Tool Metrics and Dimensions Refresh,/output/OPS_BI_Tool/Utility_Procedures/bi_tool_dimensions_load.fex,N,69,N,nan,ETL-Integration
+BI Tool Metrics and Dimensions Refresh,/output/OPS_BI_Tool/Utility_Procedures/bi_tool_guided_metrics.fex,N,69,N,nan,ETL-Integration
+BI Tool Metrics and Dimensions Refresh,/output/OPS_BI_Tool/Utility_Procedures/bi_tool_target_metrics.fex,N,69,N,nan,ETL-Integration
+BI Tool Metrics and Dimensions Refresh,/output/OPS_BI_Tool/Utility_Procedures/cnx_activity_data_pull.fex,N,69,N,nan,ETL-Integration
+BI Tool Metrics and Dimensions Refresh,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,69,N,nan,ETL-Integration
+BI Tool Real Time Data Load,/output/OPS_BI_Tool/Utility_Procedures/data_load_realtime.fex,N,70,N,nan,ETL-Integration
+Daily Flight Tracking Report,/output/OTP_Reports/Daily_Flight_Tracking_Report/flight_tracking_report.fex,N,71,N,Excel Document,Report
+DX Schedule Extract,/output/ETLs/DX_Schedule_Extract/DX_Schedule_Extract.fex,N,72,N,Excel Document,ETL-Integration
+Dynamic Distribution List Backup,/output/ETLs/Dynamic_Distribution_List_Backup/Dynamic_Distribution_List_Backup.fex,N,73,N,nan,ETL-Integration
+FOPS App Data Extract,/output/ETLs/FOPS_App/FOPS_APP_Data.fex,N,74,N,nan,ETL-Integration
+FOPS App Data Extract,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,74,N,nan,ETL-Integration
+FOPS App Data Upload (Details),/output/ETLs/FOPS_App/FOPS_APP_Data_Details.fex,N,75,N,CSV Document,ETL-Integration
+FOPS App Data Upload (Details),/output/FOPs_Reports/Flight_Ops_Reports/FOPS_App/FOPS_APP_Data.fex,Y,75,N,CSV Document,ETL-Integration
+FOPS App Data Upload (Details),/output/ETLs/FOPS_App/FOPS_APP_Data.fex,Y,75,N,CSV Document,ETL-Integration
+FOPS App Data Upload (Details),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,75,N,CSV Document,ETL-Integration
+FOPS App Data Upload (Fleet),/output/ETLs/FOPS_App/FOPS_APP_Data_Fleet.fex,N,76,N,CSV Document,ETL-Integration
+FOPS App Data Upload (Fleet),/output/FOPs_Reports/Flight_Ops_Reports/FOPS_App/FOPS_APP_Data.fex,Y,76,N,CSV Document,ETL-Integration
+FOPS App Data Upload (Fleet),/output/ETLs/FOPS_App/FOPS_APP_Data.fex,Y,76,N,CSV Document,ETL-Integration
+FOPS App Data Upload (Fleet),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,76,N,CSV Document,ETL-Integration
+FOPS App Data Upload (System),/output/ETLs/FOPS_App/FOPS_APP_Data_System.fex,N,77,N,CSV Document,ETL-Integration
+FOPS App Data Upload (System),/output/FOPs_Reports/Flight_Ops_Reports/FOPS_App/FOPS_APP_Data.fex,Y,77,N,CSV Document,ETL-Integration
+FOPS App Data Upload (System),/output/ETLs/FOPS_App/FOPS_APP_Data.fex,Y,77,N,CSV Document,ETL-Integration
+FOPS App Data Upload (System),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,77,N,CSV Document,ETL-Integration
+HZTV Dashboard Upload (NEW),/output/ETLs/Portal_Upload/portal_upload_otp_stats_v3.fex,N,78,N,JSON Document,ETL-Integration
+HZTV Dashboard Upload (NEW),/output/ETLs/Portal_Upload/portal_upload_otp_mtd_extract.fex,N,78,N,JSON Document,ETL-Integration
+HZTV Dashboard Upload (NEW),/output/OPS_Real-Time_Dashboard/Utility_Procedures/dash_data.fex,Y,78,N,JSON Document,ETL-Integration
+HZTV Dashboard Upload (Station) (NEW),/output/ETLs/Portal_Upload/portal_upload_stn_otp_stats_v3.fex,N,79,N,JSON Document,ETL-Integration
+HZTV Dashboard Upload (Station) (NEW),/output/ETLs/Portal_Upload/portal_upload_otp_mtd_extract.fex,N,79,N,JSON Document,ETL-Integration
+HZTV Dashboard Upload (Station) (NEW),/output/OPS_Real-Time_Dashboard/Utility_Procedures/dash_data.fex,Y,79,N,JSON Document,ETL-Integration
+Daily IFG Delay Report,/output/OTP_Reports/Daily_IFG_Delay_Report/ifg_daily_delays_rep.fex,N,80,N,PDF Document,Report
+Daily IFG Delay Report,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,80,N,PDF Document,Report
+OTP for Yesterday / Ponctualité pour hier,/output/OTP_Reports/Daily_OTP_AM_Email/daily_am_email_td.fex,N,81,N,E-Mail (HTML Document),Report
+OTP for Yesterday / Ponctualité pour hier,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,81,N,E-Mail (HTML Document),Report
+Overnight Aircraft,/output/MOC/mel_acft_overnight.fex,N,82,N,Excel Document,Report
+Daily Uncoded Flights,/output/OTP_Reports/Daily_Uncoded_Flights/Daily_Uncoded_Flights.fex,N,83,N,Excel Document,Report
+Daily Uncoded Flights,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,83,N,Excel Document,Report
+Daily VIP List (EXCEL),/output/Customer_Reports/Aeroplan_Wkly_VIP_Listing/aeroplan_wkly_vip_listing.fex,N,84,Y,Excel Document,Report
+Daily VIP List (EXCEL),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,84,Y,Excel Document,Report
+Daily VIP List (PDF),/output/Customer_Reports/Aeroplan_Wkly_VIP_Listing/aeroplan_wkly_vip_listing.fex,N,84,Y,Excel Document,Report
+Daily VIP List (PDF),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,84,Y,Excel Document,Report
+ACM WO Material Report,/output/OPS_BI_Tool/ACM/ACM_WO_Material_Report.fex,N,85,N,Excel Document,Report
+Daily 2MM Alert,/output/Customer_Reports/Aeroplan_Wkly_VIP_Listing/2MM_Alert.fex,N,86,N,E-Mail (HTML),Report
+Daily Delay Code Groundhandler SLA,/output/OTP_Reports/Daily_SLA_Delay_Report/sla_daily_delays_rep.fex,N,87,N,PDF Document,Report
+Daily Delay Code Groundhandler SLA,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,87,N,PDF Document,Report
+Portal Upload AC,/output/ETLs/Portal_Upload/portal_upload_otp_stats.fex,N,88,N,XML Document,ETL-Integration
+Portal Upload AC,/output/OPS_Real-Time_Dashboard/Utility_Procedures/dash_data_sum_gdgt.fex,Y,88,N,XML Document,ETL-Integration
+Portal Upload AC,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,88,N,XML Document,ETL-Integration
+Portal Upload AC,/output/OPS_Real-Time_Dashboard/Utility_Procedures/dash_data_trax.fex,Y,88,N,XML Document,ETL-Integration
+Portal Upload AC,/output//home/BuildScanDirectory/ops/WFC/Repository/Ops_Analytics/~tp038123/dash_data_trax.fex,Y,88,N,XML Document,ETL-Integration
+Portal Upload AC,/output/OPS_Real-Time_Dashboard/Utility_Procedures/dash_data.fex,Y,88,N,XML Document,ETL-Integration
+IFS VER Report,/output/FOPs_Reports/Flight_Ops_Reports/VER_Reports/IFS_500E_VER_data.fex,N,89,N,Excel Document,Report
+IFS VER Report,/output/FOPs_Reports/Flight_Ops_Reports/VER_Reports/IFS_500E_VER_report.fex,N,89,N,Excel Document,Report
+IFS VER Report,/output/FOPs_Reports/Flight_Ops_Reports/VER_Reports/IFS_500E_VER_report_PLN_ACTL.fex,N,89,N,Excel Document,Report
+IFS VER Report,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,89,N,Excel Document,Report
+IFS VER Report,/output/FOPs_Reports/Flight_Ops_Reports/VER_Reports/IFS_500E_VER_data_test.fex,Y,89,N,Excel Document,Report
+Real Time Dashboard - Daily ETL,/output/OPS_Real-Time_Dashboard/Utility_Procedures/dash_data_ETL.fex,N,90,N,HOLD File,ETL-Integration
+Real Time Dashboard - Daily ETL,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,90,N,HOLD File,ETL-Integration
+Real Time Dashboard - TRAX update,/output/OPS_Real-Time_Dashboard/Utility_Procedures/dash_data_trax.fex,N,91,N,HOLD File,ETL-Integration
+Real-Time Dashboard Update,/output/OPS_Real-Time_Dashboard/Utility_Procedures/dash_data_final.fex,N,92,N,HOLD File,ETL-Integration
+Real-Time Dashboard Update,/output/OPS_Real-Time_Dashboard/Utility_Procedures/dash_data.fex,N,92,N,HOLD File,ETL-Integration
+Real-Time Dashboard Update,/output/OPS_Real-Time_Dashboard/Utility_Procedures/dash_data_stats.fex,N,92,N,HOLD File,ETL-Integration
+Real-Time Dashboard Update,/output/OPS_Real-Time_Dashboard/Utility_Procedures/dash_data_flt_list.fex,N,92,N,HOLD File,ETL-Integration
+Real-Time Dashboard Update,/output/OPS_Real-Time_Dashboard/Utility_Procedures/dash_data_sum_gdgt.fex,N,92,N,HOLD File,ETL-Integration
+Real-Time Dashboard Update,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,92,N,HOLD File,ETL-Integration
+Real-Time Dashboard Update,/output/OPS_Real-Time_Dashboard/Utility_Procedures/dash_data_ETL.fex,Y,92,N,HOLD File,ETL-Integration
+Real-Time Dashboard Update,/output/OPS_Real-Time_Dashboard/Utility_Procedures/dash_data_top4_stations.fex,Y,92,N,HOLD File,ETL-Integration
+Real-Time Dashboard Update,/output/OPS_Real-Time_Dashboard/Utility_Procedures/dash_data_trax.fex,Y,92,N,HOLD File,ETL-Integration
+Real-Time Dashboard Update,/output//home/BuildScanDirectory/ops/WFC/Repository/Ops_Analytics/~tp038123/dash_data_trax.fex,Y,92,N,HOLD File,ETL-Integration
+Workload Extract - WAB (FTP),/output/ETLs/OPS_IT_-_WAB_Flight_List/workload_extract.fex,N,93,N,nan,ETL-Integration
+Flight Watchlist and Flight Valuation Summary,/output/Misc_Reports/FlightWatch_Reports/ftw_daily_netline_extract.fex,N,94,N,ZIP File containing Excel Documents,Report
+Flight Watchlist and Flight Valuation Summary,/output/Misc_Reports/FlightWatch_Reports/ftw_daily_flight_list.fex,N,94,N,ZIP File containing Excel Documents,Report
+Flight Watchlist and Flight Valuation Summary,/output/Misc_Reports/FlightWatch_Reports/ftw_daily_flt_val.fex,N,94,N,ZIP File containing Excel Documents,Report
+Flight Watchlist and Flight Valuation Summary,/output/Misc_Reports/FlightWatch_Reports/ftw_daily_fqtv_se_list.fex,N,94,N,ZIP File containing Excel Documents,Report
+Flight Watchlist and Flight Valuation Summary,/output/Misc_Reports/FlightWatch_Reports/ftw_daily_groups_list.fex,N,94,N,ZIP File containing Excel Documents,Report
+Flight Watchlist and Flight Valuation Summary,/output/Misc_Reports/FlightWatch_Reports/ftw_daily_avip_list.fex,N,94,N,ZIP File containing Excel Documents,Report
+Flight Watchlist and Flight Valuation Summary,/output/Misc_Reports/FlightWatch_Reports/ftw_daily_wcbw_list.fex,N,94,N,ZIP File containing Excel Documents,Report
+Flight Watchlist and Flight Valuation Summary,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,94,N,ZIP File containing Excel Documents,Report
+Flight Watchlist and Flight Valuation Summary,/output/Misc_Reports/FlightWatch_Reports/ftw_daily_netline_lookup.fex,N,94,N,ZIP File containing Excel Documents,Report
+Flight Watchlist and Flight Valuation Summary,/output/OPS_BI_Tool/Utility_Procedures/cnx_activity_data_pull.fex,Y,94,N,ZIP File containing Excel Documents,Report
+Flight Watchlist and Flight Valuation Summary,/output/Misc_Reports/FlightWatch_Reports/ftw_weekly_netline_extract.fex,Y,94,N,ZIP File containing Excel Documents,Report
+Disruption Code Breakdown Report (Weekly),/output/Executive_Reports/Disruption_Code_Breakdown_Report/Disruption_Code_Breakdown_Report_v3.fex,N,95,Y,PDF Document,Report
+Disruption Code Breakdown Report (Weekly),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,95,Y,PDF Document,Report
+Disruption Code Breakdown Report (Weekly),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/utility_functions.fex,N,95,Y,PDF Document,Report
+Disruption Code Breakdown Report (Monthly),/output/Executive_Reports/Disruption_Code_Breakdown_Report/Disruption_Code_Breakdown_Report_v3.fex,N,95,Y,PDF Document,Report
+Disruption Code Breakdown Report (Monthly),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,95,Y,PDF Document,Report
+Disruption Code Breakdown Report (Monthly),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/utility_functions.fex,N,95,Y,PDF Document,Report
+Corporate Communication Summary (HTML),/output/OTP_Reports/Corp_comm_summary/corporate_comm_summary_html.fex,N,96,N,E-Mail (HTML Document),Report
+Corporate Communication Summary (HTML),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,96,N,E-Mail (HTML Document),Report
+Weekly Executive OPS Performance Summary (EXCEL),/output/Executive_Reports/Weekly_Executive_OPS_Performance_Summary/Weekly_Executive_Composer.fex,N,97,N,Excel documents,Report
+Weekly Executive OPS Performance Summary (EXCEL),/output/Executive_Reports/Weekly_Executive_OPS_Performance_Summary/Weekly_Executive_Branch_Data_v2.fex,N,97,N,Excel documents,Report
+Weekly Executive OPS Performance Summary (EXCEL),/output/Executive_Reports/Weekly_Executive_OPS_Performance_Summary/Weekly_Executive_Carrier_Summary_v2.fex,N,97,N,Excel documents,Report
+Weekly Executive OPS Performance Summary (EXCEL),/output/Executive_Reports/Weekly_Executive_OPS_Performance_Summary/Weekly_Executive_Branch_Metrics.fex,N,97,N,Excel documents,Report
+Weekly Executive OPS Performance Summary (EXCEL),/output/Executive_Reports/Weekly_Executive_OPS_Performance_Summary/Weekly_Executive_Parameters.fex,N,97,N,Excel documents,Report
+Weekly Executive OPS Performance Summary (EXCEL),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,97,N,Excel documents,Report
+Weekly Executive OPS Performance Summary (EXCEL),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/utility_functions.fex,N,97,N,Excel documents,Report
+Weekly Executive OPS Performance Summary (EXCEL),/output/Executive_Reports/Weekly_Executive_OPS_Performance_Summary/Weekly_Executive_Branch_Data.fex,Y,97,N,Excel documents,Report
+Weekly Operational Performance Summary,/output/OTP_Reports/Weekly_ops_perf/Weekly_OPS_Compose.fex,N,98,N,PDF Document,Report
+Weekly Operational Performance Summary,/output/OTP_Reports/Weekly_ops_perf/Data_Extract/Ops_Perf_Data_Extract.fex,N,98,N,PDF Document,Report
+Weekly Operational Performance Summary,/output/OTP_Reports/Weekly_ops_perf/Report_Components/ops_perf_summary_v2.fex,N,98,N,PDF Document,Report
+Weekly Operational Performance Summary,/output/OTP_Reports/Weekly_ops_perf/Report_Components/ops_perf_HUB.fex,N,98,N,PDF Document,Report
+Weekly Operational Performance Summary,/output/OTP_Reports/Weekly_ops_perf/Report_Components/ops_perf_monitor.fex,N,98,N,PDF Document,Report
+Weekly Operational Performance Summary,/output/OTP_Reports/Weekly_ops_perf/Report_Components/ops_perf_daily.fex,N,98,N,PDF Document,Report
+Weekly Operational Performance Summary,/output/OTP_Reports/Weekly_ops_perf/Report_Components/ops_perf_dv.fex,N,98,N,PDF Document,Report
+Weekly Operational Performance Summary,/output/OTP_Reports/Weekly_ops_perf/Report_Components/ops_perf_delays_over_3hrs.fex,N,98,N,PDF Document,Report
+Weekly Operational Performance Summary,/output/OTP_Reports/Weekly_ops_perf/Report_Components/ops_perf_startup_dly_breakdown.fex,N,98,N,PDF Document,Report
+Weekly Operational Performance Summary,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,98,N,PDF Document,Report
+Weekly Operational Performance Summary,/output/Argo/OPS/Ops_Perf_Data_Extract.fex,Y,98,N,PDF Document,Report
+Casebank_AC_DELAY_roll_hist,/output/Misc_Reports/Casebank/Casebank_AC_DELAY_roll_hist.fex,N,99,N,CSV Document,ETL-Integration
+Casebank_Defect_Info_roll_hist,/output/Misc_Reports/Casebank/Casebank_Defect_Info_roll_hist.fex,N,100,N,CSV Document,ETL-Integration
+Casebank_Defect_Parts_roll_hist,/output/Misc_Reports/Casebank/Casebank_Defect_Parts_roll_hist.fex,N,101,N,CSV Document,ETL-Integration
+Casebank_Defect_Troubleshooting_roll_hist,/output/Misc_Reports/Casebank/Casebank_Defect_Troubleshooting_roll_hist.fex,N,102,N,CSV Document,ETL-Integration
+catering_fops_crew_cnt,/output/Misc_Reports/Catering_Crew_Counts/fops_emp_ftp.fex,N,103,N,Plain Text Document,ETL-Integration
+catering_ifs_crew_cnt,/output/Misc_Reports/Catering_Crew_Counts/ifs_emp_ftp.fex,N,104,N,Plain Text Document,ETL-Integration
+FOPS All Pilots Recency,/output/FOPs_Reports/FOPS_Metrics/AllPilots_Recency.fex,N,105,N,Excel Document,Report
+FOPS PCRR Recency Report,/output/FOPs_Reports/FOPS_Metrics/Jessicas_Recency_Report.fex,N,106,N,Excel Document,Report
+JAZZ FTP Cancelled Flights,/output/ETLs/JAZZ_FTP_Cancelled_Flights/jazz_ftp_cnl_flts.fex,N,107,N,Excel Document,ETL-Integration
+JAZZ FTP Cancelled Flights,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,107,N,Excel Document,ETL-Integration
+JAZZ FTP Operated Flights,/output/ETLs/JAZZ_FTP_Operated_Flights/jazz_ftp_operated_flts.fex,N,108,N,Excel Document,ETL-Integration
+JAZZ FTP Operated Flights,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,108,N,Excel Document,ETL-Integration
+OMI Daily 0700 Snapshot Report,/output/SR4/OMI_Reports/OMI_Daily_Snapshot_Report.fex,N,109,N,Excel Document,Report
+OMI Daily 0700 Snapshot Report,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,109,N,Excel Document,Report
+OMI Daily 0700 Snapshot Report,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/utility_functions.fex,N,109,N,Excel Document,Report
+OMI Daily 0700 Snapshot Report,/output/SR4/OMI_Reports/OMI_Snapshot_ETLs/OMI_Snapshot_Staging.fex,Y,109,N,Excel Document,Report
+OMI Daily Contribution Report,/output/SR4/OMI_Reports/OMI_Contribution_Report.fex,N,110,N,Excel Document,Report
+ACF Contingency Fuel Stats,/output/Fuel_Reports/Contingency_Fuel_Stats/acf_email.fex,N,111,N,"Excel Document, and TAB Delimited Text Document",ETL-Integration
+ACF Contingency Fuel Stats,/output/Fuel_Reports/Contingency_Fuel_Stats/acf_excel.fex,N,111,N,"Excel Document, and TAB Delimited Text Document",ETL-Integration
+ACF Contingency Fuel Stats,/output/Fuel_Reports/Contingency_Fuel_Stats/acf_tab_dlmtd.fex,N,111,N,"Excel Document, and TAB Delimited Text Document",ETL-Integration
+ACF Contingency Fuel Stats,/output/Fuel_Reports/Contingency_Fuel_Stats/acf_parameters.fex,N,111,N,"Excel Document, and TAB Delimited Text Document",ETL-Integration
+ACF Contingency Fuel Stats,/output/Fuel_Reports/Contingency_Fuel_Stats/acf_data.fex,N,111,N,"Excel Document, and TAB Delimited Text Document",ETL-Integration
+ACF Contingency Fuel Stats,/output//acf_data.fex,Y,111,N,"Excel Document, and TAB Delimited Text Document",ETL-Integration
+Crew Activity Pay Report (Monthly),/output/FOPs_Reports/Crew_Activity_Pay_Report/Crew_Activity_Pay_Report.fex,N,112,N,CSV Document,Report
+AIRCOM FUEL Extract,/output/ETLs/AIRCOM_ETLs/aircom_extract.fex,N,113,N,CSV Document,ETL-Integration
+AIRCOM FUEL Extract,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,113,N,CSV Document,ETL-Integration
+AIRCOM FUEL Extract TDX,/output/ETLs/AIRCOM_ETLs/aircom_extract_tdx.fex,N,114,N,CSV Document,ETL-Integration
+AIRCOM FUEL Extract TDX,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,114,N,CSV Document,ETL-Integration
+AIRCOM FUEL FLT LVL Extract,/output/ETLs/AIRCOM_ETLs/aircom_fuel_extracts.fex,N,115,N,CSV Document,ETL-Integration
+AIRCOM FUEL FLT LVL Extract,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,115,N,CSV Document,ETL-Integration
+Daily APM Reports,/output/ETLs/Daily_APM_Reports/daily_cumulative_aims_msg_extract.fex,N,116,N,TAB Delimited File,ETL-Integration
+FOPS Daily Open Pairings,/output/FOPs_Reports/FOPS_Daily_Open_Pairings/fops_open_time_pairings.fex,N,117,N,Excel Document,Report
+FOPS Daily Open Pairings,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,117,N,Excel Document,Report
+FOPS Daily Reserve Stats,/output/FOPs_Reports/FOPS_Daily_Reserve_Stats/fops_daily_rsv_stats.fex,N,118,N,Excel Document,Report
+FOPS Daily Reserve Stats,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,118,N,Excel Document,Report
+FOPS Hotel Report Daily,/output/IFS_Reports/IFS_Hotel_Report/ifs_hotel_report.fex,N,119,Y,Excel Document,Report
+FOPS Hotel Report Daily,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,119,Y,Excel Document,Report
+Forecast Baggage,/output/Baggage_Reports/Forecast_Baggage_Daily/forecast_bags.fex,N,120,N,Excel Document,Report
+IFS Daily Open Pairings,/output/IFS_Reports/IFS_Daily_Open_Pairings/ifs_open_time_pairings.fex,N,121,N,Excel Document,Report
+IFS Daily Open Pairings,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,121,N,Excel Document,Report
+IFS Daily Reserve Stats,/output/IFS_Reports/IFS_Daily_Reserve_Stats/ifs_daily_rsv_stats.fex,N,122,N,Excel Document,Report
+IFS Daily Reserve Stats,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,122,N,Excel Document,Report
+IFS Hotel Report Daily,/output/IFS_Reports/IFS_Hotel_Report/ifs_hotel_report.fex,N,119,Y,Excel Document,Report
+IFS Hotel Report Daily,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,119,Y,Excel Document,Report
+LHR Passenger Booking Report,/output/Station_Reports/LHR_Booking_Forecast_Report/LHR_Booking_Forecast.fex,N,123,N,Excel Document,Report
+LHR Passenger Booking Report,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,123,N,Excel Document,Report
+MSF Report,/output/Baggage_Reports/CBO_MSF_PROD/sita_msf.fex,N,124,N,Excel Document,Report
+International OTP Summary,/output/OTP_Reports/China_ARR_and_DEP/intl_otp_report.fex,N,125,Y,PDF Document,Report
+International OTP Summary,/output/OTP_Reports/China_ARR_and_DEP/intl_otp_parameters.fex,N,125,Y,PDF Document,Report
+International OTP Summary,/output/OTP_Reports/China_ARR_and_DEP/intl_otp_data_extract.fex,N,125,Y,PDF Document,Report
+International OTP Summary,/output/OTP_Reports/China_ARR_and_DEP/intl_otp_carrier_summary.fex,N,125,Y,PDF Document,Report
+International OTP Summary,/output/OTP_Reports/China_ARR_and_DEP/intl_otp_region_summary.fex,N,125,Y,PDF Document,Report
+International OTP Summary,/output/OTP_Reports/China_ARR_and_DEP/intl_otp_station_summary.fex,N,125,Y,PDF Document,Report
+International OTP Summary,/output/OTP_Reports/China_ARR_and_DEP/intl_otp_flight_details.fex,N,125,Y,PDF Document,Report
+International OTP Summary,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,125,Y,PDF Document,Report
+International OTP Summary - EXCEL,/output/OTP_Reports/China_ARR_and_DEP/intl_otp_report.fex,N,125,Y,Excel Document,Report
+International OTP Summary - EXCEL,/output/OTP_Reports/China_ARR_and_DEP/intl_otp_parameters.fex,N,125,Y,Excel Document,Report
+International OTP Summary - EXCEL,/output/OTP_Reports/China_ARR_and_DEP/intl_otp_data_extract.fex,N,125,Y,Excel Document,Report
+International OTP Summary - EXCEL,/output/OTP_Reports/China_ARR_and_DEP/intl_otp_carrier_summary.fex,N,125,Y,Excel Document,Report
+International OTP Summary - EXCEL,/output/OTP_Reports/China_ARR_and_DEP/intl_otp_region_summary.fex,N,125,Y,Excel Document,Report
+International OTP Summary - EXCEL,/output/OTP_Reports/China_ARR_and_DEP/intl_otp_station_summary.fex,N,125,Y,Excel Document,Report
+International OTP Summary - EXCEL,/output/OTP_Reports/China_ARR_and_DEP/intl_otp_flight_details.fex,N,125,Y,Excel Document,Report
+International OTP Summary - EXCEL,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,125,Y,Excel Document,Report
+Daily Jetz OTP Report,/output/OTP_Reports/Jetz_Daily_OTP_Report/Jetz_Daily_OTP_Report.fex,N,126,N,Excel Document,Report
+MTC Downtime Report,/output/Misc_Reports/MTC_Downtime_Report/mtc_overnight_fins.fex,N,127,N,Excel Document,Report
+Passenger Groups Report,/output/Customer_Reports/PAX_Groups_Report/PAX_Groups_Report.fex,N,128,N,Excel Document,Report
+Passenger Groups Report,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,128,N,Excel Document,Report
+Baggage Handling Success Rate & PAWOB Weekly Report,/output/Baggage_Reports/Mish_Bag_Report/Mish_Bag_Report.fex,N,129,N,Excel DocumentPDF Document,Report
+Baggage Handling Success Rate & PAWOB Weekly Report,/output/Baggage_Reports/PAWOB_MTD_YTD/sita_PAWOB_Weekly.fex,N,129,N,Excel DocumentPDF Document,Report
+Baggage Handling Success Rate & PAWOB Weekly Report,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,129,N,Excel DocumentPDF Document,Report
+Baggage Handling Success Rate & PAWOB Weekly Report,/output/Baggage_Reports/PAWOB_MTD_YTD/PAWOB-GraphGen.fex,Y,129,N,Excel DocumentPDF Document,Report
+Baggage Handling Success Rate & PAWOB Weekly Report,/output/OTP_Reports/Tier_2_and_3_Carrier_OPR_Report/wor02_03_graph_06_pawob.fex,Y,129,N,Excel DocumentPDF Document,Report
+Baggage Handling Success Rate & PAWOB Weekly Report,/output/OTP_Reports/OPR_Report/wor02_01_parameters.fex,N,129,N,Excel DocumentPDF Document,Report
+Daily SSCI Acceptance Report,/output/Customer_Reports/PAX_CheckIn_Stats/Daily_Acceptance_Report_PAX_FLT_STD.fex,N,130,N,Excel Document,Report
+Daily SSCI Acceptance Report,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,130,N,Excel Document,Report
+Pilot Supervisors Utilization Report,/output/FOPs_Reports/FOPS_Metrics/PilotSupervisorsUtilization.fex,N,131,N,Excel Document,Report
+Pilot Supervisors Utilization Report,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,131,N,Excel Document,Report
+IOE Tracking Report,/output/FOPs_Reports/Flight_Ops_Reports/IOE_Tracking/PQRMcode.fex,N,132,N,Excel Document,Report
+IOE Tracking Report,/output/FOPs_Reports/Flight_Ops_Reports/IOE_Tracking/PQRMcode_partI.fex,N,132,N,Excel Document,Report
+IOE Tracking Report,/output/FOPs_Reports/Flight_Ops_Reports/IOE_Tracking/PQRMcode_partII.fex,N,132,N,Excel Document,Report
+IOE Tracking Report,/output/ETLs/OPR_Data/oper_perf_summary_parameters.fex,N,132,N,Excel Document,Report
+IOE Tracking Report,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,132,N,Excel Document,Report
+IOE Tracking Report,/output/FOPs_Reports/IOE_Tracking/PQRMcode_partI.fex,Y,132,N,Excel Document,Report
+IOE Tracking Report,/output/FOPs_Reports/IOE_Tracking/PQRMcode_partII.fex,Y,132,N,Excel Document,Report
+PAWOB GH Monthly,/output/Baggage_Reports/PAWOB_GH_Monthly/GH_PAWOB_SITA.fex,N,133,N,Excel Document,Report
+PAWOB GH Monthly,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,133,N,Excel Document,Report
+PAX Check-in and Bag Tag Printed,/output/Customer_Reports/PAX_CheckIn_Stats/Monthly_PAX_CheckIn_Stats.fex,N,134,N,PDF Document,Report
+PAX Check-in and Bag Tag Printed,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,134,N,PDF Document,Report
+PAX Check-in and Bag Tag Printed,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/utility_functions.fex,N,134,N,PDF Document,Report
+Prime Flight Cargo Daily Evening Report,/output/Misc_Reports/Prime_Flight_Cargo/PrimeFlight_Cargo.fex,N,135,Y,Excel Document,Report
+Prime Flight Cargo Daily Morning Report,/output/Misc_Reports/Prime_Flight_Cargo/PrimeFlight_Cargo.fex,N,135,Y,Excel Document,Report
+Rouge Notification Fin Report,/output/Misc_Reports/Rouge_Notification_Fin_Report/Rouge_Notification_Fin_Report.fex,N,136,N,Excel Document,Report
+SOC WAB Workload,/output/ETLs/WAB_Workload_-_Daily/SOC_WAB_Workload.fex,N,137,N,Excel Document,Report
+USA Stations: Daily OPS Summary,/output/OTP_Reports/Daily_Carrier_OPS_Summary/Data_Extract/Ops_Summary_Data_Extract.fex,N,138,N,PDF Document,Report
+USA Stations: Daily OPS Summary,/output/OTP_Reports/USA_Daily_OPS_Summary/Ops_Summary_Composer.fex,N,138,N,PDF Document,Report
+USA Stations: Daily OPS Summary,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,138,N,PDF Document,Report
+USA Stations: Daily OPS Summary,/output/OTP_Reports/USA_Daily_OPS_Summary/Ops_Summary_Summary_v2.fex,N,138,N,PDF Document,Report
+USA Stations: Daily OPS Summary,/output/OTP_Reports/USA_Daily_OPS_Summary/Ops_Summary_IRROPS_v2.fex,N,138,N,PDF Document,Report
+USA Stations: Daily OPS Summary,/output/OTP_Reports/USA_Daily_OPS_Summary/Ops_Summary_CNLS.fex,N,138,N,PDF Document,Report
+USA Stations: Daily OPS Summary,/output/OTP_Reports/USA_Daily_OPS_Summary/Ops_Summary_PAX.fex,N,138,N,PDF Document,Report
+USA Stations: Daily OPS Summary,/output/OTP_Reports/USA_Daily_OPS_Summary/Ops_Summary_Delays_Most_Common.fex,N,138,N,PDF Document,Report
+USA Stations: Daily OPS Summary,/output/OTP_Reports/USA_Daily_OPS_Summary/Ops_Summary_Delays_Less_Common.fex,N,138,N,PDF Document,Report
+USA Stations: Daily OPS Summary,/output/OTP_Reports/USA_Daily_OPS_Summary/Ops_Summary_Delays_Uncontrollable.fex,N,138,N,PDF Document,Report
+USA Stations: Daily OPS Summary,/output/Remediated_Reports/Daily_Carrier_OPS_Summary/Data_Extract/Ops_Summary_Data_Extract.fex,Y,138,N,PDF Document,Report
+RL Integrity Reports,/output/Baggage_Reports/RL_Integrity_Reports/sita_RL_Integrity.fex,N,139,N,Excel Document,Report
+Monthly QK Irrop Report,/output/OTP_Reports/QK_IRROP_Report/soc_irrop_report_00_compound.fex,N,140,N,Excel Document,Report
+Monthly QK Irrop Report,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,140,N,Excel Document,Report
+Monthly QK Irrop Report,/output/OTP_Reports/QK_IRROP_Report/soc_irrop_report_01_downgauges_v2.fex,N,140,N,Excel Document,Report
+Monthly QK Irrop Report,/output/OTP_Reports/QK_IRROP_Report/soc_irrop_report_00_upgauges_v2.fex,N,140,N,Excel Document,Report
+Monthly QK Irrop Report,/output/OTP_Reports/QK_IRROP_Report/soc_irrop_report_02_cancellations.fex,N,140,N,Excel Document,Report
+Monthly QK Irrop Report,/output/OTP_Reports/QK_IRROP_Report/soc_irrop_report_03_long_delays.fex,N,140,N,Excel Document,Report
+Monthly QK Irrop Report,/output/OTP_Reports/QK_IRROP_Report/soc_irrop_report_04_fin_changes.fex,N,140,N,Excel Document,Report
+PAL Block Hours Report,/output/Misc_Reports/PAL_Block_Hours_Report/PAL_Block_Hours_Report.fex,N,141,N,Excel Document,Report
+PAL Block Hours Report,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,141,N,Excel Document,Report
+Baggage Handling Success Rate & PAWOB Monthly Report,/output/Baggage_Reports/Mish_Bag_Report/Mish_Bag_Report.fex,N,142,N,2x Excel Documents2x PDF Documents,Report
+Baggage Handling Success Rate & PAWOB Monthly Report,/output/Baggage_Reports/PAWOB_MTD_YTD/sita_PAWOB_Monthly.fex,N,142,N,2x Excel Documents2x PDF Documents,Report
+Baggage Handling Success Rate & PAWOB Monthly Report,/output/Baggage_Reports/PAWOB_MTD_YTD/sita_PAWOB_Yearly.fex,N,142,N,2x Excel Documents2x PDF Documents,Report
+Baggage Handling Success Rate & PAWOB Monthly Report,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,142,N,2x Excel Documents2x PDF Documents,Report
+Baggage Handling Success Rate & PAWOB Monthly Report,/output/Baggage_Reports/PAWOB_MTD_YTD/PAWOB-GraphGen.fex,Y,142,N,2x Excel Documents2x PDF Documents,Report
+Baggage Handling Success Rate & PAWOB Monthly Report,/output/OTP_Reports/Tier_2_and_3_Carrier_OPR_Report/wor02_03_graph_06_pawob.fex,Y,142,N,2x Excel Documents2x PDF Documents,Report
+Baggage Handling Success Rate & PAWOB Monthly Report,/output/OTP_Reports/OPR_Report/wor02_01_parameters.fex,N,142,N,2x Excel Documents2x PDF Documents,Report
+Monthly SSCI Acceptance by AC Destination Report,/output/Customer_Reports/PAX_CheckIn_Stats/Weekly_Acceptance_Report_PAX_FLT_STD.fex,N,143,Y,Excel Document,Report
+Monthly SSCI Acceptance by AC Destination Report,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,143,Y,Excel Document,Report
+Station Gate Compliance Report,/output/Station_Reports/Station_Gate_Compliance/station_gating_compliance_west.fex,N,144,N,Excel Document,Report
+Station Gate Compliance Report,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,144,N,Excel Document,Report
+Station Gate Flight Details Report,/output/Station_Reports/Station_Gate_Flight_Details_report/Station_Gate_Flight_Details_report.fex,N,145,N,Excel Document,Report
+Station Gate Flight Details Report,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,145,N,Excel Document,Report
+US Operations Report,/output/Misc_Reports/US_GECAS_Tracking/US_FIR_GRND_TIME_MERGED.fex,N,146,N,Excel Document,Report
+US Operations Report,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,146,N,Excel Document,Report
+US Station Delay Summary,/output/Station_Reports/US_Station/us_station_delay_compose.fex,N,147,N,PDF Document ,Report
+US Station Delay Summary,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,147,N,PDF Document ,Report
+US Station Delay Summary,/output/Station_Reports/US_Station/us_station_delay_sum.fex,N,147,N,PDF Document ,Report
+US Station Delay Summary,/output/Station_Reports/US_Station/us_station_delay_grph.fex,N,147,N,PDF Document ,Report
+US Station Performance,/output/Station_Reports/US_Station/us_station_sum_monthly.fex,N,148,N,Excel Document,Report
+US Station Performance,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,148,N,Excel Document,Report
+AC Express Operational Summary,/output/OTP_Reports/AC_Express_Operational_Summary/AC_Express_Operational_Summary.fex,N,149,N,Excel Document,Report
+AC Express Operational Summary,/output/ETLs/OPR_Data/oper_perf_summary_data.fex,Y,149,N,Excel Document,Report
+AC Express Operational Summary,/output/Remediated_Reports/OPR_Data/oper_perf_summary_data.fex,Y,149,N,Excel Document,Report
+AC Express Operational Summary,/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_v2.fex,Y,149,N,Excel Document,Report
+AC Express Operational Summary,/output/ETLs/OPR_Data/oper_perf_summary_data_dly_codes.fex,Y,149,N,Excel Document,Report
+AC Express Operational Summary,/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_dly_codes.fex,Y,149,N,Excel Document,Report
+AC Express Operational Summary,/output/ETLs/OPR_Data/oper_perf_summary_parameters.fex,N,149,N,Excel Document,Report
+AC Express Operational Summary,/output/Remediated_Reports/OPR_Data/oper_perf_summary_parameters.fex,N,149,N,Excel Document,Report
+AC Express Operational Summary,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,149,N,Excel Document,Report
+AC Express Operational Summary,/output/ETLs/OPR_Data/oper_perf_summary_data_calendar.fex,Y,149,N,Excel Document,Report
+AC Express Operational Summary,/output/Remediated_Reports/OPR_Data/oper_perf_summary_data_calendar.fex,Y,149,N,Excel Document,Report
+DX 90 day Compliance Report,/output/Misc_Reports/DX_90_day_Compliance_Report/DX_90_day_Compliance_Report.fex,N,150,N,Excel Document,Report
+Weekly Flight Watchlist,/output/Misc_Reports/FlightWatch_Reports/ftw_weekly_flight_list.fex,N,151,N,Zip File containing 3 Excel Documents,Report
+Weekly Flight Watchlist,/output/Misc_Reports/FlightWatch_Reports/ftw_weekly_groups_list.fex,N,151,N,Zip File containing 3 Excel Documents,Report
+Weekly Flight Watchlist,/output/Misc_Reports/FlightWatch_Reports/ftw_weekly_wab_list.fex,N,151,N,Zip File containing 3 Excel Documents,Report
+Weekly Flight Watchlist,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,151,N,Zip File containing 3 Excel Documents,Report
+Weekly Flight Watchlist,/output/Misc_Reports/FlightWatch_Reports/ftw_weekly_netline_extract.fex,N,151,N,Zip File containing 3 Excel Documents,Report
+Weekly Flight Watchlist,/output/Misc_Reports/FlightWatch_Reports/ftw_daily_netline_extract.fex,Y,151,N,Zip File containing 3 Excel Documents,Report
+FQTV Pax Counts,/output/Customer_Reports/FQTV_Pax_Counts/FQTV_Pax_Counts.fex,N,152,N,Excel Document,Report
+FQTV Pax Counts,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,152,N,Excel Document,Report
+IADP Self Notification,/output/Misc_Reports/IADP_Self_Notification/iadp_self_notification.fex,N,153,N,Excel Document,Report
+MTD PAWOB CPA Jazz Report,/output/Compliance_Reports/CPA_Report_Monthly/SITA_mtd_PAWOB_CPA.fex,N,154,N,Excel Document,Report
+MTD PAWOB CPA Jazz Report,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,154,N,Excel Document,Report
+YTZ Daily Flight Details,/output/Station_Reports/YTZ_Daily_Flight_Details/YTZ_Daily_Flight_Details.fex,N,155,N,Excel Document,Report
+YTZ Daily Flight Details,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,155,N,Excel Document,Report
+YUL Connecting Flights Report (Day-of),/output/Station_Reports/YUL_CNX_Report/YUL_CNX_Report.fex,N,156,Y,E-Mail (HTML Document),Report
+YUL Connecting Flights Report(Next-Day),/output/Station_Reports/YUL_CNX_Report/YUL_CNX_Report.fex,N,156,Y,E-Mail (HTML Document),Report
+YVR Connecting PAX Report,/output/Station_Reports/YVR_Connecting_PAX/YVR_Connecting_PAX.fex,N,157,N,Excel Document,Report
+YYZ CNX PAWOB breakdown,/output/Baggage_Reports/YYZ_CNX_PAWOB_breakdown/yyz_cnx_pawob_breakdown_SITA.fex,N,158,N,Excel Document,Report
+OPR Fin Changes Supplementary,/output/Misc_Reports/OPR_Fin_Changes_Supplementary/wor02_08_table_fin_changes.fex,N,159,N,Excel Document,Report
+OPR Fin Changes Supplementary,/output/OTP_Reports/OPR_Report/wor02_01_parameters.fex,N,159,N,Excel Document,Report
+OPR Fin Changes Supplementary,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,159,N,Excel Document,Report
+OPR Supplement Reports,/output/OTP_Reports/OPR_Supplement/wor02_sup_high_impact_delays.fex,N,160,N,2x PDF Documents1x Excel Document,Report
+OPR Supplement Reports,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,160,N,2x PDF Documents1x Excel Document,Report
+OTP Delay Flight YUL,/output/OTP_Reports/OTP_Ivy_Delay_Flight/OTP_IVY_Delay_Report_YUL.fex,N,161,Y,E-Mail (HTML Document),Report
+OTP Delay Flight YUL,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,161,Y,E-Mail (HTML Document),Report
+OTP Delay Flight YVR,/output/OTP_Reports/OTP_Ivy_Delay_Flight/OTP_IVY_Delay_Report_YUL.fex,N,161,Y,E-Mail (HTML Document),Report
+OTP Delay Flight YVR,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,161,Y,E-Mail (HTML Document),Report
+Daily OTP Delay Flight YYZ,/output/OTP_Reports/OTP_Ivy_Delay_Flight/OTP_Delay_Flight_Ivy_YYZ_Daily_SF.fex,N,162,N,E-Mail (HTML Document),Report
+Daily OTP Delay Flight YYZ,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,162,N,E-Mail (HTML Document),Report
+OTP Delay Flight YYZ,/output/OTP_Reports/OTP_Ivy_Delay_Flight/OTP_IVY_Delay_Report_YUL.fex,N,161,Y,E-Mail (HTML Document),Report
+OTP Delay Flight YYZ,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,161,Y,E-Mail (HTML Document),Report
+Baggage Scanning Performance - Monthly,/output/Baggage_Reports/Baggage_Performance_by_Station/baggage_performace_overall.fex,N,163,N,Excel Document,Report
+Baggage Scanning Performance - Monthly,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,163,N,Excel Document,Report
+Baggage Segregation Compliance Report,/output/Baggage_Reports/Baggage_Segregation_Compliance_Report/Baggage_Segregation_Compliance_Report.fex,N,164,N,nan,Report
+Baggage Segregation Compliance Report,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,164,N,nan,Report
+BOS Inbound and Outbound Baggage Monthly Summary Report,/output/Baggage_Reports/Inbound_Outbound_bags_by_Station/INB_OUTB_STN.fex,N,165,N,Excel Document,Report
+BOS Inbound and Outbound Baggage Monthly Summary Report,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,165,N,Excel Document,Report
+CPA Report Monthly,/output/Compliance_Reports/CPA_Report_Monthly/CPA_MNTHLY_REPORT.fex,N,166,N,PDF Document,Report
+CPA Report Monthly,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,166,N,PDF Document,Report
+Crew Radiation Report,/output/IFS_Reports/Crew_Radiation/crewfops_radiation_report.fex,N,167,N,Excel Document,Report
+Crew Radiation Report,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,167,N,Excel Document,Report
+FOPS Blockoverfly Monthly Report,/output/FOPs_Reports/FOPS_Blockoverfly_monthly_report/fops_blockoverfly_underfly.fex,N,168,N,Excel Document,Report
+FOPS Blockoverfly Monthly Report,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,168,N,Excel Document,Report
+FOPS Hotel Report,/output/IFS_Reports/IFS_Hotel_Report/ifs_hotel_report.fex,N,119,Y,Excel Document,Report
+FOPS Hotel Report,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,119,Y,Excel Document,Report
+IFS Hotel Report,/output/IFS_Reports/IFS_Hotel_Report/ifs_hotel_report.fex,N,119,Y,Excel Document,Report
+IFS Hotel Report,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,119,Y,Excel Document,Report
+Monthly MBG Report,/output/FOPs_Reports/Flight_Ops_Reports/NETLINE_MBG_REPORT.fex,N,169,N,Excel Document,Report
+FOPS Synthetics,/output/FOPs_Reports/FOPS_Metrics/FOPS_Synthetics.fex,N,170,N,Excel Document,Report
+FOPS Synthetics,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,170,N,Excel Document,Report
+FOPS Synthetics,/output/OPS_BI_Tool/Flight_Ops_Reports/Monthly_Crew_Pairing/crew_pairing_review_hold_file.fex,Y,170,N,Excel Document,Report
+FOPS Synthetics,/output/FOPs_Reports/Flight_Ops_Reports/Monthly_Crew_Pairing/crew_pairing_review_hold_file.fex,Y,170,N,Excel Document,Report
+IFS Block Time Report (Monthly),/output/IFS_Reports/IFS_Block_Time_Report/ifs_blocktime_citypair.fex,N,171,N,Excel Document,Report
+IFS Block Time Report (Monthly),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,171,N,Excel Document,Report
+Monthly Crew Absence Report,/output/FOPs_Reports/FOPS_NLCREW_ABSCENCE_REPORT/Crew_Absence_Report.fex,N,172,N,Excel Document,Report
+Monthly Ferry Flights Report,/output/OTP_Reports/Monthly_Ferry_Flight_Report/monthly_ferry_flight_report.fex,N,173,N,Excel Document,Report
+Monthly Ferry Flights Report,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,173,N,Excel Document,Report
+Monthly DH Report,/output/FOPs_Reports/Monthly_DH_Report/monthly_dh_report.fex,N,174,N,Excel Document,Report
+Monthly DH Report,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,174,N,Excel Document,Report
+Weekly PAX Check-In Stats Report - Segment Based,/output/Customer_Reports/PAX_CheckIn_Stats/Weekly_PAX_CheckIn_Stats_v2.fex,N,175,N,Excel Document,Report
+Weekly PAX Check-In Stats Report - Segment Based,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,175,N,Excel Document,Report
+Weekly PAX Check-In Stats Report - Journey Based,/output/Customer_Reports/PAX_CheckIn_Stats/Weekly_PAX_CheckIn_Stats_v3.fex,N,176,N,Excel Document,Report
+Weekly PAX Check-In Stats Report - Journey Based,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,176,N,Excel Document,Report
+Weekly SSCI Acceptance Report,/output/Customer_Reports/PAX_CheckIn_Stats/Weekly_Acceptance_Report_PAX_FLT_STD.fex,N,143,Y,Excel Document,Report
+Weekly SSCI Acceptance Report,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,143,Y,Excel Document,Report
+Netline UOC Report (Friday),/output/Misc_Reports/Netline_UOC_Report/Netline_UOC.fex,N,177,Y,Excel Document,Report
+Netline UOC Report (Monday),/output/Misc_Reports/Netline_UOC_Report/Netline_UOC.fex,N,177,Y,Excel Document,Report
+Weekly Cancelled Flights & Seats Comparison Report,/output/Executive_Reports/Weekly_CNLs_YoY_Report/Weekly_CNLs_YoY_Report_v2.fex,N,178,N,PDF Document,Report
+Weekly Cancelled Flights & Seats Comparison Report,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/utility_functions.fex,N,178,N,PDF Document,Report
+Weekly Crew VO Report,/output/FOPs_Reports/Crew_VO_Report/Crew_VO_Report.fex,N,179,N,Excel Document,Report
+Weekly Crew VO Report,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,179,N,Excel Document,Report
+Weekly MTC Visits,/output/Misc_Reports/Weekly_MTC_Visits/Weekly_MTC_Visits.fex,N,180,N,Excel Document,Report
+Weekly MTC Visits,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,180,N,Excel Document,Report
+Weekly PAX CheckIn Stats Report - LHR,/output/Customer_Reports/PAX_CheckIn_Stats/Weekly_PAX_CheckIn_Stats_LHR.fex,N,181,N,Excel Document,Report
+Weekly PAX CheckIn Stats Report - LHR,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,181,N,Excel Document,Report
+ACM MEL Stats,/output/ETLs/Portal_Upload/portal_acm_data_add.fex,N,182,N,XML Document,ETL-Integration
+ACM MEL Stats,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,182,N,XML Document,ETL-Integration
+ACM OTP Stats,/output/ETLs/Portal_Upload/portal_upload_stn_otp_stats_acm.fex,N,183,N,XML Document,ETL-Integration
+ACM OTP Stats,/output/ETLs/Portal_Upload/portal_upload_stn_otp_stats_acm_working.fex,N,183,N,XML Document,ETL-Integration
+ACM OTP Stats,/output/ETLs/OPR_Data/oper_perf_summary_parameters.fex,N,183,N,XML Document,ETL-Integration
+ACM OTP Stats,/output/OPS_Real-Time_Dashboard/Utility_Procedures/dash_data.fex,Y,183,N,XML Document,ETL-Integration
+ACM OTP Stats,/output/OPS_Real-Time_Dashboard/Utility_Procedures/dash_data_sum_gdgt.fex,Y,183,N,XML Document,ETL-Integration
+ACM OTP Stats,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,183,N,XML Document,ETL-Integration
+ACM OTP Stats,/output/OPS_Real-Time_Dashboard/Utility_Procedures/dash_data_trax.fex,Y,183,N,XML Document,ETL-Integration
+ACM OTP Stats,/output//home/BuildScanDirectory/ops/WFC/Repository/Ops_Analytics/~tp038123/dash_data_trax.fex,Y,183,N,XML Document,ETL-Integration
+Air Canada YYZ OTP - A15 & D15 (+/-),/output/Station_Reports/Air_Canada_YYZ_OTP_-_A15_D15/Air_Canada_YYZ_OTP_-_A15_and_D15.fex,N,184,N,Excel Document,Report
+Air Canada YYZ OTP - A15 & D15 (+/-),/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,184,N,Excel Document,Report
+SLVW ITD YEG 24-Hour Forecast,/output/SLVW_ITD_YVR/slvwyegitd24hourforecast.fex,N,185,N,E-Mail (HTML Document),Report
+SLVW ITD YEG 24-Hour Forecast,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,185,N,E-Mail (HTML Document),Report
+SLVW ITD YHZ 24-Hour Forecast,/output/SLVW_ITD_YVR/slvwyhzitd24hourforecast.fex,N,186,N,E-Mail (HTML Document),Report
+SLVW ITD YHZ 24-Hour Forecast,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,186,N,E-Mail (HTML Document),Report
+SLVW ITD YUL 24-Hour Forecast,/output/SLVW_ITD_YVR/slvwyulitd24hourforecast.fex,N,187,N,E-Mail (HTML Document),Report
+SLVW ITD YUL 24-Hour Forecast,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,187,N,E-Mail (HTML Document),Report
+SLVW ITD YVR 24-Hour Forecast WF8,/output/SLVW_ITD_YVR/slvwyvritd24hourforecast.fex,N,188,N,E-Mail (HTML Document),Report
+SLVW ITD YVR 24-Hour Forecast WF8,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,188,N,E-Mail (HTML Document),Report
+SLVW ITD YYC 24-Hour Forecast WF8,/output/SLVW_ITD_YVR/slvwyycitd24hourforecast.fex,N,189,N,E-Mail (HTML Document),Report
+SLVW ITD YYC 24-Hour Forecast WF8,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,189,N,E-Mail (HTML Document),Report
+SLVW ITD YYZ 24-Hour Forecast WF8,/output/SLVW_ITD_YVR/slvw_yyz_itd_24hour_forecast.fex,N,190,N,E-Mail (HTML Document),Report
+SLVW ITD YYZ 24-Hour Forecast WF8,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,190,N,E-Mail (HTML Document),Report
+MTA Daily - Eastern Stations,/output/MTA_Daily_YYZ/nick_rouge_station_delays_leg_flown1.fex,N,191,Y,Excel Document,Report
+MTA Daily - Eastern Stations,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,191,Y,Excel Document,Report
+MTA Daily - Western stations,/output/MTA_Daily_YYZ/nick_rouge_station_delays_leg_flown1.fex,N,191,Y,Excel Document,Report
+MTA Daily - Western stations,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,191,Y,Excel Document,Report
+MTA Daily - Station YYZ,/output/MTA_Daily_YYZ/nick_rouge_station_delays_leg_flown1.fex,N,191,Y,Excel Document,Report
+MTA Daily - Station YYZ,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,191,Y,Excel Document,Report
+MTA Weekly - Eastern stations,/output/MTA_Daily_YYZ/nick_rouge_station_delays_leg_flown1.fex,N,191,Y,Excel Document,Report
+MTA Weekly - Eastern stations,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,191,Y,Excel Document,Report
+MTA Weekly - Western Stations,/output/MTA_Daily_YYZ/nick_rouge_station_delays_leg_flown1.fex,N,191,Y,Excel Document,Report
+MTA Weekly - Western Stations,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,191,Y,Excel Document,Report
+MTA Weekly - Station YYZ,/output/MTA_Daily_YYZ/nick_rouge_station_delays_leg_flown1.fex,N,191,Y,Excel Document,Report
+MTA Weekly - Station YYZ,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,191,Y,Excel Document,Report
+SPAT 2-Day YHZ,/output/SPAT_2-Day/SPAT_2day.fex,N,192,Y,Zip File containing an Excel Document,Report
+SPAT 2-Day YHZ,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,192,Y,Zip File containing an Excel Document,Report
+SPAT 2-Day YOW,/output/SPAT_2-Day/SPAT_2day.fex,N,192,Y,Zip File containing an Excel Document,Report
+SPAT 2-Day YOW,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,192,Y,Zip File containing an Excel Document,Report
+SPAT 2-Day YYZ,/output/SPAT_2-Day/SPAT_2day.fex,N,192,Y,Zip File containing an Excel Document,Report
+SPAT 2-Day YYZ,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,192,Y,Zip File containing an Excel Document,Report
+SEC Weekly Delays,/output/SEC_Weekly_delays/catsa_security_delays.fex,N,193,N,Excel Document,Report
+SEC Weekly Delays,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,193,N,Excel Document,Report
+LHR Monthly PAX check-in report WF8,/output/Salesview_Reports/LHR_CKI_billing_extract.fex,N,194,N,Excel Document,Report
+LHR Monthly PAX check-in report WF8,/output//home/BuildScanDirectory/ops/EDA/EDASERVE/ops_analytics/procedures/common_dates_ibi.fex,N,194,N,Excel Document,Report

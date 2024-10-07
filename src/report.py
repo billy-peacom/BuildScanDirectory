@@ -78,7 +78,8 @@ class Report:
                     procedureList.append(proc_dict[source_file_path.lower()])
                     curReport.add_procedure(proc_dict[source_file_path.lower()])
                 else:
-                    print(f"Procedure Not Found: {source_file_path}")
+                    # print(f"Procedure Not Found: {source_file_path}")
+                    pass
             reports.append(curReport)        
 
         return procedureList
@@ -92,6 +93,7 @@ class Report:
         #os.makedirs(target_directory, exist_ok=True)
         artifact_dict = {} 
         reports = []
+        invalid_paths = {} # {report, list of invalid paths}
         for _, row in inventory_df.iterrows():
             artifact_name = row['Artifact name']
             artifact_data = row['PRIMARY FEX(ES)']
@@ -112,24 +114,34 @@ class Report:
                 print(f"Source directory: {source_directory}")
                 #print(f"Target directory: {target_directory}")
             if artifact_name in artifact_dict:
-                print(f"Skipping duplicate artifact: {artifact_name}")
+                # print(f"Skipping duplicate artifact: {artifact_name}")
                 continue
             artifact_dict[artifact_name] = artifact_files
 
             if pd.isna(artifact_name):
-                print(f"Skipping row due to missing artifact name")
+                # print(f"Skipping row due to missing artifact name")
                 continue
             else:
                 curReport = Report(report_name=artifact_name, output_format = artifact_output, ac_type=artifact_ac_type)
+
+            non_existent_files = []
+
             for file in artifact_files:
                 source_file_path = os.path.normpath(os.path.join(source_directory, file.lstrip("/")))
+                
                 if source_file_path.lower() in proc_dict:
+                    # print(f"\t{source_file_path}")
                     procedureList.append(proc_dict[source_file_path.lower()])
                     curReport.add_procedure(proc_dict[source_file_path.lower()])
                 else:
-                    print(f"Procedure Not Found: {source_file_path}")
+                    non_existent_files.append(source_file_path)
+
+            if non_existent_files:
+                invalid_paths[curReport.report_name] = non_existent_files
+
             reports.append(curReport) 
-        return reports           
+
+        return reports, invalid_paths
             
     @staticmethod
     def _load_reports(inventory_file):
